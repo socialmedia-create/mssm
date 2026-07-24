@@ -1,0 +1,281 @@
+<html>
+<head>
+    <title>Responsive Image Gallery</title>
+     <link rel="icon" href="assets/logo/logo(2).png" type="image/x-icon">
+     
+     <meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"> 
+        <meta name="description" content="Responsive Image Gallery with jQuery" />
+        <meta name="keywords" content="jquery, carousel, image gallery, slider, responsive, flexible, fluid, resize, css3" />
+		<meta name="author" content="Codrops" />
+		<link rel="stylesheet" type="text/css" href="css/demo.css" />
+		<link rel="stylesheet" type="text/css" href="css/style.css" />
+		<link rel="stylesheet" type="text/css" href="css/elastislide.css" />
+		<link href='http://fonts.googleapis.com/css?family=PT+Sans+Narrow&v1' rel='stylesheet' type='text/css' />
+		<link href='http://fonts.googleapis.com/css?family=Pacifico' rel='stylesheet' type='text/css' />
+</head>
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+<noscript>
+	<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+			</noscript>
+			
+			<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
+	
+	
+	<div class="row">
+        <div class="column">
+      <img class="demo cursor" src="assets/Guest Lecture/1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Our Director with Dr Manish R Joshi Secretary UGC New Delhi For A Session on Empowering Educators For Academic Excellence">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Guestlectures/WhatsApp Image 2024-08-12 at 11.35.27 AM.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Top Management Conclave Speaker  Shri R.S. RANGANATHAN Senior General Manager (Corporate IR & Legal) of Brakes India Pvt. Ltd.Chennai on 10-08-2024">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Guestlectures/IMG_20220920_150122.jpg" style="width:100%" onclick="currentSlide(3)" alt="Session on Motivational Psychology By  Mr S.A.U Althaf Mydeen, M.Sc., on 20/09/2022">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Guestlectures/IMG_20220919_145154.jpg" style="width:100%" onclick="currentSlide(4)" alt="Session on Designing a Startup By Dr Iyappan A, Ph.D., PDF., on 12/09/2022">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Guestlectures/WhatsApp Image 2022-05-13 at 12.30.19 PM (2).jpeg" style="width:100%" onclick="currentSlide(5)" alt="Session on Four Labour Codes By Prof.Ranganathan on 12/05/2022">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Guestlectures/bs.jpg" style="width:100%" onclick="currentSlide(6)" alt="Mr.S.Jayaraam, chief manager- market development (business standard) addressing our 1st year mba students on 22/02/2020">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/conclave_24/IMG_20240228_114842.jpg" style="width:100%" onclick="currentSlide(7)" alt=" Session on Innovations in Human Resource Management  Dr.Raju Sivasamy,Vice President Medical & Finance SIMS, Vadapalani On 28-02-2024">
+    </div>
+  </div>
+
+	
+		<br>
+		
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 7</div>
+    <img src="assets/Guest Lecture/1.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">2 / 7</div>
+    <img src="assets/Guestlectures/WhatsApp Image 2024-08-12 at 11.35.27 AM.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 7</div>
+    <img src="assets/Guestlectures/IMG_20220920_150122.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 7</div>
+    <img src="assets/Guestlectures/IMG_20220919_145154.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">5 / 7</div>
+    <img src="assets/Guestlectures/WhatsApp Image 2022-05-13 at 12.30.19 PM (2).jpeg" style="width:100%">
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">6 / 7</div>
+    <img src="assets/Guestlectures/bs.jpg" style="width:100%">
+  </div>
+   <div class="mySlides">
+    <div class="numbertext">7 / 7</div>
+    <img src="assets/conclave_24/IMG_20240228_114842.jpg" style="width:100%">
+  </div>
+  
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  
+  
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+<!-- 	<center><form action="https://youtu.be/xnEkkJf_kcI?si=YH673-q0VkmeJNGS">
+        <button type="submit" class="GFG">Graduation Video</button>
+       </form>	</center> -->
+		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
+		
+ </body>
+</html>
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		
+		

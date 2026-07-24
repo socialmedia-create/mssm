@@ -1,0 +1,355 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Fire Safety Lecture And Mock Drill</title>
+     <link rel="icon" href="assets/logo/logo(2).png" type="image/x-icon">
+</head>
+<body></body>
+</html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+      <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        .GFG { 
+           width:100px;
+           height:50px;
+           background:#00254e;
+           border:none;
+           color:white;
+        } 
+        
+
+        </style>
+
+
+<body>
+
+            <div class="container-fluid">
+               
+                   
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                  
+            </div>
+        </nav>
+
+        <a href="#" title="MSSM">
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" ><img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/> </h1>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        
+
+                </div>
+            </div>
+        </nav>
+
+</div>
+                            </div>
+
+                        </div>
+
+      
+                    </div>
+
+                </div>
+
+                <div class="col-sm-1"></div>
+
+<div class="container">
+            <div class="row">            
+                <div class="col-sm-16" style="text-align: center">
+                    <h3>Fire Safety Lecture And Mock Drill</h3>
+                    <br>
+			</div>
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 4</div>
+    <img src="assets/Fire_drill/IMG_20240315_111633.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 4</div>
+    <img src="assets/Fire_drill/IMG_20240315_115904.jpg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 4</div>
+    <img src="assets/Fire_drill/IMG_20240315_120131.jpg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 4</div>
+    <img src="assets/Fire_drill/IMG_20240315_120250.jpg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="assets/Fire_drill/IMG_20240315_111633.jpg" style="width:100%" onclick="currentSlide(1)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Fire_drill/IMG_20240315_115904.jpg" style="width:100%" onclick="currentSlide(2)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Fire_drill/IMG_20240315_120131.jpg" style="width:100%" onclick="currentSlide(3)" alt="">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Fire_drill/IMG_20240315_120250.jpg" style="width:100%" onclick="currentSlide(4)" alt="">
+    </div>
+  </div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+ 	<center><form action="assets/Fire_drill/VID_20240315_115532.mp4">
+        <button type="submit" class="GFG">Fire Drill Video</button>
+       </form>	</center>
+
+</body>
+
+
+
+
+
+</html>

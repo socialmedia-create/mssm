@@ -1,0 +1,794 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Free TANCET Coaching 2026 | MSSM</title>
+    <meta name="description" content="Join the free TANCET preparatory session at Meenakshi Sundararajan School of Management. Master Quant, Verbal & Data Interpretation.">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+    <!-- Modern Sans-Serif Font Only -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="icon" type="image/png" href="tancet26/logo.png">
+<link rel="apple-touch-icon" href="tancet26/logo.png">
+
+    
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        mssm: {
+                            red: '#990000',    /* Brand Red */
+                            redDark: '#7a0000',
+                            dark: '#111827',   /* Modern Black/Gray */
+                            light: '#F9FAFB',  /* Light Background */
+                        }
+                    },
+                    fontFamily: {
+                        sans: ['Inter', 'sans-serif'],
+                    },
+                    boxShadow: {
+                        'form': '0 20px 25px -5px rgba(0, 0, 0, 0.1), 0 10px 10px -5px rgba(0, 0, 0, 0.04)',
+                        'float': '0 4px 15px rgba(0,0,0,0.2)'
+                    }
+                }
+            }
+        }
+    </script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            scroll-behavior: smooth;
+        }
+        .hero-bg {
+            /* Image of well-dressed Indian students - Authentic Look */
+            background-image: linear-gradient(rgba(0, 0, 0, 0.75), rgba(0, 0, 0, 0.65)), url('tancet26/front.jpg'); 
+            background-size: contain;
+            background-position: center;
+        }
+        .glass-header {
+            background: rgba(255, 255, 255, 0.98);
+            backdrop-filter: blur(10px);
+        }
+        .animate-pulse-slow {
+            animation: pulse 3s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .fade-in {
+            animation: fadeIn 0.8s ease-out forwards;
+        }
+        /* Accordion Styles */
+        .accordion-content {
+            transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+            max-height: 0;
+            opacity: 0;
+            overflow: hidden;
+        }
+        .accordion-content.active {
+            opacity: 1;
+        }
+        /* Custom Select Styling */
+        .custom-select-wrapper {
+            position: relative;
+        }
+        .custom-select-wrapper::after {
+            content: '\f107';
+            font-family: 'Font Awesome 5 Free';
+            font-weight: 900;
+            position: absolute;
+            top: 50%;
+            right: 1rem;
+            transform: translateY(-50%);
+            color: #990000;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body class="bg-gray-50 text-gray-900 selection:bg-mssm-red selection:text-white">
+
+    <!-- Top Institutional Header (Scrolls away) -->
+    <div class="bg-white border-b border-gray-100">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-4 md:gap-8">
+                <!-- Logo & Name -->
+                <div class="flex items-center gap-4 w-full md:w-auto justify-center md:justify-start">
+                    <div class="w-14 h-14 bg-mssm-red rounded-lg flex items-center justify-center text-white font-bold text-2xl shadow-sm flex-shrink-0">
+                        <img src="tancet26/logo.png">
+                    </div>
+                    <div class="text-center md:text-left">
+                        <h1 class="text-lg md:text-xl font-bold text-mssm-red leading-tight">
+                            MEENAKSHI SUNDARARAJAN <br class="hidden md:block">SCHOOL OF MANAGEMENT
+                        </h1>
+                        
+                        <p class="text-[10px] text-gray-500 font-medium tracking-wide mt-1">
+                            Affiliated to University of Madras & Approved by AICTE
+                        </p>
+                    </div>
+                </div>
+
+                <!-- Info Block (Hidden on small mobile to save space, visible on larger screens) -->
+                <div class="hidden md:flex flex-col items-end text-right text-xs text-gray-500 font-medium space-y-1">
+                    <p>(A Co-Educational Institution under the Aegis of IIET)</p>
+                    <p class="flex items-center gap-1"><i class="fas fa-map-marker-alt text-mssm-red"></i> #363, Arcot Road, Kodambakkam, Chennai - 600024</p>
+                    <p class="text-mssm-red font-bold bg-red-50 px-2 py-0.5 rounded border border-red-100 inline-block">
+                        TANCET COUNSELLING CODE - 365
+                    </p>
+                </div>
+                
+                <!-- Mobile only Counselling code -->
+                <div class="md:hidden text-center w-full">
+                    <span class="text-mssm-red text-xs font-bold bg-red-50 px-3 py-1 rounded-full border border-red-100">
+                        CODE: 365
+                    </span>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <nav class="sticky top-0 z-50 glass-header border-b border-gray-100 shadow-sm">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex justify-between items-center h-16">
+                <!-- Short Brand for Sticky Nav -->
+                <a href="#" class="font-bold text-gray-900 text-lg flex items-center gap-2">
+                    <span class="text-mssm-red">MSSM</span> <span class="text-gray-400 font-light">|</span> TANCET Prep
+                </a>
+
+                <!-- Desktop Nav Links -->
+                <div class="hidden md:flex items-center gap-8">
+                    <a href="#curriculum" class="text-sm font-medium text-gray-600 hover:text-mssm-red transition">Curriculum</a>
+                    <a href="#venue" class="text-sm font-medium text-gray-600 hover:text-mssm-red transition">Venue</a>
+                    <a href="#faq" class="text-sm font-medium text-gray-600 hover:text-mssm-red transition">FAQ</a>
+                    <a href="#register-form" class="bg-mssm-red text-white px-5 py-2 rounded-lg text-sm font-bold shadow-md hover:bg-mssm-redDark transition transform hover:-translate-y-0.5">
+                        Register Free
+                    </a>
+                </div>
+                
+                <!-- Mobile Nav Toggle -->
+                <div class="md:hidden">
+                    <button id="mobileMenuBtn" type="button" class="text-gray-700 hover:text-mssm-red p-2" aria-expanded="false" aria-controls="mobileMenu">
+                        <i id="mobileMenuIcon" class="fa-solid fa-bars fas fa-bars text-xl"></i>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu Panel -->
+            <div id="mobileMenu" class="md:hidden hidden pb-4">
+                <div class="mt-2 bg-white border border-gray-100 rounded-xl shadow-sm overflow-hidden">
+                    <a href="#curriculum" class="block px-5 py-4 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-mssm-red transition">Curriculum</a>
+                    <a href="#venue" class="block px-5 py-4 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-mssm-red transition border-t border-gray-100">Venue</a>
+                    <a href="#faq" class="block px-5 py-4 text-sm font-medium text-gray-700 hover:bg-gray-50 hover:text-mssm-red transition border-t border-gray-100">FAQ</a>
+                    <div class="p-4 border-t border-gray-100">
+                        <a href="#register-form" class="block w-full text-center bg-mssm-red text-white px-5 py-3 rounded-lg text-sm font-bold shadow-md hover:bg-mssm-redDark transition">
+                            Register Free
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="relative min-h-[600px] flex items-center py-12 hero-bg">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative w-full">
+            <div class="flex flex-col lg:flex-row items-center justify-between gap-12">
+                
+                <!-- Left Content: High Impact Text -->
+                <div class="lg:w-1/2 text-white fade-in">
+                    <div class="inline-flex items-center gap-2 px-3 py-1 bg-white/20 backdrop-blur-sm border border-white/30 rounded-full mb-6">
+                        <span class="flex h-2 w-2 rounded-full bg-green-400 animate-pulse-slow"></span>
+                        <span class="text-xs font-bold uppercase tracking-wide">Admissions Open 2026</span>
+                    </div>
+
+                    <h2 class="text-4xl md:text-6xl font-extrabold tracking-tight leading-tight mb-6 text-shadow-sm">
+                        Crack TANCET with <br>
+                        <span class="text-transparent bg-clip-text bg-gradient-to-r from-red-400 to-yellow-400">Expert Guidance.</span>
+                    </h2>
+                    
+                    <p class="text-lg text-gray-200 mb-8 max-w-lg leading-relaxed shadow-black drop-shadow-md">
+                        Join the <span class="font-bold text-white">Free Preparatory Sessions</span> at MSSM. Learn from top faculty, take mock tests, and secure your MBA seat.
+                    </p>
+
+                    <!-- Hero Stats -->
+                    <div class="flex gap-8 border-t border-white/20 pt-8">
+                        <div>
+                            <p class="text-3xl font-bold text-white">100%</p>
+                            <p class="text-sm text-gray-300 font-medium">Free of Cost</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-white">5+</p>
+                            <p class="text-sm text-gray-300 font-medium">Weekend Sessions</p>
+                        </div>
+                        <div>
+                            <p class="text-3xl font-bold text-white">Top</p>
+                            <p class="text-sm text-gray-300 font-medium">Rank Results</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Content: The "FOMO" Form -->
+                <div id="register-form" class="lg:w-5/12 w-full fade-in" style="animation-delay: 0.2s">
+                    <div class="bg-white rounded-2xl shadow-form overflow-hidden relative border border-gray-100">
+                        <!-- Urgency Banner -->
+                        <div class="bg-gradient-to-r from-red-600 to-mssm-red text-white text-center py-3 px-4">
+                            <p class="text-sm font-bold flex items-center justify-center gap-2 animate-pulse">
+                                <i class="fas fa-fire"></i> 
+                                Limited Seats: First Come, First Serve!
+                            </p>
+                        </div>
+
+                        <div class="p-6 md:p-8">
+                            <div class="mb-6 border-b border-gray-100 pb-4">
+                                <h3 class="text-xl md:text-2xl font-bold text-gray-900 mb-1">Secure Your Free Spot</h3>
+                                <p class="text-green-600 text-sm font-bold flex items-center gap-2">
+                                    <i class="fas fa-check-circle"></i> 100% Sponsored by MSSM.
+                                </p>
+                            </div>
+
+                            <form onsubmit="handleFormSubmit(event)" id="leadForm" class="space-y-4">
+    <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-1">
+            <label class="text-xs font-bold text-gray-700 uppercase ml-1">Name</label>
+            <input type="text" name="name" required
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-mssm-red outline-none text-sm"
+                placeholder="John Doe">
+        </div>
+
+        <div class="space-y-1">
+            <label class="text-xs font-bold text-gray-700 uppercase ml-1">Phone</label>
+            <input type="tel" name="phone" required
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-mssm-red outline-none text-sm"
+                placeholder="98765...">
+        </div>
+    </div>
+
+    <div class="space-y-1">
+        <label class="text-xs font-bold text-gray-700 uppercase ml-1">Email</label>
+        <input type="email" name="email" required
+            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-mssm-red outline-none text-sm"
+            placeholder="john@example.com">
+    </div>
+
+    <div class="space-y-1">
+        <label class="text-xs font-bold text-gray-700 uppercase ml-1">Current College</label>
+        <input type="text" name="college" required
+            class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-mssm-red outline-none text-sm"
+            placeholder="College Name">
+    </div>
+
+    <div class="grid grid-cols-2 gap-4">
+        <div class="space-y-1">
+            <label class="text-xs font-bold text-gray-700 uppercase ml-1">Course</label>
+            <input type="text" name="course" required
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-mssm-red outline-none text-sm"
+                placeholder="B.Tech CSE">
+        </div>
+
+        <div class="space-y-1">
+            <label class="text-xs font-bold text-gray-700 uppercase ml-1">City</label>
+            <input type="text" name="city" required
+                class="w-full px-4 py-3 bg-gray-50 border border-gray-200 rounded-lg focus:ring-2 focus:ring-mssm-red outline-none text-sm"
+                placeholder="Chennai">
+        </div>
+    </div>
+
+    <!-- reCAPTCHA v2 -->
+    <div class="g-recaptcha"
+        data-sitekey="6LerS1EsAAAAAH2EPiUwNERQH4DxG6OlBa2ScSJu">
+    </div>
+
+    <button type="submit"
+        class="w-full bg-mssm-red text-white font-bold text-lg py-3 rounded-lg hover:bg-mssm-redDark transition">
+        Claim My Seat
+    </button>
+
+    <p class="text-[10px] text-center text-gray-400 mt-2">
+        Limited availability. By registering, you agree to receive updates via WhatsApp.
+    </p>
+</form>
+
+                            
+                            <!-- Success Message -->
+                            <div id="formSuccess" class="hidden absolute inset-0 bg-white flex-col items-center justify-center text-center p-8 z-10">
+                                <div class="w-16 h-16 bg-green-100 rounded-full flex items-center justify-center mb-4 animate-bounce">
+                                    <i class="fas fa-check text-2xl text-green-600"></i>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900">Submission Successful!</h3>
+                                <p class="text-gray-500 mt-2 text-sm">We will get in touch with you shortly.</p>
+                                <button onclick="location.reload()" class="mt-6 text-mssm-red font-bold text-sm hover:underline">Register Another Student</button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Details Grid -->
+    <section id="details" class="py-20 bg-white">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="text-center mb-16">
+                <span class="text-mssm-red font-bold uppercase tracking-wider text-sm">Why Join Us?</span>
+                <h2 class="text-3xl md:text-4xl font-extrabold text-gray-900 mt-2">Comprehensive Preparation</h2>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+                <!-- Card 1 -->
+                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition border border-gray-100 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 text-mssm-red group-hover:scale-110 transition-transform">
+                        <i class="fas fa-calendar-alt text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Weekend Sessions</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Structured classes on Saturdays to ensure your college/work isn't affected.</p>
+                    <div class="text-sm font-semibold text-gray-500">
+                        <i class="fas fa-clock mr-2"></i>2:00 PM Onwards
+                    </div>
+                </div>
+
+                <!-- Card 2 -->
+                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition border border-gray-100 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 text-mssm-red group-hover:scale-110 transition-transform">
+                        <i class="fas fa-book-open text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Full Syllabus</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Covers Quantitative, Verbal, Data Interpretation & General Knowledge.</p>
+                    <div class="text-sm font-semibold text-gray-500">
+                         <i class="fas fa-check-circle mr-2"></i>Study Material Included
+                    </div>
+                </div>
+
+                <!-- Card 3 -->
+                <div class="p-8 bg-gray-50 rounded-2xl hover:shadow-lg transition border border-gray-100 group">
+                    <div class="w-14 h-14 bg-white rounded-xl flex items-center justify-center shadow-sm mb-6 text-mssm-red group-hover:scale-110 transition-transform">
+                        <i class="fas fa-user-tie text-2xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-900 mb-2">Expert Mentors</h3>
+                    <p class="text-gray-600 leading-relaxed mb-4">Learn shortcuts and strategies from experienced MBA trainers.</p>
+                    <div class="text-sm font-semibold text-gray-500">
+                        <i class="fas fa-chart-line mr-2"></i>Performance Tracking
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Schedule Strip -->
+    <section class="bg-mssm-red py-16 text-white overflow-hidden relative">
+        <div class="absolute top-0 right-0 -mt-10 -mr-10 w-64 h-64 bg-white opacity-5 rounded-full blur-3xl"></div>
+        <div class="absolute bottom-0 left-0 -mb-10 -ml-10 w-64 h-64 bg-black opacity-10 rounded-full blur-3xl"></div>
+        
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+            <div class="flex flex-col md:flex-row items-center justify-between gap-8">
+                <div>
+                    <h2 class="text-3xl font-bold mb-2">Mark Your Calendar</h2>
+                    <p class="text-red-100">Don't miss a single session. Consistency is key.</p>
+                </div>
+                <div class="flex flex-wrap gap-4 justify-center md:justify-end">
+                    <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border border-white/20 text-center">
+                        <span class="block text-xs uppercase tracking-wider opacity-80">Jan</span>
+                        <span class="block text-2xl font-bold">24</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border border-white/20 text-center">
+                        <span class="block text-xs uppercase tracking-wider opacity-80">Jan</span>
+                        <span class="block text-2xl font-bold">31</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border border-white/20 text-center">
+                        <span class="block text-xs uppercase tracking-wider opacity-80">Feb</span>
+                        <span class="block text-2xl font-bold">07</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border border-white/20 text-center">
+                        <span class="block text-xs uppercase tracking-wider opacity-80">Feb</span>
+                        <span class="block text-2xl font-bold">14</span>
+                    </div>
+                    <div class="bg-white/10 backdrop-blur-sm px-6 py-4 rounded-xl border border-white/20 text-center">
+                        <span class="block text-xs uppercase tracking-wider opacity-80">Feb</span>
+                        <span class="block text-2xl font-bold">21</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Faculty & Curriculum -->
+    <section id="curriculum" class="py-20 bg-gray-50">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div class="flex flex-col lg:flex-row gap-16">
+                <!-- Curriculum List -->
+                <div class="lg:w-1/2">
+                    <h2 class="text-3xl font-bold text-gray-900 mb-8">Curriculum</h2>
+                    <div class="space-y-6">
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-blue-100 flex items-center justify-center text-blue-600 flex-shrink-0">
+                                <i class="fas fa-calculator"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">Quantitative Ability</h4>
+                                <p class="text-gray-600 text-sm mt-1">Arithmetic, Algebra, Geometry & Modern Math.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-green-100 flex items-center justify-center text-green-600 flex-shrink-0">
+                                <i class="fas fa-chart-bar"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">Data Interpretation & Reasoning</h4>
+                                <p class="text-gray-600 text-sm mt-1">Tables, Charts, Logical reasoning.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-purple-100 flex items-center justify-center text-purple-600 flex-shrink-0">
+                                <i class="fas fa-book-reader"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">Verbal Ability</h4>
+                                <p class="text-gray-600 text-sm mt-1">Reading comprehension, grammar & vocabulary.</p>
+                            </div>
+                        </div>
+                        <div class="flex gap-4">
+                            <div class="w-12 h-12 rounded-full bg-orange-100 flex items-center justify-center text-orange-600 flex-shrink-0">
+                                <i class="fas fa-globe-asia"></i>
+                            </div>
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900">General Knowledge</h4>
+                                <p class="text-gray-600 text-sm mt-1">Current Affairs, Business Awareness & Monthly quizzes.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Faculty List -->
+                <div class="lg:w-1/2 bg-white p-8 rounded-2xl shadow-sm border border-gray-100">
+                    <h3 class="text-2xl font-bold text-gray-900 mb-6 border-b pb-4">Course Mentors</h3>
+                    <ul class="space-y-6">
+                        <li class="flex items-center justify-between group cursor-default">
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900 group-hover:text-mssm-red transition">Dr. Saiju M John</h4>
+                                <span class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Director</span>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-300">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </div>
+                        </li>
+                        <li class="flex items-center justify-between group cursor-default">
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900 group-hover:text-mssm-red transition">Dr. D. Gomathy</h4>
+                                <span class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Professor & Addl. Director</span>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-300">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </div>
+                        </li>
+                        <li class="flex items-center justify-between group cursor-default">
+                            <div>
+                                <h4 class="text-lg font-bold text-gray-900 group-hover:text-mssm-red transition">Mr. S. Devananth</h4>
+                                <span class="text-sm font-semibold text-gray-400 uppercase tracking-wider">Assistant Professor & HOD</span>
+                            </div>
+                            <div class="w-8 h-8 rounded-full bg-gray-50 flex items-center justify-center text-gray-300">
+                                <i class="fas fa-chevron-right text-xs"></i>
+                            </div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FAQ Section -->
+    <section id="faq" class="py-20 bg-white border-t border-gray-100">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
+            <h2 class="text-3xl font-bold text-center text-gray-900 mb-12">Frequently Asked Questions</h2>
+            
+            <div class="space-y-4">
+                <!-- FAQ 1 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-5 text-left bg-gray-50 hover:bg-gray-100 transition focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-gray-900">Who is eligible to attend these sessions?</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-gray-600 border-t border-gray-100">
+                            Any final year student or graduate aspiring to pursue an MBA and planning to write the TANCET exam can attend these sessions.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 2 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-5 text-left bg-gray-50 hover:bg-gray-100 transition focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-gray-900">Is there any registration fee?</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-gray-600 border-t border-gray-100">
+                            No, the entire coaching program is completely sponsored by MSSM and is 100% free of cost for all participants.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 3 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-5 text-left bg-gray-50 hover:bg-gray-100 transition focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-gray-900">What materials will be provided?</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-gray-600 border-t border-gray-100">
+                            Students will receive printable notes, access to recorded sessions (if applicable), and mock test papers for practice.
+                        </div>
+                    </div>
+                </div>
+
+                <!-- FAQ 4 -->
+                <div class="border border-gray-200 rounded-lg overflow-hidden">
+                    <button class="w-full flex justify-between items-center p-5 text-left bg-gray-50 hover:bg-gray-100 transition focus:outline-none" onclick="toggleAccordion(this)">
+                        <span class="font-bold text-gray-900">Where are the classes conducted?</span>
+                        <i class="fas fa-chevron-down text-gray-500 transition-transform duration-300"></i>
+                    </button>
+                    <div class="accordion-content bg-white">
+                        <div class="p-5 text-gray-600 border-t border-gray-100">
+                            The classes are held offline at the Dr. K. S. Babai Seminar Hall, MSSM Campus, Kodambakkam, Chennai.
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Location / Venue Section -->
+    <section id="venue" class="relative bg-white py-0 h-96">
+        <div class="absolute inset-0 w-full h-full">
+            <iframe 
+                src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d7773.415822272236!2d80.226737!3d13.054255!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3a5266f237c5fe8d%3A0x9aad278bb20e48be!2sMeenakshi%20Sundararajan%20School%20of%20Management!5e0!3m2!1sen!2sin!4v1768932617829!5m2!1sen!2sin" 
+                width="100%" 
+                height="100%" 
+                style="border:0;" 
+                allowfullscreen="" 
+                loading="lazy">
+            </iframe>
+            
+        </div>
+        <!-- Overlay Card  
+         <div class="absolute top-8 left-8 bg-white p-6 rounded-xl shadow-2xl max-w-sm hidden md:block border border-gray-200">
+             <h4 class="font-bold text-gray-900 text-lg mb-2">Venue Location</h4>
+             <p class="text-gray-600 text-sm mb-4">
+                 Dr. K. S. Babai Seminar Hall,<br>
+                 Meenakshi Sundararajan School of Management,<br>
+                 363, Arcot Road, Kodambakkam, Chennai - 600 024.
+             </p>
+ a href="https://maps.app.goo.gl/SKErNfxJGGgD6RM3A" target="_blank" class="text-mssm-red text-sm font-bold hover:underline flex items-center gap-1">
+                 <i class="fas fa-directions"></i> Get Directions
+             </a>
+        </div>-->
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-mssm-dark text-white py-12">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center gap-6">
+            <div class="text-center md:text-left">
+                <img src="tancet26/logo.png" style="max-width:80px; margin-bottom:20px">
+                <p class="text-gray-400 text-sm mt-1">Excellence in Management Education since 2001.</p>
+            </div>
+            
+            <div class="flex gap-6">
+                <a href="https://www.facebook.com/mssm5/" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#1877F2] transition text-white">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+                <a href="https://www.instagram.com/mssm_mba_official/?hl=en" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#E4405F] transition text-white">
+                    <i class="fab fa-instagram"></i>
+                </a>
+                <a href="https://in.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229" target="_blank" class="w-10 h-10 rounded-full bg-gray-800 flex items-center justify-center hover:bg-[#0A66C2] transition text-white">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+            </div>
+        </div>
+        <div class="max-w-7xl mx-auto px-4 mt-8 pt-8 border-t border-gray-800 text-center text-xs text-gray-500">
+            &copy; 2026 Meenakshi Sundararajan School of Management. All rights reserved.
+        </div>
+        <div class="max-w-7xl mx-auto px-4 pt-8 text-center text-xs text-gray-500">
+            Powered By <a href="https://vleafy.com" target="_blank">Vleafy</a>
+        </div>
+    </footer>
+
+    <!-- Floating Action Bar (Responsive Design) -->
+    <!-- Desktop: Vertical Stack Bottom Right -->
+    <div class="hidden md:flex fixed bottom-8 right-8 z-50 flex-col gap-4">
+        <!-- Register -->
+        <a href="#register-form" class="group relative flex items-center justify-center w-14 h-14 bg-mssm-red text-white rounded-full shadow-float hover:scale-110 transition-transform hover:bg-mssm-redDark">
+            <i class="fa-solid fa-pen-to-square fas fa-edit text-xl"></i>
+            <!-- Tooltip -->
+            <span class="absolute right-16 bg-gray-900 text-white text-xs font-bold px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md">Register Now</span>
+        </a>
+        
+        <!-- Call -->
+        <a href="tel:919840721869" class="group relative flex items-center justify-center w-14 h-14 bg-mssm-dark text-white rounded-full shadow-float hover:scale-110 transition-transform">
+            <i class="fa-solid fa-phone fas fa-phone text-xl"></i>
+            <span class="absolute right-16 bg-gray-900 text-white text-xs font-bold px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md">Call Us</span>
+        </a>
+
+        <!-- WhatsApp -->
+        <a href="https://wa.me/message/4YXUDCOCPQ4TL1" target="_blank" class="group relative flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-float hover:scale-110 transition-transform">
+            <i class="fa-brands fa-whatsapp fab fa-whatsapp text-2xl"></i>
+            <span class="absolute right-16 bg-gray-900 text-white text-xs font-bold px-3 py-1.5 rounded opacity-0 group-hover:opacity-100 transition-opacity whitespace-nowrap shadow-md">Chat on WA</span>
+        </a>
+    </div>
+
+    <!-- Mobile: Floating Horizontal Pill (App-like feel) -->
+    <div class="md:hidden fixed bottom-6 left-1/2 -translate-x-1/2 z-50 flex items-center gap-2 bg-white/90 backdrop-blur-xl p-1.5 rounded-full shadow-2xl border border-gray-200">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/message/4YXUDCOCPQ4TL1" target="_blank" class="flex items-center justify-center w-11 h-11 bg-[#25D366] text-white rounded-full shadow-sm active:scale-95 transition-transform">
+            <i class="fa-brands fa-whatsapp fab fa-whatsapp text-xl"></i>
+        </a>
+        
+        <!-- Call -->
+        <a href="tel:919840721869" class="flex items-center justify-center w-11 h-11 bg-mssm-dark text-white rounded-full shadow-sm active:scale-95 transition-transform">
+            <i class="fa-solid fa-phone fas fa-phone text-lg"></i>
+        </a>
+
+        <!-- Register (Prominent) -->
+        <a href="#register-form" class="flex items-center gap-2 px-5 h-11 bg-mssm-red text-white rounded-full shadow-sm active:scale-95 transition-transform">
+            <span class="text-xs font-bold uppercase tracking-wider">Register</span>
+            <i class="fa-solid fa-arrow-right fas fa-arrow-right text-xs"></i>
+        </a>
+    </div>
+
+    <script>
+        // Accordion functionality
+        function toggleAccordion(button) {
+            const content = button.nextElementSibling;
+            const icon = button.querySelector('i');
+            
+            // Toggle active class on content
+            content.classList.toggle('active');
+            
+            if (content.classList.contains('active')) {
+                content.style.maxHeight = content.scrollHeight + "px";
+                icon.style.transform = "rotate(180deg)";
+            } else {
+                content.style.maxHeight = "0";
+                icon.style.transform = "rotate(0deg)";
+            }
+        }
+
+        // Mobile menu toggle
+        (function () {
+            const btn = document.getElementById('mobileMenuBtn');
+            const menu = document.getElementById('mobileMenu');
+            const icon = document.getElementById('mobileMenuIcon');
+
+            if (!btn || !menu || !icon) return;
+
+            function openMenu() {
+                menu.classList.remove('hidden');
+                btn.setAttribute('aria-expanded', 'true');
+                icon.classList.remove('fa-bars', 'fas');
+                icon.classList.add('fa-xmark', 'fa-solid');
+            }
+
+            function closeMenu() {
+                menu.classList.add('hidden');
+                btn.setAttribute('aria-expanded', 'false');
+                icon.classList.remove('fa-xmark');
+                icon.classList.add('fa-bars');
+            }
+
+            btn.addEventListener('click', function (e) {
+                e.stopPropagation();
+                const isOpen = !menu.classList.contains('hidden');
+                if (isOpen) closeMenu();
+                else openMenu();
+            });
+
+            // Close when clicking a link
+            menu.addEventListener('click', function (e) {
+                const target = e.target;
+                if (target && target.closest && target.closest('a')) {
+                    closeMenu();
+                }
+            });
+
+            // Close when clicking outside
+            document.addEventListener('click', function (e) {
+                const isOpen = !menu.classList.contains('hidden');
+                if (!isOpen) return;
+                if (menu.contains(e.target) || btn.contains(e.target)) return;
+                closeMenu();
+            });
+
+            // Close on resize to desktop
+            window.addEventListener('resize', function () {
+                if (window.innerWidth >= 768) closeMenu();
+            });
+        })();
+    </script>
+    
+    <script>
+  const SCRIPT_URL =
+    "https://script.google.com/macros/s/AKfycbyADNJi83zJ8r80ZWZFhj7it9_YoX1wTj7jJ_LQVATkUaYlZSJAZn5RBtg-TIrjgECCuA/exec";
+
+  async function handleFormSubmit(event) {
+    event.preventDefault();
+
+    const form = document.getElementById("leadForm");
+    const btn = form.querySelector('button[type="submit"]');
+
+    // Basic validation
+    const name = form.name.value.trim();
+    const phone = form.phone.value.trim();
+    const email = form.email.value.trim();
+    const college = form.college.value.trim();
+    const course = form.course.value.trim();
+    const city = form.city.value.trim();
+
+    if (!name || !phone || !email || !college || !course || !city) {
+      alert("Please fill all required fields");
+      return;
+    }
+
+    // Button loading state
+    const oldBtnHtml = btn.innerHTML;
+    btn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Submitting...';
+    btn.disabled = true;
+    btn.classList.add("opacity-75");
+
+    try {
+      // reCAPTCHA v2 token (widget)
+  let token = "N/A";
+  if (window.grecaptcha && typeof grecaptcha.getResponse === "function") {
+    token = grecaptcha.getResponse();
+    if (!token) {
+      alert("Please verify the reCAPTCHA");
+      return;
+    }
+  }
+
+      // India datetime
+      const now = new Date();
+      const date = now.toLocaleDateString("en-GB", { timeZone: "Asia/Kolkata" });
+      const time = now.toLocaleTimeString("en-GB", { timeZone: "Asia/Kolkata" });
+      const dt = `${date} ${time}`;
+
+      const params = new URLSearchParams({
+        sheetName: "Sheet1",
+        Name: name,
+        Mobile: phone,
+        Email: email,
+        "College/ Institution Name": college,
+        "Department/Course": course,
+        City: city,
+        DateTime: dt,
+        Source:'Landing Page'
+      });
+
+      await fetch(`${SCRIPT_URL}?${params.toString()}`, {
+        method: "GET",
+        mode: "no-cors",
+      });
+
+      form.reset();
+
+      // Show success UI
+      const success = document.getElementById("formSuccess");
+      success.classList.remove("hidden");
+      success.classList.add("flex");
+    } catch (err) {
+      console.error(err);
+      alert("Submission failed. Please try again.");
+    } finally {
+      btn.innerHTML = oldBtnHtml;
+      btn.disabled = false;
+      btn.classList.remove("opacity-75");
+    }
+  }
+</script>
+
+<script src="https://www.google.com/recaptcha/api.js" async defer></script>
+    
+    
+<script defer src="https://static.cloudflareinsights.com/beacon.min.js/vcd15cbe7772f49c399c6a5babf22c1241717689176015" integrity="sha512-ZpsOmlRQV6y907TI0dKBHq9Md29nnaEIPlkf84rnaERnq6zvWvPUqr2ft8M1aS28oN72PdrCzSjY4U6VaAw1EQ==" data-cf-beacon='{"version":"2024.11.0","token":"e32050a811da482fa6b42b471a4e3814","r":1,"server_timing":{"name":{"cfCacheStatus":true,"cfEdge":true,"cfExtPri":true,"cfL4":true,"cfOrigin":true,"cfSpeedBrain":true},"location_startswith":null}}' crossorigin="anonymous"></script>
+</body>
+</html>

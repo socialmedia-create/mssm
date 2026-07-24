@@ -1,0 +1,449 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Industry-Institution Connect</title>
+     <link rel="icon" href="assets/logo/logo(2).png" type="image/x-icon">
+</head>
+<body></body>
+</html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+  justify-content: space-between;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+      <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        .GFG { 
+           width:100px;
+           height:50px;
+           background:#00254e;
+           border:none;
+           color:white;
+        } 
+        
+
+        </style>
+        
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: center;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  float: center;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  float: center;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+
+
+<body>
+
+            <div class="container-fluid">
+               
+                   
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                  
+            </div>
+        </nav>
+
+        <a href="#" title="MSSM">
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" ><img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/> </h1>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+	<ul class="dropdown-menu"> 
+		<li><a href="management.html">Management </a></li>
+		<li><a href="MBA.html">M.B.A </a></li>	
+		<li><a href="whymssm.html">Why MSSM </a></li>
+	</ul>
+    <li class ="dropdown">
+	
+
+	<li><a href="Infrastructure.html">Infrastructure </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Prof&amp;Dir.html">Professor &amp; Director </a></li>
+		<li><a href="ofm.html">Faculty Members </a></li>
+	</ul>
+	</li>	
+
+	<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>
+
+	
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Edge <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Research Faculty.html">Research Faculty </a></li>
+		<li><a href="coming_soon.html">Research Publications </a></li>
+		<li><a href="coming_soon.html">Research Activity </a></li>
+			</ul>
+	</li>
+	
+	<li><a href="gallery.html">Gallery </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	    <li><a href="graduation19th.html">19th GRADUATION DAY </a></li>
+	    <li><a href="graduationday18.html">18th GRADUATION DAY </a></li>
+	    <li><a href="graduationday17.html">17th GRADUATION DAY </a></li>
+		<li><a href="graduationday16.html">16th GRADUATION DAY </a></li>
+		<li><a href="graduationday15.html">15th GRADUATION DAY </a></li>
+	
+		
+		
+	</ul>
+	</li>
+	<li><a href="placement_new.html">Placement Cell </a></li>
+	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+	<li><a href="contact.html">Contact Us </a></li>
+</ul>
+                        
+
+                </div>
+            </div>
+        </nav>
+
+</div>
+                            </div>
+
+                        </div>
+
+      
+                    </div>
+
+                </div>
+
+                <div class="col-sm-1"></div>
+
+<div class="container">
+            <div class="row">            
+                <div class="col-sm-16" style="text-align: center">
+                    <h3>Industry-Institution Connect</h3>
+                    <br>
+			</div>
+			
+<br>			
+		<div class="container">
+            <div class="row">            
+                <div class="col-sm-16" style="text-align: center">
+
+            
+<div class="container">
+  <a target="_blank" href="assets/img/sankaran1.png">
+    <img src="assets/img/sankaran1.png" alt="" width="30%" height="20%">
+  </a>
+</div>
+<br>
+<p class="title">Dr. H.Sankaran M.B.A., M.A., B.G.L., D.L.A.L., Ph.D. <br> Dean Industry - Institute Connect </p>
+</div>
+</div>
+</div>
+			
+<br>			
+			
+			
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 5</div>
+    <img src="assets/Industrialvisit/G&B 1.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 5</div>
+    <img src="assets/Industrialvisit/G&B 5.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 5</div>
+    <img src="assets/Industrialvisit/G&B 3.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 5</div>
+    <img src="assets/Industrialvisit/Brakes India.jpeg" style="width:100%">
+  </div>
+  <a class="prev" onclick="plusSlides(-1)">❮</a>
+  <a class="next" onclick="plusSlides(1)">❯</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+<div class="container">
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="assets/Industrialvisit/G&B 1.jpeg" style="width:100%" onclick="currentSlide(1)" alt="Industrial Visit on 16/10/2023 to Godrej & Boyce, Ambattur (2023-2025)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Industrialvisit/G&B 5.jpeg" style="width:100%" onclick="currentSlide(2)" alt="Industrial Visit on 16/10/2023 to Godrej & Boyce, Ambattur (2023-2025)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Industrialvisit/G&B 3.jpeg" style="width:100%" onclick="currentSlide(3)" alt="Industrial Visit on 16/10/2023 to Godrej & Boyce, Ambattur (2023-2025)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Industrialvisit/Brakes India.jpeg" style="width:100%" onclick="currentSlide(4)" alt="Industrial Visit on 16/10/2023 to Brakes India Pvt Ltd, Padi (2023-2025)">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="assets/Industrialvisit/2nd yrs industvist.JPG" style="width:100%" onclick="currentSlide(5)" alt="The India Cements Limited Sankari Plant, Salem (2022-2024)">
+    </div>
+  </div>
+</div>
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+
+</body>
+
+
+ 
+
+
+</html>
+

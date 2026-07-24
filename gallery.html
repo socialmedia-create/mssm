@@ -1,0 +1,353 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MSSM Album</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+       <!-- image next to title in tab <link rel="shortcut icon" href="assets/img/alumnigroup.JPG"> -->
+        <link rel="icon" href="favicon.ico" type="image/x-icon"> 
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+        
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+    </style>
+    
+    <!-- THE ALBUM STYLE CODE BEGIN -->
+    <style>
+
+img{ max-width:100%;}
+
+.gallery_box li{ width:33.333333%; max-width: 100% ; display:inline-block; float: left; text-align: center; overflow: hidden;    position: relative;}
+.gallery_box{ padding:0;display: flow-root;}
+
+.gallery_box li:hover img {
+    -moz-transform: scale(1.1);
+    -webkit-transform: scale(1.1);
+    -ms-transform: scale(1.1);
+    -o-transform: scale(1.1);
+    transform: scale(2.2);
+}
+.gallery_box li img{-webkit-transition: transform 0.5s ease;
+    -o-transition: transform 0.5s ease;
+    transition: transform 0.5s ease;}
+    
+.gallery_box li:nth-child(even) {
+    height: 304px;
+}
+.gallery_box li:nth-child(odd) {
+    height: 438px; 
+}
+.gallery_box li:nth-child(odd) .box_data{ background:rgba(0,0,0,0.17) }
+.gallery_box li:nth-child(even) .box_data{ background:rgba(0,44,255,0.27) }
+.gallery_box .box_data{ position:absolute; top: 0; left: 0; right:0; bottom:0; color:#fff;}
+.gallery_box .box_data span{ position:absolute; top: 50%; transform: translateY(-50%); left:0 ; right:0; font-size:24px;}
+.gallery_box li:hover .box_data{ background:rgba(225,0,39,0.55)}
+
+</style>
+
+
+    </head>
+    
+    <!-- BODY OF THE PAGE BEGINS -->
+    
+    <body>
+        
+            <div class="container-fluid">
+               
+                   
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                  
+            </div>
+        
+
+        <a href="index.html" title="MSSM">
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" > <a href="index.html"> <img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/> </h1>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="management.html"> Management </a></li>
+                           
+                             <li><a href="MBA.html"> M.B.A </a></li>
+                        <li><a href="whymssm.html"> Why MSSM </a></li> 
+                        </ul>
+                        <li><a href="Infrastructure.html"> Infrastructure </a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Faculty <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Prof&Dir.html"> Professor & Director </a></li>
+                                <li><a href="ofm.html"> Other Faculty Members </a> </li> </ul>
+                                  <li class="dropdown">
+                           <li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>
+
+                            <!--
+                            <ul class="dropdown-menu">
+                                <li><a href="batch19_21.html"> Batch of 2019-2021 </a></li>
+                            </ul> 
+                            -->
+                        <li><a href="IIC2.html"> Industrial-Institute Connect </a></li>
+                           <!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Placement  <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	    <li><a href="about_placement.html">About</a></li>
+	    <li><a href="coming_soon.html">2023-2025 Placement </a></li>
+	    <li><a href="placement_22_24.html">2022-2024 Placement </a></li>
+	    
+	    </ul>
+	</li>-->
+                            	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+			<li><a href="contact.html"> Contact Us </a></li>                            
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+
+<!-- BODY OF THE ALBUM COMMENCE HERE -->
+
+    
+    
+<ul class="gallery_box">
+	
+<li>
+		<a href="galleryalumi1.html"><img src="assets/thumbnail/alumnigroup2.jpg">
+		
+<div class="box_data">
+			
+<span>Alumni Association</span>
+		
+</div>
+</a>
+	
+</li>
+		
+
+<li>
+		
+<a href="galleryHappy1.html"><img src="assets/thumbnail/4.jpg">
+		
+<div class="box_data">
+			
+<span>Happy Class</span>
+		
+</div></a>
+	
+</li>
+	
+	
+	<li>
+		
+<a href="galleryGust1.html">
+<img src="assets/thumbnail/guest.JPG">
+
+		<div class="box_data">
+			
+<span>Guest Lectures</span>
+		
+</div>
+</a>
+	
+</li>	
+
+<li>
+		
+<a href="gallerygroup1.html"><img src="assets/Groupphoto/02.jpeg">
+		
+<div class="box_data">
+			
+<span>Group Photo</span>
+		
+</div></a>
+	
+</li>
+			
+
+
+			
+
+<li style="    position: relative;
+    top: -134px;">
+		
+<a href="galleryTour1.html"><img src="assets/thumbnail/tor.jpg">
+		
+<div class="box_data">
+			
+<span>College Tour</span>
+		
+</div>
+</a>
+	
+</li>
+			
+
+
+
+
+				
+
+	
+
+
+	
+<li>
+		<a href="galleryCeleb1.html"><img src="assets/thumbnail/IMG20230908143748.jpg">
+		
+<div class="box_data">
+			
+<span>Celebrations</span>
+		
+</div>
+</a>
+
+	</li>
+	
+
+</ul>
+    
+    
+    <!-- FOOTER OF THE WEBSITE -->
+    
+ <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+
+            <center> All Rights Reserved </center>
+            
+        </footer>
+        
+    </body>
+</html>

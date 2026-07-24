@@ -1,0 +1,521 @@
+<!DOCTYPE html>
+<html>
+    
+    
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+<style type="text/css">
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.cnt223 a{
+text-decoration: none;
+}
+.popup{
+width: 80%;
+margin: 0 auto;
+display: none;
+position: absolute;
+z-index: 101;
+}
+ .popupBoxWrapper{
+     max-width: 550px;
+     width: 95%;
+     margin: 
+     50px auto; 
+     text-align: center;
+ }
+.cnt223{
+min-width: 400px;
+width: 570px;
+min-height: 50px;
+margin: 50px auto;
+background: #f3f3f3;
+position: relative;
+z-index: 103;
+padding: 15px 35px;
+border-radius: 1px;
+box-shadow: 0 2px 5px #000;
+}
+.cnt223 p{
+clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 40px;
+    font-family: sans-serif;
+}
+.cnt223 p a{
+color: #d91900;
+font-weight: bold;
+}
+.cnt223 .x{
+float: right;
+height: 35px;
+left: -20px;
+position: relative;
+top: -20px;
+width: 50px;
+}
+
+.footer {
+     background-color:#1f2836;
+     padding:70px 0px;
+     width:100%;
+     float:left;
+}
+ .footer-sect {
+     width:33%;
+     float:left;
+}
+ .footer-sect h2 {
+     color:#fff;
+     margin-bottom: 20px;
+}
+ .footer-sect p {
+     color: #fff;
+     line-height: 22px;
+     padding:0px 30px 20px 0px;
+}
+ .footer-menu li {
+     width: 50%;
+     float: left;
+     margin-bottom: 10px;
+}
+ .footer-menu li a {
+     color:#fff;
+     text-decoration: none;
+}
+ .footer-contact li {
+     margin-bottom:15px;
+     list-style: none;
+     color: #fff;
+}
+
+footer {
+    text-align: center;
+}
+
+.social-icons {
+    list-style-type: none;
+    padding: 0;
+}
+
+.social-icons li {
+    display: inline-block;
+    margin: 0 10px; /* Adjust the spacing between icons */
+}
+
+.social-icons img {
+    width: 40px; /* Adjust the size of icons */
+    height: auto;
+}
+</style>
+
+
+
+ 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Happy class</title>
+     <link rel="icon" href="assets/logo/logo(2).png" type="image/x-icon">
+</head>
+<body></body>
+</html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+<style type="text/css">#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+</style>
+<style type="text/css">/* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 1000px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1000px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+</style>
+<style type="text/css">a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+/********** Slider and Notification CSS Starts **********/  
+.banner {
+     width:100%;
+     border-top:1px solid #cccfff;
+}
+ .notification {
+     width: 100%;
+     float: left;
+     padding: 12px;
+     background: #ebebeb;
+}
+ .notification b {
+     color: red;
+     font-size: 18px;
+     float: left;
+     position: absolute;
+     background: #e3e3e3;
+     z-index: 9999;
+}
+ .notification marquee {
+     list-style:none;
+     font-size: 16px;
+}
+ .notification marquee img {
+     height:16px;
+}
+/********** Slider and Notification CSS Ends **********/
+</style>
+
+
+
+<h1 style="text-align: center; float: none; clear: both; margin: 0 auto;"><a href="#" title="MSSM"><img src="assets\img\mssm_logo.jpg" style="max-width: 100%;" /></a></h1>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header"><button class="navbar-toggle" data-target="#navBar" data-toggle="collapse" type="button"></button></div>
+
+<div class="collapse navbar-collapse" id="navBar">
+<ul class="nav navbar-nav">
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+	<ul class="dropdown-menu"> 
+		<li><a href="management.html">Management </a></li>
+		<li><a href="MBA.html">M.B.A </a></li>	
+		<li><a href="whymssm.html">Why MSSM </a></li>
+	</ul>
+    <li class ="dropdown">
+	
+
+	<li><a href="Infrastructure.html">Infrastructure </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Prof&amp;Dir.html">Professor &amp; Director </a></li>
+		<li><a href="ofm.html">Faculty Members </a></li>
+	</ul>
+	</li>	
+
+	<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>
+	<li><a href="IIC2.html">Industry-Institution Connect </a></li>
+	
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Edge <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Research Faculty.html">Research Faculty </a></li>
+		<li><a href="coming_soon.html">Research Publications </a></li>
+		<li><a href="coming_soon.html">Research Activity </a></li>
+			</ul>
+	</li>
+	
+	<li><a href="gallery.html">Gallery </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	    <li><a href="graduation19th.html">19th GRADUATION DAY </a></li>
+	    <li><a href="graduationday18.html">18th GRADUATION DAY </a></li>
+	    <li><a href="graduationday17.html">17th GRADUATION DAY </a></li>
+		<li><a href="graduationday16.html">16th GRADUATION DAY </a></li>
+		<li><a href="graduationday15.html">15th GRADUATION DAY </a></li>
+	
+		
+		
+	</ul>
+	</li>
+	<li><a href="placement_new.html">Placement Cell </a></li>
+	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+	<li><a href="contact.html">Contact Us </a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+    
+    
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>     .header {
+            background-color: #ECB200;
+            color: white;
+            width: 100%;
+            text-align: center;
+            padding: 10px;
+            font-size: 24px;
+            font-weight: bold;
+        }</style>
+<style>
+body {font-family: Arial, Helvetica, sans-serif;}
+
+#myImg, .moreImgs {
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+#myImg:hover, .moreImgs:hover {opacity: 0.7;}
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  padding-top: 100px; /* Location of the box */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+}
+
+/* Modal Content (image) */
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Caption of Modal Image */
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+/* Add Animation */
+.modal-content, #caption {  
+  -webkit-animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+  animation-name: zoom;
+  animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {-webkit-transform:scale(0)} 
+  to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+  from {transform:scale(0)} 
+  to {transform:scale(1)}
+}
+
+/* The Close Button */
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: white;
+  font-size: 60px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: white;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px){
+  .modal-content {
+    width: 100%;
+  }
+}
+
+</style>
+</head>
+    <div class="header">
+        Happy Class
+    </div>
+<br>
+<body>
+<div class="col-sm-16" style="text-align: center">
+    <img class="moreImgs" src="assets/Happyclass/WhatsApp Image 2024-08-26 at 6.07.32 PM.jpeg" alt="" style="width:100%;max-width:300px">
+<img class="moreImgs" src="assets/Happyclass/WhatsApp Image 2024-08-26 at 6.07.29 PM.jpeg" alt="" style="width:100%;max-width:300px">
+<img class="moreImgs" src="assets/Happyclass/WhatsApp Image 2024-08-26 at 6.07.29 PM (1).jpeg" alt="" style="width:100%;max-width:300px">
+<img class="moreImgs" src="assets/Happyclass/WhatsApp Image 2024-08-26 at 6.07.31 PM.jpeg" alt="" style="width:100%;max-width:300px">
+
+</div>
+<br>
+<div class="col-sm-16" style="text-align: center">
+<img class="moreImgs" src="assets/Happyclass/WhatsApp Image 2024-08-26 at 6.07.32 PM.jpeg" alt="" style="width:100%;max-width:300px">
+<img class="moreImgs" src="assets/Happyclass/WhatsApp Image 2024-08-26 at 6.07.33 PM.jpeg" alt="" style="width:100%;max-width:300px">
+<img class="moreImgs" src="assets/Happyclass/WhatsApp Image 2024-08-26 at 6.07.30 PM.jpeg" alt="" style="width:100%;max-width:300px">
+</div>
+<!-- The Modal -->
+<div id="myModal" class="modal">
+  <span class="close">&times;</span>
+  <img class="modal-content" id="img01">
+  <div id="caption"></div>
+</div>
+
+<script>
+// Get the modal
+var modal = document.getElementById("myModal");
+
+// Get the modal image and caption
+var modalImg = document.getElementById("img01");
+var captionText = document.getElementById("caption");
+
+// Function to open modal
+function openModal(event) {
+  modal.style.display = "block";
+  modalImg.src = event.target.src;
+  captionText.innerHTML = event.target.alt;
+}
+
+// Attach event listeners to all images with class 'moreImgs'
+var imgs = document.querySelectorAll(".moreImgs");
+imgs.forEach(function(img) {
+  img.addEventListener("click", openModal);
+});
+
+// Get the <span> element that closes the modal
+var span = document.getElementsByClassName("close")[0];
+
+// When the user clicks on <span> (x), close the modal
+span.onclick = function() { 
+  modal.style.display = "none";
+}
+</script>
+<br>
+</body>
+</html>
+
+
+
+<footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+<center><font size="4">363, Arcot Road, Kodambakkam, Chennai - 600 024 </font></center>
+</footer>
+
+<footer class="w3-center" style="background-color: black; padding: 2px; color: #ffffff">
+<center><font size="4">All Rights Reserved </font></center>
+
+<p></p>
+</footer>
+
+
+
+
+
+

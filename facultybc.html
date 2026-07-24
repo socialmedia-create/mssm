@@ -1,0 +1,423 @@
+
+
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+<style type="text/css">
+#overlay {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: #000;
+filter:alpha(opacity=70);
+-moz-opacity:0.7;
+-khtml-opacity: 0.7;
+opacity: 0.7;
+z-index: 100;
+display: none;
+}
+.cnt223 a{
+text-decoration: none;
+}
+.popup{
+width: 80%;
+margin: 0 auto;
+display: none;
+position: absolute;
+z-index: 101;
+}
+ .popupBoxWrapper{
+     max-width: 550px;
+     width: 95%;
+     margin: 
+     50px auto; 
+     text-align: center;
+ }
+.cnt223{
+min-width: 400px;
+width: 570px;
+min-height: 50px;
+margin: 50px auto;
+background: #f3f3f3;
+position: relative;
+z-index: 103;
+padding: 15px 35px;
+border-radius: 1px;
+box-shadow: 0 2px 5px #000;
+}
+.cnt223 p{
+clear: both;
+    color: #555555;
+    /* text-align: justify; */
+    font-size: 40px;
+    font-family: sans-serif;
+}
+.cnt223 p a{
+color: #d91900;
+font-weight: bold;
+}
+.cnt223 .x{
+float: right;
+height: 35px;
+left: -20px;
+position: relative;
+top: -20px;
+width: 50px;
+}
+
+
+</style>
+
+
+
+ 
+
+
+
+
+<!DOCTYPE html>
+<html>
+<head>
+</head>
+<body></body>
+</html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meenakshi Sundararajan School of Management</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<style type="text/css">#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+</style>
+<style type="text/css">/* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 1000px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1000px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+</style>
+<style type="text/css">a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+</style>
+
+
+<h1 style="text-align: center; float: none; clear: both; margin: 0 auto;"><a href="#" title="MSSM"><img src="assets\img\mssm_logo.jpg" style="max-width: 100%;" /></a></h1>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header"><button class="navbar-toggle" data-target="#navBar" data-toggle="collapse" type="button"></button></div>
+
+<div class="collapse navbar-collapse" id="navBar">
+<ul class="nav navbar-nav">
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+	<ul class="dropdown-menu"> 
+		<li><a href="management.html">Management </a></li>
+		<li><a href="MBA.html">M.B.A </a></li>	
+		<li><a href="whymssm.html">Why MSSM </a></li>
+	</ul>
+    <li class ="dropdown">
+	
+
+	<li><a href="Infrastructure.html">Infrastructure </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Prof&amp;Dir.html">Professor &amp; Director </a></li>
+		<li><a href="ofm.html">Faculty Members </a></li>
+	</ul>
+	</li>	
+
+	<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>
+	<li><a href="IIC.html">Industry-Institution Connect </a></li>
+	
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Edge <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Research Faculty.html">Research Faculty </a></li>
+		<li><a href="">Research Publications </a></li>
+		<li><a href="">Research Activity </a></li>
+			</ul>
+	</li>
+	
+	<li><a href="gallery.html">Gallery </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="graduationday15.html">15th GRADUATION DAY </a></li>
+		<li><a href="graduationday16.html">16th GRADUATION DAY </a></li>
+		<li><a href="graduationday17.html">17th GRADUATION DAY </a></li>
+		<li><a href="graduationday18.html">18th GRADUATION DAY </a></li>
+		<li><a href="graduation19th.html">19th GRADUATION DAY </a></li>
+	</ul>
+	</li>
+	<li><a href="placement.html">Placement Cell </a></li>
+	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+	<li><a href="contact.html">Contact Us </a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<div class="col-sm-3"></div>
+</div>
+<br>
+</div>
+<style>.bg-grey {
+	background-color: #f7f6ff;
+}
+.heading {
+	text-align: center;
+	width: 100%;
+	float: left;
+	padding-bottom:20px;
+}
+.heading h5 {
+	-webkit-text-stroke-width: 2px;
+	-webkit-text-stroke-color: #292929;
+	font-size: 7vw;
+	color: transparent;
+	font-weight: 600;
+	letter-spacing: 0.8rem;
+	opacity: 0.05;
+	pointer-events: none;
+	margin: 0px;
+	padding: 0px;
+}
+.heading h2 {
+	font-weight: 600!important;
+	color: #292929;
+	margin: 0px;
+	padding: 0px;
+	position: relative;
+	bottom:70px;
+}
+.heading-border {
+	height: 4px;
+	width:40px;
+	margin-bottom:10px;
+	margin-top: 0px;
+	display: inline-block;
+	background-color:#cb7c6f;
+}
+@media only screen and (max-width:768px) {
+.heading h2 {
+ bottom: 10px;
+ font-size: 18px;
+}
+.heading-border {
+ height:2px;
+ width: 20px;
+ margin-bottom:6px;
+ margin-top: 0px;
+}
+}
+/
+.about-img img {
+	width: 100%;
+}
+.about-info h2 {
+	border-left: 2px solid #ea4020;
+	padding-left: 10px;
+	font-size: 18px;
+	margin-bottom: 25px;
+	margin-top: 25px;
+}
+.about-info h3 {
+	font-weight: 500;
+	color: #292929;
+	font-size: 18px;
+	margin-top: 20px;
+	padding-left: 10px;
+}
+.about-info p {
+	padding-left: 10px;
+	color: #555a64;
+	font-size: 15px;
+	line-height: 25px;
+	margin-top: 15px;
+}
+.about-info .about-tool {
+	display: flex;
+	flex-wrap: wrap;
+	margin-top: 28px;
+	margin-bottom: 32px;
+}
+.about-info .about-tool span {
+	font-size: 13px;
+	border: 1px solid rgba(41, 41, 41, 0.1);
+	padding: 6px 16px;
+	border-radius: 40px;
+	margin: 0 5px 5px 0;
+	background: #fff;
+}
+.about-info .about-work span {
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	background: #ea4020;
+	color: #fff;
+	vertical-align: top;
+	text-align: center;
+	border-radius: 50%;
+	font-size: 12px;
+	float: left;
+}
+.about-info .about-work h4 {
+	margin-left: 5px;
+	float: left;
+	margin-top: 8px;
+	font-weight: 100;
+	font-size: 18px;
+}
+.about-us img {
+     width:24%;
+     float:left;
+}
+ .about-us div {
+     width:70%;
+     margin-left:20px;
+     float:left;
+     line-height:35px;
+}</style>
+<div class="container-fluid bg-grey">
+  <div class="container">
+   <!-- <div class="heading">
+      <h5>Mr.S.Devananth</h5>-->
+      <h2 class="heading"><span class="heading-border"></span>Mr.S.Devananth<span class="heading-border"></span></h2>
+    </div>
+<div class="main-section about-us">
+   <img src="assets/img/deva.JPG" >
+   <div>
+       <div class="col-lg-7 col-md-7 col-12">
+        <div class="about-info">
+      <h2>Assistant Professor & Head of the Department</h2>
+      <p> M.B.A., M.Com., MSW., MLM., MA., PGDBA., PGDPM, (Ph.D)<br>
+      13 years of Teaching Experience<br>
+      UGC NET (Management., Social work., Labour Laws., Public Administration)<br>
+      TN SET (Management., Social work., Commerce)</p>
+   </div>
+</div>
+        </div>
+      </div>
+      
+<div class="container-fluid bg-grey">
+  <div class="container">
+   <!-- <div class="heading">
+      <h5>Mr.S.Devananth</h5>-->
+      <h2 class="heading"><span class="heading-border"></span>Dr.Vijayalakshmi Krishna. A<span class="heading-border"></span></h2>
+    </div>
+<div class="main-section about-us">
+   <img src="assets/img/Vijayalakshmi mam.jpeg" >
+   <div>
+       <div class="col-lg-7 col-md-7 col-12">
+        <div class="about-info">
+      <h2>Assistant Professor & Head of the Department</h2>
+      <p> M.B.A., M.Com., MSW., MLM., MA., PGDBA., PGDPM, (Ph.D)<br>
+      13 years of Teaching Experience<br>
+      UGC NET (Management., Social work., Labour Laws., Public Administration)<br>
+      TN SET (Management., Social work., Commerce)</p>
+   </div>
+</div>
+        </div>
+      </div>
+
+
+

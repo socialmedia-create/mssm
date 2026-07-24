@@ -1,0 +1,30 @@
+.director{
+    width: 80%;
+    margin: auto;
+    padding-top: 80px;
+    padding-bottom: 50px;
+}
+.row{
+   margin-top: 5%;
+    display:flex;
+    justify-content: space-between;
+}
+.col img{
+    width: 100%;
+    border-radius: 50px;
+}
+.col{
+    flex-basis: 48%;
+    padding: 30px 2px;
+}
+.col h3{
+    padding-top: 0;
+}
+.col p{
+    padding: 15px 0 25px;
+}
+@media(max-width:700px){
+    .row{
+        flex-direction: column;
+    }
+}

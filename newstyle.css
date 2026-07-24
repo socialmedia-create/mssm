@@ -1,0 +1,58 @@
+.containerachievement {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      background: #fff;
+      padding: 30px;
+      margin-bottom: 40px;
+      border-radius: 10px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      gap: 30px;
+    }
+    
+.spanheading {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333; /* or whatever color you want */
+    display: block; /* optional if you want it on a new line */
+    margin-bottom: 10px; /* optional for spacing */
+}
+
+    .containerachievement p {
+      flex: 1;
+      color: #333;
+      line-height: 1.6;
+    }
+
+    .bgimage {
+      width: 500px;
+      height: 400px;
+      background-position: center;
+      background-size: cover;
+      background-repeat: no-repeat;
+      border-radius: 10px;
+      flex-shrink: 0;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.1);
+    }
+
+    .bgachievement1 {
+      background-image: url("assets/img/beryl.jpg");
+    }
+
+    .bgachievement2 {
+      background-image: url("assets/nisha_mam/First Rank Holder.JPG");
+    }
+
+    @media (max-width: 768px) {
+      .containerachievement {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .bgimage {
+        width: 100%;
+        max-width: 400px;
+        height: 200px;
+        object-fit: cover;
+      }
+    }

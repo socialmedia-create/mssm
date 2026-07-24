@@ -1,0 +1,663 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    line-height: 1.6;
+    color: #333;
+}
+
+header {
+    background: white;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    position: fixed;
+    width: 100%;
+    top: 0;
+    z-index: 1000;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.logo {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    font-weight: 700;
+    justify-content: flex-start;
+    align-items: flex-start;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #333;
+    margin-left: 2rem;
+    font-weight: 500;
+}
+
+.apply-btn {
+    background: #2c3e50;
+    color: white;
+    padding: 0.5rem 1.5rem;
+    border: none;
+    border-radius: 5px;
+    margin-left: 2rem;
+    cursor: pointer;
+}
+
+.hero {
+    background-image:  url(/assets/admissions/mssm.png);
+    background-size: cover;
+    min-height: 80vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    color: white;
+    padding: 100px 5%;
+}
+
+.hero-content {
+    flex: 1;
+    text-align: left;
+    padding-right: 5%;
+}
+
+.brochure-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    width: 400px;
+    color: #333;
+}
+
+.brochure-form h2 {
+    font-size: 1.8rem;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.brochure-form p {
+    margin-bottom: 1.5rem;
+    font-size: 0.9rem;
+}
+
+.brochure-form form {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.brochure-form input,
+.brochure-form select {
+    padding: 0.8rem;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    font-size: 1rem;
+}
+
+.phone-input {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.phone-input select {
+    width: 80px;
+}
+
+.phone-input input {
+    flex: 1;
+}
+
+.terms {
+    font-size: 0.8rem;
+    color: #666;
+}
+
+.terms a {
+    color: #2c3e50;
+    text-decoration: none;
+}
+.btn-row {
+     display: flex;
+     flex-direction: row;
+     justify-content: center;
+     align-items: center;
+     margin: 0.5rem;
+}
+.download-btn {
+    margin: 1rem;
+    background: #ffc107;
+    color: #000;
+    padding: 1rem;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-btn:hover {
+    background: #ffca2c;
+}
+
+.seats {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 0.5rem;
+    color: #666;
+}
+
+.hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero-content p {
+    font-family: 'Playfair Display', serif;
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+section {
+    padding: 5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    text-align: center;
+}
+
+.about-content {
+    display: flex;
+    gap: 2rem;
+}
+
+.about-text ul {
+    list-style-position: inside;
+    margin-top: 1rem;
+}
+ .icons-wrapper {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      justify-content: center;
+    }
+
+    .icon-card {
+      display: flex;
+      align-items: center;
+      flex: 1 1 250px;
+      max-width: 400px;
+      padding: 15px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    }
+
+    .icon {
+      width: 50px;
+      height: 50px;
+      flex-shrink: 0;
+      margin-right: 15px;
+    }
+
+    .label {
+      font-size: 1.2rem;
+      font-weight: bold;
+    }
+
+    @media (max-width: 600px) {
+      .icon-card {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+      }
+
+      .icon {
+        margin: 0 0 10px 0;
+      }
+    }
+.specializations {
+            display: flex;
+            flex-wrap: wrap;
+            
+            margin-top: 20px;
+            background-color: #204E9E;
+        }
+.specializations h2 {
+             color: white;
+        }
+
+
+.contact {
+    background: #f8f9fa;
+    padding: 5rem 5%;
+}
+
+.contact-container {
+    display: flex;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.contact-info,
+.contact-map {
+    flex: 1;
+    background: white;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.contact-info h3,
+.contact-map h3 {
+    font-family: 'Playfair Display', serif;
+    margin-bottom: 1.5rem;
+    color: #2c3e50;
+}
+
+.contact-info p {
+    margin-bottom: 1rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.contact-info i {
+    font-size: 1.2rem;
+}
+
+.contact-map iframe {
+    border-radius: 5px;
+}
+
+@media (max-width: 768px) {
+    .contact-container {
+        flex-direction: column;
+    }
+}
+
+footer {
+    background: #2c3e50;
+    color: white;
+    text-align: center;
+    padding: 2rem;
+}
+
+.mobile-menu-btn {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 1.8rem;
+    cursor: pointer;
+    color: #2c3e50;
+}
+
+.nav-links a:hover {
+    color: #3498db;
+}
+
+.apply-btn:hover {
+    background: #3498db;
+    transform: translateY(-2px);
+    transition: all 0.3s ease;
+}
+
+.spec-card {
+    transition: transform 0.3s ease;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.spec-card:hover {
+    transform: translateY(-5px);
+}
+
+.program-details {
+    background: linear-gradient(to right, #2c3e50, #3498db);
+    border-radius: 10px;
+    padding: 2rem 5%;
+    margin: -2rem auto 4rem;
+    max-width: 1000px
+}
+
+.program-details-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+    color: white;
+}
+
+.program-details-container .h3 {
+    font-size: 1.8rem;
+    margin: 0;
+}
+
+.download-brochure-btn {
+    background: #2ecc71;
+    color: white;
+    padding: 1rem 2rem;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.download-brochure-btn:hover {
+    background: #27ae60;
+}
+
+@media (max-width: 768px) {
+    .program-details-container {
+        flex-direction: column;
+        text-align: center;
+        gap: 1rem;
+    }
+}
+
+.video-popup {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+    height: 100%;
+    background: rgba(0, 0, 0, 0.8);
+    z-index: 1000;
+    justify-content: center;
+    align-items: center;
+}
+
+.video-popup-content {
+    position: relative;
+    width: 90%;
+    max-width: 800px;
+}
+
+.close-popup {
+    position: absolute;
+    top: -40px;
+    right: 0;
+    color: red;
+    font-size: 30px;
+    cursor: pointer;
+    background: white;
+    border-radius: 5px;
+    
+}
+
+.video-popup video {
+    width: 100%;
+    height: 450px;
+    border: none;
+    border-radius: 8px;
+    background: #000;
+}
+
+
+.testimonial-card {
+    transition: transform 0.3s ease;
+}
+
+.testimonial-card:hover {
+    transform: translateY(-3px);
+}
+
+@media (max-width: 768px) {
+    .mobile-menu-btn {
+        display: block;
+    }
+    .nav-links {
+    display: none;
+    flex-direction: column;
+    gap: 1rem;
+}
+
+.nav-links.active {
+    display: flex;
+}
+    .hero {
+        flex-direction: column;
+        padding: 100px 20px;
+        text-align: center;
+    }
+
+    .hero-content {
+        padding-right: 0;
+        margin-bottom: 2rem;
+    }
+
+    .brochure-form {
+        width: 100%;
+        max-width: 400px;
+    }
+
+    .video-container {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+    .written-testimonials {
+        grid-template-columns: 1fr;
+    }
+
+    .about-content {
+        flex-direction: column;
+    }
+
+    .slider-container {
+        margin: 0 auto 2rem;
+        padding: 0 10px;
+    }
+
+    .spec-card {
+        flex: 0 0 100%;
+        max-width: calc(100vw - 40px);
+        margin: 0 auto;
+    }
+
+    .spec-card img {
+        height: 200px;
+        object-fit: cover;
+    }
+
+    .slider-btn {
+        padding: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .slider-btn.prev {
+        left: 0;
+    }
+
+    .slider-btn.next {
+        right: 0;
+    }
+
+    .slider-dots {
+        margin-top: 1.5rem;
+    }
+
+    .specializations {
+        padding: 3rem 0;
+    }
+
+    .nav-links {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        right: 0;
+        background: white;
+        padding: 1rem;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .nav-links.active {
+        display: flex;
+    }
+
+    .nav-links a {
+        margin: 0.5rem 0;
+    }
+
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    section {
+        padding: 3rem 5%;
+    }
+}
+
+.top-recruiters {
+    padding: 4rem 5%;
+    background: #f8f9fa;
+}
+
+.recruiters-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.recruiter-row {
+    display: flex;
+    animation: slide 30s linear infinite;
+    gap: 2rem;
+    width: max-content;
+}
+
+.recruiter-logo {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s ease;
+    min-width: 200px;
+}
+
+.recruiter-logo:hover {
+    transform: translateY(-5px);
+}
+
+.recruiter-logo img {
+    max-width: 150px;
+    max-height: 100px;
+    object-fit: contain;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-70%);
+    }
+}
+
+@media (max-width: 768px) {
+    .recruiter-logo {
+        padding: 1rem;
+        min-width: 150px;
+    }
+
+    .recruiter-logo img {
+        max-width: 120px;
+        max-height: 80px;
+    }
+}
+
+.image-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    flex-wrap: wrap;
+    padding: 20px;
+}
+
+.image-container img {
+    width: 100%;
+    max-width: 600px; /* consistent width */
+    height: 200px; /* consistent height */
+    object-fit: cover; /* crops nicely */
+    border-radius: 12px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+    transition: transform 0.3s ease;
+}
+
+.image-container img:hover {
+    transform: scale(1.03);
+}
+@media (max-width: 1024px) {
+    .image-container img {
+        width: 250px;   /* Adjusted width for tablets and smaller screens */
+        height: 170px;  /* Adjusted height for tablets and smaller screens */
+    }
+}
+
+@media (max-width: 768px) {
+    .image-container {
+        justify-content: space-between; /* More efficient use of space */
+        padding: 10px;  /* Reduce padding on smaller screens */
+    }
+
+    .image-container img {
+        width: 200px;   /* Adjusted width for mobile screens */
+        height: 150px;  /* Adjusted height for mobile screens */
+    }
+}
+
+@media (max-width: 480px) {
+    .image-container img {
+        width: 150px;   /* Further reduced width for very small screens */
+        height: 120px;  /* Further reduced height for very small screens */
+    }
+}
+.containerachievement{
+    color:red;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+}
+.bgimage{
+    width:300px;
+    height:400px;
+    background-position:center;
+    background-size:contain;
+    background-repeat:no-repeat;
+}
+.bgachievement1{
+    background-image:url("./assets/img/Screenshot (5).png");
+}
+.bgachievement2{
+    background-image:url("assets/nisha_mam/First Rank Holder.JPG");
+}

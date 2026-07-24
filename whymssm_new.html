@@ -1,0 +1,999 @@
+
+<!DOCTYPE html>
+<html>
+	 
+    <head>
+        <title>MSSM</title>
+        <meta charset="utf-12">
+	<!--	<meta name="viewport" content="width=1024">-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="assets/logo/logo(2).png" type="image/x-icon">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.1s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254a !important;
+                border-color: #E7E7E7;
+                margin-bottom: 0px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffee;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1024px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 1024px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+       
+		</style>
+		<style>
+.button {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color:  #00254E;} /* Blue */
+</style>
+
+	<style>
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(1, 1);
+            }
+            to {
+                -webkit-transform: scale(1.5, 1.5);
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(1, 1);
+            }
+            to {
+                transform: scale(1.5, 1.5);
+            }
+        }
+
+        .carousel-inner .item > img {
+            -webkit-animation:0.2s;
+            animation: 0.2s;
+        }
+			.center img.img-with-animation {
+    margin: -28px auto;
+    display: block;
+}
+</style>
+    <style>
+    /* Styles for the pop-up */
+    #popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        z-index: 9999;
+    }
+    #popup-content {
+        display: inline-block;
+        background: #fff;
+        padding: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<style>
+	.pos1 {
+  position: absolute;
+  top: 310px;
+  left: 320px;
+}
+	.pos2 {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+}
+	.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+	/* Styling for the pop-up container */
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Ensures the pop-up is above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the pop-up content */
+#popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#popup-content img {
+  max-width: 100%;
+  max-height: 88vh; /* Limit height to 80% of viewport height */
+}
+
+#close-btn {
+  margin-top: 10px;
+
+}
+</style>
+                <style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+    </head>
+<script>
+    window.onload = function() {
+  var popupContainer = document.getElementById('popup-container');
+  var closeButton = document.getElementById('close-btn');                                                                                                                                                                                                                                   
+
+  function showPopup() {
+    popupContainer.style.display = 'flex';
+  }
+
+  function closePopup() {
+    popupContainer.style.display = 'none';
+  }
+
+  closeButton.addEventListener('click', closePopup);
+
+showPopup();
+}
+
+</script>
+    <body>
+ 
+
+<!--<div id="popup-container">
+            <div id="popup-content">
+              <img src="assets/logo/popup.jpg" alt="Pop-up Image"><br>
+              <button id="close-btn" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>-->
+        <nav class="navbar navbar-default" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navSearch">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="https://www.mssm.edu.in/">MSSM</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navSearch">	
+
+				 <p class="navbar-text navbar-right" style="padding-right:10px; color:white "> <a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf"target="_blank">Mandatory Disclosure  </a></p>	 
+                </div>
+            </div>
+        </nav>
+
+		<a href="#" title="MSSM"> <!--msec2_logo1.png--></a>
+		<!-- <h1 style="text-align: left; float: none; clear: both; margin: 0 auto;" > --><img src="assets\img\mssm_logo.jpg" style="max-width: 100%;"></img>
+<style>	
+		.blink_me {
+  animation: blinker 1.5s linear infinite;
+}
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+		@keyframes blinkingText{
+    0%{     color: #E046D7;    }
+    49%{    color: #468EE0; }
+    60%{    color: #EFF449; }
+    99%{    color: #F28C12;  }
+    100%{   color: #24D371;    }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+		</style>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar"><font face="Arial" size=2>
+
+                    <ul class="nav navbar-nav">
+                     <!--   <li><a href="#">HOME</a></li>-->
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+	<ul class="dropdown-menu"> 
+		<li><a href="management_new.html">Management </a></li>
+		<li><a href="MBA_new.html">M.B.A </a></li>	
+		<li><a href="whymssm_new.html">Why MSSM </a></li>
+	</ul>
+    <li class ="dropdown">
+	
+
+	<li><a href="Infrastructure.html">Infrastructure </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Prof&Dir_new.html">Professor &amp; Director </a></li>
+		<li><a href="ofm.html">Faculty Members </a></li>
+	</ul>
+	</li>	
+
+	<!--<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>-->
+	<li><a href="IIC2_new.html">Industry-Institution Connect </a></li>
+	
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Edge <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Research Faculty.html">Research Faculty </a></li>
+		<li><a href="coming_soon.html">Research Publications </a></li>
+		<li><a href="coming_soon.html">Research Activity </a></li>
+			</ul>
+	</li>
+	
+	<li><a href="gallery.html">Gallery </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	    <li><a href="graduation19th.html">19th GRADUATION DAY </a></li>
+	    <li><a href="graduationday18.html">18th GRADUATION DAY </a></li>
+	    <li><a href="graduationday17.html">17th GRADUATION DAY </a></li>
+		<li><a href="graduationday16.html">16th GRADUATION DAY </a></li>
+		<li><a href="graduationday15.html">15th GRADUATION DAY </a></li>
+	
+		
+		
+	</ul>
+	</li>
+	<li><a href="placement_new.html">Placement Cell </a></li>
+	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+	<li><a href="contact.html">Contact Us </a></li>	
+					</ul>       
+					</font>
+                </div>
+            </div>
+        </nav>
+
+
+
+</center>
+	
+
+</center>
+			<br>
+        	        <div class="container">
+            <div class="jumbotron page-header" style="text-align: center; background-color: #ECB200;padding: 5px">
+                <h3> </h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><b> Why M.B.A @ MSSM </b> </h2></div></div>
+                     <div class="container">
+            <div class="row">     
+            
+                <div class="col-sm-12">
+                    <p>
+The College offers an MBA programme affiliated to the University Of Madras, Approved by AICTE.
+                    </p>
+                </div>
+            </div>
+           
+<br>                   
+<ul>
+  <li>
+Learning Environment creates employable students.
+</li>
+<li>
+Judicious blend of Management Theory and the application of theory to practice.
+</li>
+<li>
+Student-Faculty Ratio is 12:1. 
+</li>
+<li>
+Industry oriented Case-Study based teaching-learning Pedagogy.
+</li>
+<li>
+NPTEL and MOOCs are also made available to them to ensure learning.
+</li>
+<li>
+A detailed analysis of financial market activities with a comprehensive study of business,finance and accounting topics.
+</li>
+<li>
+Industrial visits are a part of the curriculum.
+</li>
+<li>
+Entrepreneurship Development Cell imparts Skill sets required for Innovation,Model Building and Entrepreneurship.
+</li>
+<li>
+In order to provide a competiive edge to our students, soft skills such as customer-centricity, critical thinking, problem-solving, attention to detail and flawless written and Verbal Communication are imparted to students.
+</li>
+<li>
+The reason we exist is our Students.
+</li>
+<li>
+Tutorial Hour - "Feel Free to Clarify your Doubts with Faculty any time "
+</li>
+<p>Saturdays are meant for Individual Student Development - called "<b>HAPPY CLASSES</b>" by enacting Plays, Conducting quiz programmes, Debates on current affairs, Group discussions, Training in public speaking.</p> 
+
+
+<li>
+Organisational Leadership, Inspiration, Dilemmas and action are learnt, by using inputs from Literature.
+   Classics are great for trying out various issues of Leadership and connecting with Organisational Behaviour.
+   Students can analyse the dilemmas the characters engage in, introspect and  write a reflection paper.
+
+</li> </div></div></div>
+
+<div class="container">
+       
+<div class="row">
+<div class="col-sm-12">
+<h5><b>During Soft-Skill Class
+<b></h5></div></div></div>
+<br>
+
+
+			
+        <div class="container-fluid">
+            <div class="row">
+				
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="800" class="active" ></li>
+                            
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+     
+							    <div class="item active">
+                                <img src="assets/img2021/1.jpeg" alt="2" style="width:100%; height: auto"><br>
+                                <center><p><strong>The Tragedie of Macbeth Play by William Shakespeare</strong></p></center>
+                               <!-- <div class="carousel-caption">
+<h3>Second IMG</h3>
+<p>2nd Desc</p>
+</div> -->
+								</div>	
+							<div class="item">
+                                <img src="assets/img2021/2.jpeg" alt="2" style="width:100%; height: auto"><br>
+                                <center><p><strong>Twelfth Night Play By William Shakespeare</strong></p></center>
+                               <!-- <div class="carousel-caption">
+<h3>Second IMG</h3>
+<p>2nd Desc</p>
+</div> -->
+								</div>	
+							
+								<div class="item">
+                                <img src="assets/img2021/3.jpeg" alt="2" style="width:100%; height: auto"><br>
+                                <center><p><strong> Lagaan Movie Directed By Ashutosh Gowariker</strong></p></center>
+                               <!-- <div class="carousel-caption">
+<h3>Second IMG</h3>
+<p>2nd Desc</p>
+</div> -->
+								</div>
+			
+
+
+
+                        
+                        
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+			
+
+                <div class="col-sm-2"></div>
+
+            </div>
+            <br/>
+        </div>
+              </div>
+
+
+
+
+
+<div class="container">
+            <div class="jumbotron page-header" style="text-align: center; background-color: #ECB200;padding: 5px">
+                <h3><b> Our Academic Achievements</b> </h3>
+</div>
+<p>Students of Meenakshi Sundararajan School of Management have continuously excelled at the university level examinations </p>
+<br><p>Details of some achievements, are listed below:</p><br>
+
+
+
+</div>
+</div>
+
+
+
+<style>
+body {
+  font-family: Arial;
+  margin: 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+img {
+  vertical-align: middle;
+}
+
+/* Position the image container (needed to position the left and right arrows) */
+.container {
+  position: relative;
+}
+
+/* Hide the images by default */
+.mySlides {
+  display: none;
+}
+
+/* Add a pointer when hovering over the thumbnail images */
+.cursor {
+  cursor: pointer;
+}
+
+/* Next & previous buttons */
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+</style>
+
+
+
+<noscript>
+	<style>
+				.es-carousel ul{
+					display:block;
+				}
+			</style>
+			</noscript>
+			
+			<script id="img-wrapper-tmpl" type="text/x-jquery-tmpl">	
+			<div class="rg-image-wrapper">
+				{{if itemsCount > 1}}
+					<div class="rg-image-nav">
+						<a href="#" class="rg-image-nav-prev">Previous Image</a>
+						<a href="#" class="rg-image-nav-next">Next Image</a>
+					</div>
+				{{/if}}
+				<div class="rg-image"></div>
+				<div class="rg-loading"></div>
+				<div class="rg-caption-wrapper">
+					<div class="rg-caption" style="display:none;">
+						<p></p>
+					</div>
+				</div>
+			</div>
+		</script>
+	
+	
+
+
+	
+		<br>
+		
+<div class="container">
+    <div class="mySlides">
+    <div class="numbertext">1 / 10</div>
+    <img src="assets/University_Ranks_2022/rank2.png" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  </div>
+  <div class="mySlides">
+    <div class="numbertext">12/ 10</div>
+    <img src="assets/nisha_mam/First Rank Holder.JPG" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms. Nishanthini.R  receiving the Gold Medal from the Honble President of India, during the University of Madras convocation held on 6th Aug, 2023.  </p>
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 10</div>
+    <img src="assets/img/Screenshot (5).png" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms. Shanmugapriya.E receiving the Gold Medal from the Tamilnadu Governor, during the University of Madras convocation held on 16th May, 2022.  </p>
+
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">4 / 10</div>
+    <img src="assets/img/rank2020.jpg" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms. K Ashwini stood 1st, Ms. P Archana stood 2nd, Ms. M Varsha stood 3rd in the April 2020 examinations of the University of Madras  </p>
+
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">5/ 10</div>
+    <img src="assets/img/2019.jpg" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms. T G Deepika stood 2nd, Ms. V Veena stood 5th, Ms. M Varsha stood 6th, Mr. V Dinesh Krishnan stood 8th in the April 2019 examinations of the University of Madras  </p>
+
+  </div>
+  
+  <div class="mySlides">
+    <div class="numbertext">6/ 10</div>
+    <img src="assets/img/beryl.jpg" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms. R Beryl Georgina stood 1st in the examinations conducted during April 2018 by the University of Madras  </p>
+
+  </div>
+   <div class="mySlides">
+    <div class="numbertext">7 / 10</div>
+    <img src="assets/img/ishwarya.jpg" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms. Ishwariya vaani C K stood 3rd in the examinations conducted during April 2017 by the University of Madras  </p>
+
+  </div>
+  
+   <div class="mySlides">
+    <div class="numbertext">8/ 10</div>
+    <img src="assets/img/aathi.png" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms. Aarthi stood 1st in the examinations conducted during April 2013 by the University of Madras  </p>
+
+  </div>
+  
+   <div class="mySlides">
+    <div class="numbertext">9 / 10</div>
+    <img src="assets/img/maha.png" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms.C.Mahalakshmi stood 2nd in the examinations conducted during April 2008 by the University of Madras  </p>
+
+  </div>
+  
+   <div class="mySlides">
+    <div class="numbertext">10/ 10</div>
+    <img src="assets/img/nithya.png" style="width:100%">
+    <p class="text-justify">
+                    
+					 <font face="Arial" size=3> <p class="text-justify">
+						  <b> Ms.S.Nithya stood 2nd in the examinations conducted during April 2006 by the University of Madras  </p>
+
+  </div>
+  
+    
+  <a class="prev" onclick="plusSlides(-1)"><font size=10><</font></a>
+  <a class="next" onclick="plusSlides(1)"><font size=10>></font></a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  
+  
+</div>
+
+<script>
+let slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  let i;
+  let slides = document.getElementsByClassName("mySlides");
+  let dots = document.getElementsByClassName("demo");
+  let captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+    slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+    dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+
+
+<!-- 	<center><form action="https://youtu.be/xnEkkJf_kcI?si=YH673-q0VkmeJNGS">
+        <button type="submit" class="GFG">Graduation Video</button>
+       </form>	</center> -->
+		
+<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>
+		<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
+		<script type="text/javascript" src="js/jquery.easing.1.3.js"></script>
+		<script type="text/javascript" src="js/jquery.elastislide.js"></script>
+		<script type="text/javascript" src="js/gallery.js"></script>
+		
+		
+	<hr>
+	
+<div class="container">
+            <div class="jumbotron page-header" style="text-align: center; background-color: #ECB200;padding: 5px">
+                <h3> </h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2><b>Grievances and Redressal </b> </h2></div></div>
+                     <div class="container">
+            <div class="row">     
+            
+                <div class="col-sm-12">
+                    <h2><font size=4>
+Meenakshi Sundararajan School of Management is committed to a policy of treating all members of the college community fairly in regard to their personal and professional concerns. The student grievance procedure ensures that concerns are promptly dealt with and resolutions reached in a fair and just manner. The College's procedures enable students to bring complaints and problems to the attention of the College administration.<br/>
+
+Registry for Grievances and Redressal is available in the office of main building Meenakshi Sundararajan School of Management, 363, Arcot Road, Kodambakkam, Chennai-600024.
+
+                    </h2> </font>
+                </div>
+            </div>
+<hr>
+	
+  <div class="row">
+                <div class="col-sm-12">
+                    <font color = "black">
+                    <h2><strong>The Counselors </strong> </h2>
+                    <br>
+                    <ol>
+                        <li> Prof. S. Devananth-Head of the Department
+                        </li><br>
+                        <li> Dr.S Chandrasekaran-Assistant Professor
+ </li><br>
+                        <li> Dr. S.A. Jarina -Assistant Professor </li> <br>
+                    </ol></font>
+                </div>
+                <font size =3><a href="https://www.aicte-india.org/feedback/index.php"><font color=blue>Click here to AICTE FEEDBACK	</font></a></font>
+		
+            </div>
+	
+
+
+
+					
+					<br>
+
+
+</center>
+
+
+                </div>
+
+            </div>
+
+
+<br>
+
+</center>
+
+
+                </div>
+
+            </div>
+<br>
+            
+        </div>
+
+
+        <br/>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+<h2 align=center><font color=white face="Bodoni MT Black">Follow us on</font></h2> 
+<br>
+<a href="https://www.facebook.com/profile.php?id=61557611947227" target=blank><img src="assets/logo/facebook.png" height=40 width=40></img></a><a href="https://youtube.com"><img src="assets/logo/vecteezy.png" height=40 width=50></img></a><a href="https://www.instagram.com/mssm_mba_official/"><img src="assets/logo/picture-logo-42719.png" height=40 width=40></img></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/"><img src="assets/logo/linkedin-logo-png-1854.png" height=40 width=40></img></a>
+<center>
+<br>
+            <p> 363, Arcot Road, Kodambakkam, Chennai - 600 024 </p>
+        </footer>
+        <footer class="w3-center" style="padding: 2px; background-color: #000000;">
+            <div class="container">
+                <p class="copyright text-muted small" style="color: #ffffff" >All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

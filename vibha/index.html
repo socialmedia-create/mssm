@@ -1,0 +1,517 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MSSM VIBHA 2026 | Where Dynamic Minds Converge</title>
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700;800&family=Poppins:wght@300;400;500&display=swap" rel="stylesheet">
+    <!-- AOS Animation Library -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    
+    <style>
+        :root {
+            --primary-color: #0f1e3c;
+            --secondary-color: #5c0f19;
+            --accent-gold: linear-gradient(45deg, #d4af37, #f9e29c, #b8860b);
+            --text-light: #f8f9fa;
+            --glass-bg: rgba(255, 255, 255, 0.05);
+            --glass-border: rgba(255, 255, 255, 0.1);
+        }
+
+        body {
+            font-family: 'Poppins', sans-serif;
+            background-color: #fdfdfd;
+            color: var(--primary-color);
+            overflow-x: hidden;
+            scroll-behavior: smooth;
+        }
+
+        h1, h2, h3, .navbar-brand {
+            font-family: 'Montserrat', sans-serif;
+            font-weight: 700;
+        }
+
+        /* Navbar */
+        .navbar {
+            background: rgba(15, 30, 60, 0.95);
+            backdrop-filter: blur(10px);
+            border-bottom: 2px solid #d4af37;
+            padding: 1rem 0;
+        }
+
+        .navbar-brand img {
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        /* Hero Section */
+        .hero {
+            background: linear-gradient(rgba(15, 30, 60, 0.85), rgba(15, 30, 60, 0.9)), 
+                        url('./vibhabg.webp');
+            background-size: cover;
+            background-position: center;
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            color: white;
+            padding: 100px 0;
+        }
+
+        .hero-poster {
+            border: 4px solid #d4af37;
+            border-radius: 15px;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.4);
+            max-width: 100%;
+            height: auto;
+            transition: transform 0.3s ease;
+        }
+
+        .hero-poster:hover {
+            transform: scale(1.02);
+        }
+
+        .gold-gradient-text {
+            background: var(--accent-gold);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            font-weight: 800;
+        }
+
+        /* Buttons */
+        .btn-vibha {
+            background: var(--secondary-color);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 50px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            border: 2px solid transparent;
+        }
+
+        .btn-vibha:hover {
+            background: transparent;
+            border-color: #d4af37;
+            color: #d4af37;
+            transform: translateY(-3px);
+            box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+        }
+
+        /* Sections Styling */
+        .section-padding {
+            padding: 80px 0;
+        }
+
+        .section-title {
+            position: relative;
+            margin-bottom: 50px;
+            text-align: center;
+        }
+
+        .section-title::after {
+            content: '';
+            position: absolute;
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            width: 60px;
+            height: 3px;
+            background: var(--secondary-color);
+        }
+
+        /* Event Cards */
+        .event-card {
+            background: white;
+            border-radius: 20px;
+            padding: 30px;
+            height: 100%;
+            box-shadow: 0 10px 30px rgba(0,0,0,0.05);
+            border: 1px solid #eee;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        .event-card:hover {
+            transform: translateY(-10px);
+            border-color: #d4af37;
+            box-shadow: 0 15px 40px rgba(15, 30, 60, 0.1);
+        }
+
+        .event-card i {
+            color: var(--secondary-color);
+            margin-bottom: 20px;
+        }
+
+        .category-badge {
+            font-size: 0.8rem;
+            text-transform: uppercase;
+            padding: 5px 15px;
+            border-radius: 20px;
+            background: var(--primary-color);
+            color: white;
+            margin-bottom: 15px;
+        }
+
+        /* Registration Box */
+        .reg-box {
+            background: var(--primary-color);
+            color: white;
+            border-radius: 30px;
+            padding: 50px;
+            text-align: center;
+            border: 2px solid #d4af37;
+            position: relative;
+        }
+
+        .qr-placeholder {
+            width: 150px;
+            height: 150px;
+            background: white;
+            margin: 20px auto;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border-radius: 10px;
+        }
+
+        /* Coordinators */
+        .coord-card {
+            background: rgba(15, 30, 60, 0.03);
+            border-left: 5px solid var(--secondary-color);
+            padding: 20px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--primary-color);
+            color: white;
+            padding: 60px 0 20px;
+        }
+
+        .footer-divider {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            margin: 30px 0;
+            padding-top: 20px;
+        }
+
+        /* Mobile Tweaks */
+        @media (max-width: 768px) {
+            .hero {
+                text-align: center;
+                padding-top: 120px;
+            }
+            .hero-poster {
+                margin-top: 40px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
+        <div class="container">
+            <a class="navbar-brand d-flex align-items-center" href="#">
+                <span class="gold-gradient-text fs-4">MSSM VIBHA 2026</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">About</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#events">Events</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#registration">Register</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero" id="home">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-7" data-aos="fade-right">
+                    <p class="mb-2 text-uppercase fw-bold tracking-widest" style="color: #d4af37;">Meenakshi Sundararajan School of Management Presents</p>
+                    <h1 class="display-3 mb-1">MSSM <span class="gold-gradient-text">VIBHA 2026</span></h1>
+                    <h3 class="h4 mb-4 text-white-50">Visionary Intelligence for Business Excellence</h3>
+                    <p class="lead mb-4">"Where Dynamic Minds Converge"</p>
+                    <div class="d-flex align-items-center mb-5">
+                        <div class="me-4">
+                            <i data-lucide="calendar" class="text-warning me-2"></i>
+                            <span class="fw-bold">13th March 2026</span>
+                        </div>
+                        <div>
+                            <i data-lucide="map-pin" class="text-warning me-2"></i>
+                            <span>Kodambakkam, Chennai</span>
+                        </div>
+                    </div>
+                    <a href="#registration" class="btn btn-vibha btn-lg">Register Now</a>
+                </div>
+                <div class="col-lg-5" data-aos="zoom-in" data-aos-delay="200">
+                    <!-- Placeholder for Poster Image -->
+                    <div class="hero-poster-wrapper mt-5 mt-lg-0">
+                        <div class="bg-white p-2 rounded shadow-lg">
+                             <img src="https://images.unsplash.com/photo-1523580494863-6f3031224c94?auto=format&fit=crop&q=80&w=800" alt="Vibha 2026 Poster" class="hero-poster">
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-8 text-center" data-aos="fade-up">
+                    <h2 class="section-title">About VIBHA</h2>
+                    <p class="lead text-muted">
+                        VIBHA is a premier inter-college management fest organized by the Meenakshi Sundararajan School of Management (MSSM). Designed to foster innovation, creativity, and strategic thinking, VIBHA 2026 brings together the brightest minds from across the region to compete in a series of high-stakes business challenges and creative showcases.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Events Section -->
+    <section id="events" class="section-padding">
+        <div class="container">
+            <h2 class="section-title" data-aos="fade-up">Competitive Events</h2>
+            
+            <!-- UG Events -->
+            <div class="row mb-5">
+                <div class="col-12 mb-4" data-aos="fade-right">
+                    <h4 class="fw-bold border-start border-4 border-danger ps-3">UG Students Only</h4>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card">
+                        <i data-lucide="megaphone" size="48"></i>
+                        <span class="category-badge">Marketing</span>
+                        <h5>AdXpress (Adzap)</h5>
+                        <p class="small text-muted">Unleash your creative marketing genius and sell the unthinkable.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card">
+                        <i data-lucide="smile" size="48"></i>
+                        <span class="category-badge">Creativity</span>
+                        <h5>Silent Spectrum (Mime)</h5>
+                        <p class="small text-muted">Expression without words. Let your actions speak volumes.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="event-card">
+                        <i data-lucide="video" size="48"></i>
+                        <span class="category-badge">Media</span>
+                        <h5>Trend Setter (Reels)</h5>
+                        <p class="small text-muted">Create viral content that defines the new-age digital landscape.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- UG & PG Events -->
+            <div class="row mb-5">
+                <div class="col-12 mb-4" data-aos="fade-right">
+                    <h4 class="fw-bold border-start border-4 border-warning ps-3">Open for UG & PG</h4>
+                </div>
+                <div class="col-md-4 mx-auto mb-4" data-aos="fade-up">
+                    <div class="event-card">
+                        <i data-lucide="briefcase" size="48"></i>
+                        <span class="category-badge">Corporate</span>
+                        <h5>Corporate 2.0</h5>
+                        <p class="small text-muted">The ultimate Corporate Walk. Flaunt your professional charisma.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- PG Events -->
+            <div class="row">
+                <div class="col-12 mb-4" data-aos="fade-right">
+                    <h4 class="fw-bold border-start border-4 border-primary ps-3">PG Students Only</h4>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="event-card">
+                        <i data-lucide="crown" size="48"></i>
+                        <span class="category-badge">Leadership</span>
+                        <h5>Corporate Crown</h5>
+                        <p class="small text-muted">The hunt for the Best Manager. Lead, adapt, and conquer.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="event-card">
+                        <i data-lucide="lightbulb" size="48"></i>
+                        <span class="category-badge">Entrepreneurship</span>
+                        <h5>Capital Catalyst</h5>
+                        <p class="small text-muted">Shark Tank MSSM edition. Pitch your vision to the investors.</p>
+                    </div>
+                </div>
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="event-card">
+                        <i data-lucide="trending-up" size="48"></i>
+                        <span class="category-badge">Finance</span>
+                        <h5>Alpha Vault</h5>
+                        <p class="small text-muted">The Stock Quiz. Navigate the complexities of the market.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Registration Section -->
+    <section id="registration" class="section-padding bg-light">
+        <div class="container">
+            <div class="row justify-content-center">
+                <div class="col-lg-10">
+                    <div class="reg-box shadow-lg" data-aos="zoom-in">
+                        <h2 class="mb-4 text-white">Secure Your Spot</h2>
+                        <div class="row align-items-center">
+                            <div class="col-md-6 text-md-start">
+                                <ul class="list-unstyled">
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i data-lucide="check-circle" class="text-warning me-2"></i>
+                                        <span>Registration Fee: <strong>Rs. 100 per person</strong></span>
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i data-lucide="check-circle" class="text-warning me-2"></i>
+                                        <span>Includes participation in selected events</span>
+                                    </li>
+                                    <li class="mb-3 d-flex align-items-center">
+                                        <i data-lucide="check-circle" class="text-warning me-2"></i>
+                                        <span>Certificates for all participants</span>
+                                    </li>
+                                </ul>
+                                <div class="mt-4">
+                                    <a href="#" class="btn btn-vibha">Register via Portal</a>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="qr-placeholder shadow-inner">
+                                    <i data-lucide="qr-code" size="80" class="text-dark"></i>
+                                </div>
+                                <p class="small mt-2 opacity-75">Scan to pay / register</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Guidelines Section -->
+    <section class="section-padding text-center">
+        <div class="container">
+            <div class="p-5 border rounded-4 bg-white shadow-sm" data-aos="fade-up">
+                <h3 class="mb-4">Important Guidelines</h3>
+                <p class="mb-4 text-muted">Please read all event rules and eligibility criteria before registering.</p>
+                <button class="btn btn-outline-dark btn-lg px-5">View Event Guidelines</button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Coordinators Section -->
+    <section id="contact" class="section-padding">
+        <div class="container">
+            <h2 class="section-title">Event Coordinators</h2>
+            <div class="row">
+                <div class="col-md-6" data-aos="fade-right">
+                    <h5 class="mb-4 fw-bold">UG & PG Coordination</h5>
+                    <div class="coord-card">
+                        <h6 class="mb-1">Ananthakumaar S</h6>
+                        <p class="mb-0 text-muted">+91 8300761556</p>
+                    </div>
+                    <div class="coord-card">
+                        <h6 class="mb-1">Sruthi R</h6>
+                        <p class="mb-0 text-muted">+91 8248039300</p>
+                    </div>
+                </div>
+                <div class="col-md-6" data-aos="fade-left">
+                    <h5 class="mb-4 fw-bold">PG Coordination</h5>
+                    <div class="coord-card">
+                        <h6 class="mb-1">Gopinath S</h6>
+                        <p class="mb-0 text-muted">+91 9176760460</p>
+                    </div>
+                    <div class="coord-card">
+                        <h6 class="mb-1">Rachel D</h6>
+                        <p class="mb-0 text-muted">+91 7358732214</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-4 mb-5">
+                    <h4 class="gold-gradient-text mb-4">MSSM</h4>
+                    <p class="small opacity-75">Meenakshi Sundararajan School of Management (MSSM)</p>
+                    <p class="small opacity-75">A Co-Educational Institution | Affiliated to the University of Madras | Approved by AICTE</p>
+                    <p class="small opacity-75">363, Arcot Road, Kodambakkam, Chennai – 600024</p>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <h5 class="text-warning mb-4">Leadership</h5>
+                    <ul class="list-unstyled small opacity-75">
+                        <li class="mb-2"><strong>Patron:</strong> Shri. N. Sreekanth (Secretary)</li>
+                        <li class="mb-2"><strong>Director:</strong> Dr. Saiju M John</li>
+                        <li class="mb-2"><strong>Convenor:</strong> Dr. D. Gomathy (Additional Director)</li>
+                    </ul>
+                </div>
+                <div class="col-lg-4 mb-5">
+                    <h5 class="text-warning mb-4">Faculty Coordinators</h5>
+                    <ul class="list-unstyled small opacity-75">
+                        <li class="mb-2"><strong>S. Devananth:</strong> Head of Department</li>
+                        <li class="mb-2"><strong>Dr. Chandrasekaran S:</strong> Assistant Professor</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-divider text-center">
+                <p class="small mb-0">&copy; 2026 Meenakshi Sundararajan School of Management. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Scripts -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        // Initialize Animations
+        AOS.init({
+            duration: 1000,
+            once: true,
+            easing: 'ease-out-quad'
+        });
+
+        // Initialize Icons
+        lucide.createIcons();
+
+        // Navbar scroll effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 50) {
+                navbar.style.padding = '0.5rem 0';
+                navbar.style.boxShadow = '0 5px 20px rgba(0,0,0,0.2)';
+            } else {
+                navbar.style.padding = '1rem 0';
+                navbar.style.boxShadow = 'none';
+            }
+        });
+    </script>
+</body>
+</html>

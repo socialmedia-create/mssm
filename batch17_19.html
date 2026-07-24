@@ -1,0 +1,633 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MSSM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        
+            <div class="container-fluid">
+               
+                   
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                  
+            </div>
+        </nav>
+
+        <a href="#" title="MSSM">
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" ><img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/> </h1>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="management.html"> Management </a></li>
+                            </ul>
+                        </li>
+                                <li><a href="MBA.html"> M.B.A </a></li>
+                        <li><a href="whymssm.html"> Why MSSM </a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Infrastructure <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                
+                            </ul>
+                        </li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Faculty <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Prof&Dir.html"> Professor & Director </a></li>
+                                <li><a href="ofm.html">Faculty Members </a></li></ul>
+                        </li>  <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Student Profile <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="batch17_19.html"> Batch of 2017-2019 </a></li>
+                                <li><a href="batch18_20.html"> Batch of 2018-2020 </a></li>
+                            </ul>
+                            <li><a href="gallery.html"> Gallery </a></li> 
+                               <li><a href="placement.html"> Placement Cell </a></li> 
+                        <li><a href="contact.html"> Contact Us </a></li>                            
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+</div>
+                            </div>
+
+                        </div>
+
+      
+                    </div>
+
+                </div>
+
+                <div class="col-sm-1"></div>
+
+            </div>
+            <br/>
+        </div>
+ <div class="main-container container">
+  <div class="row">
+    <section class="col-sm-12">
+                  <a id="main-content"></a>
+                    <h1 class="page-header">Students Speak</h1>
+                                                         <div class="region region-content">
+    <div id="node-12" class="node node-page node-full clearfix" about="/placement/students-speak" typeof="foaf:Document">
+
+      <span property="dc:title" content="Students Speak" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+ <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><!-- Left-aligned media object -->
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/vrs.jpg /></div>
+	<div class="media-body">
+		<h4 class="media-heading">
+			Varsha M</h4>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Tech (IT) <br/> Work Experience : Software Enginees - L&T Infotech (2 Years) <br/>
+			Placed In: Sosaley Technologies Pvt Ltd <b> HR Executive</b></br>Summer Project : Big Bazaar <br/> Final Project : Sosaley Technologies
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/ak.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			S Arun Kumar</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.E (ECE) <br/>
+			Placed In: NETTYFISH Networks as <b>Digital Marketing Executive</b></br>Summer Project : THE RAMCO CEMENT LTD
+ <br/> Final Project : Lynk logistics
+</p>
+
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/Ramya.JPG /></div>
+	<div class="media-body">
+		<h4 class="media-heading">
+			Ramya G</h4>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.E (ECE) <br/> UG : B.Sc (Psychology)<br/>
+			Placed In: Sriram Value Services Ltd as <b>HR Executive</b></br>Summer Project : Redington gulf FZE
+ <br/> Final Project : TVS Brakes India private limited
+
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/dhk.JPG /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Dhanesh Kumar</h4></b>
+		<p>PG : MBA (Marketing & Finance)<br/> UG : B.E (Mech) <br/>
+			Placed In: Datalogics India as <b>Marketing Executive</b></br>Summer Project : Tafe ( Tractors and farm equipment )
+ <br/> Final Project : Big Bazaar
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/dk.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Dinesh krishnan V</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.E (Mech) <br/>
+			Placed In: Datalogics India as <b>Marketing Executive</b></br>Summer Project : Chennai port trust
+ <br/> Final Project : SPI cinemas</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/zak.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Mohammed Zayan K</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : BBA <br/>
+			Placed In: Datalogics Networks as <b>Marketing Executive</b></br>Summer Project : NMZ Group
+ <br/> Final Project : Pidilite Industries</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/pa.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Prithish Akshit M</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.E (Mech) <br/>
+			Placed In: Datalogics India as <b>Marketing Executive</b></br>Summer Project : Redington Gulf FZE
+ <br/> Final Project : Bharat Petroleum Corporation Limited</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/sai.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Sai Venkatesh Raj V L </h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Sc (Hotel Management) <br/>
+			Placed In: Datalogics India <b>Marketing Executive</b></br>Summer Project : IP Rings Ltd
+ <br/> Final Project : Taj Connemara
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/siva.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Siva V</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.E (Mech)</br>Summer Project : Nexus innovative solutions pvt ltd
+ <br/> Final Project : Eureka Forbes
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/tamil.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Tamilselvan S</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Com
+			</br>Summer Project : Chennai Port Trust<br/> Final Project : Chennai Port Trust</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/ashu.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Ashutosh Sharma</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : BBA</br>Summer Project : Spar hypermarket
+ <br/> Final Project : Cafe coffee Day
+
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/adi.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Adeline Timiah M</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.E (CIVIL)</br>Summer Project : Spar hypermarket
+ <br/> Final Project : L&T Construction, buildings and factories
+
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/dd.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Divya Darshini G</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Tech (BioTech)</br>Summer Project : Paragon Digital Services
+ <br/> Final Project : Lucas TVS</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/dhana.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Dhanalakshmi R</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.A (English)</br>Summer Project : TNSC Bank
+ <br/> Final Project : Johnson Lift Pvt Ltd</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/dpm.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Deepika M</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Sc (Computer Science)</br>Summer Project : Linkup Textile Pvt Ltd 
+ <br/> Final Project : Airport Authority of India
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/dptg.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Deepika T G</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.E (CSE)</br>Summer Project : Big Bazaar
+ <br/> Final Project : International Bakery Products ltd 
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/jan.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Janani P R</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.Com(CA)</br>Summer Project : Linkup Textiles
+ <br/> Final Project : Big Bazaar</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/jothi.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Jothidharani S V</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Sc(Maths)<br/>Summer Project : Sharekhan Pvt Ltd
+ <br/> Final Project : Wheels India
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/kavi.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Kavitha K</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Sc(Computer Science)</br>Summer Project : Jain Housing and Construction
+ <br/> Final Project : Prasad Corporation Private Limited
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/kokila.JPG /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Kokila Vani V V</h4></b>
+		<p>PG : MBA (Marketing & Finance)<br/> UG : B.Com</br>Summer Project : Spar Hyper Market 
+ <br/> Final Project : Jagath Jothi Solar Nanufacturing </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/moni.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Monicka D</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.A(Corporate Economics) </br>Summer Project : TNSC Bank
+ <br/> Final Project :  Agrya Consulting Private Limited  
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/mru.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			T Mrunalini </h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : BBA</br>Summer Project : Yamaha Goldfields <br/> Final Project : L&T Constructions
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/niran.JPG /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Niranjana</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.E (CSE)</br>Summer Project : Paragon Digital Services
+ <br/> Final Project : L&T Infotech (LTI)</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/nive.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Nivethitha L</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.E (CSE) <br/></br>Summer Project : Blue Dart Aviation Ltd
+ <br/> Final Project : Simpson & Co Ltd</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/pavith.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Pavithra</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Com <br/>Summer Project : 
+ <br/> Final Project : </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/pp.JPG /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Pathuri Preethi</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.Com<br/>Summer Project : Jetspeed Logistics Pvt Ltd
+ <br/> Final Project : Big Bazaar
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/sriv.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Sri Vidhya Ramya N</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.Sc (Maths)</br>Summer Project : Redington Gulf FZE 
+ <br/> Final Project : Redington Gulf FZE 
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/susan.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Susan Shiny J</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.E (CSE)</br>Summer Project : Sukvarsha Management Services Private Limited
+ <br/> Final Project : BSNL RGMTTC
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/tina.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Martina Priscilla Pakkiam</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.Com (A/F)</br>Summer Project : Indian Overseas Bank 
+<br/> Final Project : State Bank of India
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/vani.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Vanitha Ravi</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.Com</br>Summer Project : Sundaram BNP Paribas Home Finance
+ <br/> Final Project : Sundaran Finance Limited
+</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/veena.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Veena V</h4></b>
+		<p>PG : MBA (HR & Finance)<br/> UG : B.Sc (Electronics & Communication)</br>Summer Project : Sharekhan
+ <br/> Final Project : Royal Sundaram General Insurance Company</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/studentprofile/keerthi.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Keerthika Selvarajan</h4></b>
+		<p>PG : MBA (HR & Marketing)<br/> UG : B.Com</br>Summer Project : TVS Logistics
+ <br/> Final Project : Hotel Green Park</p>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>        
+</div>
+</div>           
+</div>
+</div>
+</div>
+</div>
+
+            
+        </div>
+        <br/>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+
+            <p><center> All Rights Reserved </center> </p>
+        </footer>
+        
+    </body>
+</html>

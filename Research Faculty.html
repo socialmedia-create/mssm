@@ -1,0 +1,386 @@
+<!-- HTML code to add icon in the title bar 
+.course-list {
+     width: 100%;
+     float:left;
+     padding:0px;
+     list-style:none;
+}-->
+<script type="text/javascript" src="https://code.jquery.com/jquery-1.8.2.js"></script>
+<style type="text/css">
+.heading {
+     font-size: 30px;
+     font-weight: 500;
+     border-bottom: 1px solid #ff5722;
+     margin-bottom:25px;
+     color: #ff5722;
+}
+/********** About Us CSS Starts **********/  
+.about-us img {
+     width:24%;
+     float:left;
+}
+ .about-us div {
+     width:70%;
+     margin-left:20px;
+     float:left;
+     line-height:35px;
+}
+/********** About Us CSS Ends **********/
+/********** Popular Courses CSS Starts **********/  
+ .course-list li {
+     width: 23%;
+     float: right;
+     list-style: none;
+     text-align: center;
+     padding: 20px 2px;
+     margin:1%;
+     border-radius:10px;
+}
+ .course-list p {
+     color:#000;
+     font-size:18px;
+     margin-top:10px;
+     color: #fff;
+}
+ .course-list i {
+     font-size:38px;
+     color: #fff;
+}
+ ul.course-list li:nth-child(1) {
+     background: #2196f3;
+}
+ ul.course-list li:nth-child(2) {
+     background: #ff5722;
+}
+ ul.course-list li:nth-child(3) {
+     background: #8bc34a;
+}
+ ul.course-list li:nth-child(4) {
+     background: #ff9800;
+}
+/********** Popular Courses CSS Ends **********/
+.center {
+  line-height: 0px;
+  height: 0px;
+  border: 3px solid darkblue;
+  text-align: center; 
+</style>
+
+<!DOCTYPE html>
+<html>
+
+<head>
+</head>
+<body>
+</body>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Meenakshi Sundararajan School of Management</title>
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet" /><script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script><script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script><script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script><script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+<link href="https://www.w3schools.com/w3css/4/w3.css" rel="stylesheet" />
+<link href="favicon.ico" rel="icon" type="image/x-icon" />
+<style type="text/css">#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+</style>
+<style type="text/css">/* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 1000px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1000px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+</style>
+<style type="text/css">a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+</style>
+
+
+<h1 style="text-align: center; float: none; clear: both; margin: 0 auto;"><a href="#" title="MSSM"><img src="assets\img\mssm_logo.jpg" style="max-width: 100%;" /></a></h1>
+
+<nav class="navbar navbar-default">
+<div class="container-fluid">
+<div class="navbar-header"><button class="navbar-toggle" data-target="#navBar" data-toggle="collapse" type="button"></button></div>
+
+<div class="collapse navbar-collapse" id="navBar">
+<ul class="nav navbar-nav">
+    <li><a href="index.html">Home</a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+	<ul class="dropdown-menu"> 
+		<li><a href="management.html">Management </a></li>
+		<li><a href="MBA.html">M.B.A </a></li>	
+		<li><a href="whymssm.html">Why MSSM </a></li>
+	</ul>
+    <li class ="dropdown">
+	
+
+	<li><a href="Infrastructure.html">Infrastructure </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Prof&amp;Dir.html">Professor &amp; Director </a></li>
+		<li><a href="ofm.html">Faculty Members </a></li>
+	</ul>
+	</li>	
+	
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Edge <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="coming_soon.html">Research Publications </a></li>
+		<li><a href="coming_soon.html">Research Activity </a></li>
+			</ul>
+
+	<li><a href="placement.html">Placement Cell </a></li>
+	<li><a href="contact.html">Contact Us </a></li>
+</ul>
+</div>
+</div>
+</nav>
+</div>
+<div class="col-sm-3"></div>
+</div>
+<br>
+</div>
+
+<div class="main-section about-us">
+   <img src="assets/img/director.png" >
+   <div>
+      <h2 class="heading">Dr.Saiju M John</h2>
+      <p>Director, Professor<br>M.B.A; MFT; M.Phil; UGC NET; TN SET; M.B.A Finance; PhD<br>PhD in Management Science.<br> He has to his credit 10 Research Papers published in reputed International and National Journals<br></p>
+   </div>
+</div>
+<!---------- Popular Courses HTML Starts --------->
+<div class="main-section">
+   <div class="container">
+      <ul class="course-list">
+         <li>
+            <i class="fa fa-globe"> </i>
+            <p>Publications</p>
+         </li>
+         <li>
+            <i class="fa fa-line-chart"> </i>
+            <p>Research Scholars</p>
+         </li>
+          <li>
+            <i class="fa fa-line-chart"> </i>
+            <p>Projects</p>
+         </li>
+        
+      </ul>
+   </div>
+</div>
+<div align="center" style="width=1000;height=100;padding=10;border=10  solid dark-blue ;"><BR></div>
+<!-- <div class="center"> </div> -->
+<div align="center" style="width=1000;height=100;padding=10;border=10  solid dark-blue ;"><BR></div>
+
+<div class="main-section about-us">
+   <img src="assets/img/Vijayalakshmi mam.jpeg" >
+   <div>
+      <h2 class="heading">Dr.Vijayalakshmi Krishna. A</h2>
+      <p>Assistant Professor<br>B.E., M.B.A., Ph.D<br></p>
+   </div>
+</div>
+<!---------- Popular Courses HTML Starts --------->
+<div class="main-section">
+   <div class="container">
+      <ul class="course-list">
+         <li>
+            <i class="fa fa-globe"> </i>
+            <p>Publications</p>
+         </li>
+         <li>
+            <i class="fa fa-line-chart"> </i>
+            <p>Research Scholars</p>
+         </li>
+          <li>
+            <i class="fa fa-line-chart"> </i>
+            <p>Projects</p>
+         </li>
+        
+      </ul>
+   </div>
+</div>
+<div align="center" style="width=1000;height=100;padding=10;border=10  solid dark-blue ;"><BR></div>
+<!-- <div class="center"> </div> -->
+<div align="center" style="width=1000;height=100;padding=10;border=10  solid dark-blue ;"><BR></div>
+<!---------- About Us HTML Starts --------->
+<div class="main-section about-us">
+   <img src="assets/img/chandrasekaran.jpg" >
+   <div>
+      <h2 class="heading">Dr. Chandrasekaran S</h2>
+      <p>Assistant Professor <br> M.B.A ., M.Phil., TN SET., Ph.D 3 years of Corporate Experience in Hospitality Sector<br> And 6 years of Teaching Experience Has published 3 research papers in International Journals and <br>10 research papers in National Journals</p>
+   </div>
+</div>
+<!---------- Popular Courses HTML Starts --------->
+<div class="main-section">
+   <div class="container">
+      <ul class="course-list">
+         <li>
+            <i class="fa fa-globe"> </i>
+            <p>Publications</p>
+         </li>
+         <li>
+            <i class="fa fa-line-chart"> </i>
+            <p>Research Scholars</p>
+         </li>
+          <li>
+            <i class="fa fa-line-chart"> </i>
+            <p>Projects</p>
+         </li>
+        
+      </ul>
+   </div>
+</div>
+<div align="center" style="width=1000;height=100;padding=10;border=10  solid dark-blue ;"><BR></div>
+<!-- <div class="center"> </div> -->
+<div align="center" style="width=1000;height=100;padding=10;border=10  solid dark-blue ;"><BR></div>
+<div class="main-section about-us">
+   <img src="assets/img/IMG-20220812-WA0006.jpg" >
+   <div>
+      <h2 class="heading">Dr. Jarina S.A</h2>
+      <p>Assistant Professor<br> M.B.A.,Ph.D, & M.B.A. International Marketing and Hospitality Management-France,<br> 8 Years of Teaching Experience <br> Has published 7 research papers in ISSN <br>Has also presented 12 research papers in ISBN</p>
+   </div>
+</div>
+<div class="main-section">
+   <div class="container">
+      <ul class="course-list">
+         <li>
+            <i class="fa fa-globe"> </i>
+            <p>Publications</p>
+         </li>
+         <li>
+            <i class="fa fa-line-chart"> </i>
+            <p>Research Scholars</p>
+         </li>
+          <li>
+            <i class="fa fa-line-chart"> </i>
+            <p>Projects</p>
+         </li>
+        
+      </ul>
+   </div>
+</div>
+<br>
+<!---------- Popular Courses HTML Starts --------->
+
+
+<!---------- Popular Courses HTML Ends --------->
+<!---------- About Us HTML Ends ---------<img src="images/sign.png">
+ <h2 class="heading-section"> Most Popular Top <span>Courses</span> </h2>
+      <p class="subhead-section">Lorem Ipsum is simply dummy text of the printing and typesetting industry</p>-->
+
+
+
+
+
+</html>
+<p></p>
+
+<p></p>
+
+<footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+<p></p>
+
+<center><font size="4">All Rights Reserved </font></center>
+
+<p></p>
+</footer>
+
+<p></p>
+

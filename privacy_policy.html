@@ -1,0 +1,395 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MSSM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+            .privacy-policy {
+  max-width: 900px;
+  margin: 60px auto;
+  padding: 40px 30px;
+  background: #0d0d0d;
+  color: #e5e5e5;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  line-height: 1.7;
+  border-radius: 10px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.6);
+}
+
+/* Headings */
+.privacy-policy h1 {
+  font-size: 36px;
+  text-align: center;
+  color: #ff2b2b;
+  margin-bottom: 10px;
+}
+
+.privacy-policy h2 {
+  font-size: 22px;
+  margin-top: 30px;
+  color: #ff2b2b;
+  border-left: 4px solid #ff2b2b;
+  padding-left: 10px;
+}
+
+.privacy-policy h3 {
+  font-size: 18px;
+  margin-top: 20px;
+  color: #ffffff;
+}
+
+/* Paragraphs */
+.privacy-policy p {
+  font-size: 15px;
+  color: #cfcfcf;
+  margin-bottom: 12px;
+}
+
+/* Lists */
+.privacy-policy ul {
+  padding-left: 20px;
+  margin-bottom: 15px;
+}
+
+.privacy-policy ul li {
+  margin-bottom: 8px;
+  position: relative;
+}
+
+/* Custom bullet */
+.privacy-policy ul li::marker {
+  color: #ff2b2b;
+}
+
+/* Contact section */
+.privacy-policy strong {
+  color: #ffffff;
+}
+
+/* Divider spacing */
+.privacy-policy h2 + p,
+.privacy-policy h3 + p {
+  margin-top: 8px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .privacy-policy {
+    padding: 25px 18px;
+  }
+
+  .privacy-policy h1 {
+    font-size: 28px;
+  }
+
+  .privacy-policy h2 {
+    font-size: 20px;
+  }
+}
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        
+            <div class="container-fluid">
+               
+                   
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                  
+            </div>
+        </nav>
+
+        <a href="#" title="MSSM">
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" ><img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/> </h1>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                
+                                <li><a href="management.html"> Management </a></li>
+                          
+                                <li><a href="MBA.html"> M.B.A </a></li>
+                        <li><a href="whymssm.html"> Why MSSM </a></li>  
+                        </ul>
+                        </li>
+                        <li><a href="Infrastructure.html"> Infrastructure </a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Faculty <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Prof&Dir.html"> Professor & Director </a></li>
+                                <li><a href="ofm.html">Faculty Members </a></li></ul>
+                          <li class="dropdown">
+	<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>
+	<li><a href="IIC.html">Industry-Institution Connect </a></li>
+                        <li><a href="gallery.html"> Gallery </a></li>
+                           
+                            	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+                        <li><a href="contact.html"> Contact Us </a></li>                            
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+</div>
+                            </div>
+
+                        </div>
+
+      
+                    </div>
+
+                </div>
+
+                <section class="privacy-policy">
+
+  <h1>Privacy Policy</h1>
+  <p><strong>Effective Date:</strong> February 27, 2025</p>
+
+  <p>
+    This Privacy Policy explains how Meenakshi Sundararajan School of Management (MSSM) collects, uses, processes, and protects your personal information when you access our website and services.
+  </p>
+
+  <h2>1. Introduction</h2>
+  <p>
+    At MSSM, we value your privacy and are committed to safeguarding your personal information. By using our website or services, you agree to the collection and use of information in accordance with this policy.
+  </p>
+
+  <h2>2. Information We Collect</h2>
+  <p>We collect information to enhance your experience and provide better academic and administrative services.</p>
+
+  <h3>2.1 Information You Provide</h3>
+  <ul>
+    <li>Full name and contact details (phone number, email address)</li>
+    <li>Academic and application-related information</li>
+    <li>Login credentials (if applicable)</li>
+    <li>Communication preferences</li>
+    <li>Payment details for application or course-related fees (if applicable)</li>
+  </ul>
+
+  <h3>2.2 Automatically Collected Information</h3>
+  <ul>
+    <li>Device information and browser type</li>
+    <li>IP address and location data (if enabled)</li>
+    <li>Website usage data and interaction logs</li>
+    <li>Cookies and tracking technologies</li>
+  </ul>
+
+  <h2>3. How We Use Your Information</h2>
+  <p>Your information is used for the following purposes:</p>
+  <ul>
+    <li>To manage admissions and academic services</li>
+    <li>To communicate important updates, notifications, and announcements</li>
+    <li>To process applications, payments, and inquiries</li>
+    <li>To improve website functionality and user experience</li>
+    <li>To ensure security and prevent fraudulent activity</li>
+  </ul>
+
+  <h2>4. Information Sharing and Disclosure</h2>
+  <p>
+    MSSM does not sell or rent your personal information. Information may be shared only under the following circumstances:
+  </p>
+
+  <h3>4.1 With Consent</h3>
+  <p>
+    We may share your information with third parties when you provide explicit consent.
+  </p>
+
+  <h3>4.2 Legal Requirements</h3>
+  <p>
+    We may disclose information if required to comply with applicable laws, legal processes, or government requests, or to protect the rights and safety of MSSM and its users.
+  </p>
+
+  <h2>5. Data Security</h2>
+  <p>
+    We implement appropriate security measures to protect your personal information:
+  </p>
+  <ul>
+    <li>Secure data transmission using SSL encryption</li>
+    <li>Regular monitoring of systems for vulnerabilities</li>
+    <li>Restricted access to authorized personnel only</li>
+  </ul>
+
+  <h2>6. Your Rights</h2>
+  <p>You have the right to:</p>
+  <ul>
+    <li>Access the personal data we hold about you</li>
+    <li>Request correction of inaccurate or incomplete information</li>
+    <li>Request deletion of your personal data (subject to legal requirements)</li>
+    <li>Withdraw consent for data processing where applicable</li>
+  </ul>
+
+  <h2>7. Cookies Policy</h2>
+  <p>
+    Our website may use cookies to enhance user experience and analyze website traffic. You can control or disable cookies through your browser settings.
+  </p>
+
+  <h2>8. Updates to This Policy</h2>
+  <p>
+    We may update this Privacy Policy periodically. Any changes will be posted on this page with an updated effective date.
+  </p>
+
+  <h2>Contact Us</h2>
+  <p>
+    If you have any questions or concerns regarding this Privacy Policy, please contact us:
+  </p>
+
+  <p>
+    <strong>Email:</strong> admissions@mssm.edu.in<br>
+    <strong>Address:</strong> 363, Arcot Road, Kodambakkam, Chennai – 600024
+  </p>
+
+</section>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+
+            <p><center> All Rights Reserved </center> </p>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,705 @@
+
+<!DOCTYPE html>
+<html>
+	 
+    <head>
+        <title>MSSM</title>
+        <meta charset="utf-12">
+	<!--	<meta name="viewport" content="width=1024">-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="assets/logo/logo(2).png" type="image/x-icon">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.1s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254a !important;
+                border-color: #E7E7E7;
+                margin-bottom: 0px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffee;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1024px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 1024px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+       
+		</style>
+		<style>
+.button {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color:  #00254E;} /* Blue */
+</style>
+
+	<style>
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(1, 1);
+            }
+            to {
+                -webkit-transform: scale(1.5, 1.5);
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(1, 1);
+            }
+            to {
+                transform: scale(1.5, 1.5);
+            }
+        }
+
+        .carousel-inner .item > img {
+            -webkit-animation:0.2s;
+            animation: 0.2s;
+        }
+			.center img.img-with-animation {
+    margin: -28px auto;
+    display: block;
+}
+</style>
+    <style>
+    /* Styles for the pop-up */
+    #popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        z-index: 9999;
+    }
+    #popup-content {
+        display: inline-block;
+        background: #fff;
+        padding: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<style>
+	.pos1 {
+  position: absolute;
+  top: 310px;
+  left: 320px;
+}
+	.pos2 {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+}
+	.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+	/* Styling for the pop-up container */
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Ensures the pop-up is above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the pop-up content */
+#popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#popup-content img {
+  max-width: 100%;
+  max-height: 88vh; /* Limit height to 80% of viewport height */
+}
+
+#close-btn {
+  margin-top: 10px;
+
+}
+</style>
+                <style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+    </head>
+<script>
+    window.onload = function() {
+  var popupContainer = document.getElementById('popup-container');
+  var closeButton = document.getElementById('close-btn');                                                                                                                                                                                                                                   
+
+  function showPopup() {
+    popupContainer.style.display = 'flex';
+  }
+
+  function closePopup() {
+    popupContainer.style.display = 'none';
+  }
+
+  closeButton.addEventListener('click', closePopup);
+
+showPopup();
+}
+
+</script>
+    <body>
+ 
+
+<!--<div id="popup-container">
+            <div id="popup-content">
+              <img src="assets/logo/popup.jpg" alt="Pop-up Image"><br>
+              <button id="close-btn" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>-->
+        <nav class="navbar navbar-default" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navSearch">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="https://www.mssm.edu.in/">MSSM</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navSearch">	
+
+				 <p class="navbar-text navbar-right" style="padding-right:10px; color:white "> <a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf"target="_blank">Mandatory Disclosure  </a></p>	 
+                </div>
+            </div>
+        </nav>
+
+		<a href="#" title="MSSM"> <!--msec2_logo1.png--></a>
+		<!-- <h1 style="text-align: left; float: none; clear: both; margin: 0 auto;" > --><img src="assets\img\mssm_logo.jpg" style="max-width: 100%;"></img>
+<style>	
+		.blink_me {
+  animation: blinker 1.5s linear infinite;
+}
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+		@keyframes blinkingText{
+    0%{     color: #E046D7;    }
+    49%{    color: #468EE0; }
+    60%{    color: #EFF449; }
+    99%{    color: #F28C12;  }
+    100%{   color: #24D371;    }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+		</style>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar"><font face="Arial" size=2>
+
+                    <ul class="nav navbar-nav">
+                     <!--   <li><a href="#">HOME</a></li>-->
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+	<ul class="dropdown-menu"> 
+		<li><a href="management_new.html">Management </a></li>
+		<li><a href="MBA_new.html">M.B.A </a></li>	
+		<li><a href="whymssm_new.html">Why MSSM </a></li>
+	</ul>
+    <li class ="dropdown">
+	
+
+	<li><a href="Infrastructure.html">Infrastructure </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Prof&Dir_new.html">Professor &amp; Director </a></li>
+		<li><a href="ofm.html">Faculty Members </a></li>
+	</ul>
+	</li>	
+
+	<!--<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>-->
+	<li><a href="IIC2_new.html">Industry-Institution Connect </a></li>
+	
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Edge <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Research Faculty.html">Research Faculty </a></li>
+		<li><a href="coming_soon.html">Research Publications </a></li>
+		<li><a href="coming_soon.html">Research Activity </a></li>
+			</ul>
+	</li>
+	
+	<li><a href="gallery.html">Gallery </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	    <li><a href="graduation19th.html">19th GRADUATION DAY </a></li>
+	    <li><a href="graduationday18.html">18th GRADUATION DAY </a></li>
+	    <li><a href="graduationday17.html">17th GRADUATION DAY </a></li>
+		<li><a href="graduationday16.html">16th GRADUATION DAY </a></li>
+		<li><a href="graduationday15.html">15th GRADUATION DAY </a></li>
+	
+		
+		
+	</ul>
+	</li>
+	<!--<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Placement  <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	    <li><a href="about_placement.html">About</a></li>
+	    <li><a href="coming_soon.html">2023-2025 Placement </a></li>
+	    <li><a href="placement_22_24.html">2022-2024 Placement </a></li>
+	    
+	    </ul>
+	</li>-->
+	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+	<li><a href="contact.html">Contact Us </a></li>	
+					</ul>       
+					</font>
+                </div>
+            </div>
+        </nav>
+
+
+
+<br>
+
+ <div class="container">
+       <div class="row">
+
+                <div style="background-color: #00254E; color: #ffffff">
+                    <ul class="nav nav-tabs ">
+						<li class="active"><a data-toggle="tab" href="#emirec"> Alumni Association </a></li>
+                        <li><a data-toggle="tab" href="#vasd"> Value Added Skills Development </a></li>
+                        <li><a data-toggle="tab" href="#place_2017"> 2017 Placement Record </a></li>
+						<li><a data-toggle="tab" href="#place_2018"> 2018 Placement Record </a></li>
+						<li><a data-toggle="tab" href="#place_2019"> 2019 Placement Record </a></li>
+						<li><a data-toggle="tab" href="#place_2020">2020 Batch Placement Record</a></li>
+				        <li><a data-toggle="tab" href="#place_2021"> 2021 Batch Placement Record</a></li>
+	                    <li><a data-toggle="tab" href="#place_2022"> 2022 Batch Placement Record</a></li>
+				        <li><a data-toggle="tab" href="#place_2023">  2023 Batch Placement Record</a></li>
+				        <li><a data-toggle="tab" href="#place_2024"><font class=blink_me>  2024 Batch Placement Record<img src="newb.gif" width=30 height=15></img></font> </a></li>
+                        <li><a data-toggle="tab" href="#contact"> Contact </a></li>
+                    </ul>
+                </div>
+
+              <div class="tab-content">
+             	   
+				    
+                    <div id="emirec" class="tab-pane fade in active">
+                        <div class="table-responsive" style="padding-top:20px">
+							<center> <font color=purple face=Garamond size=5><strong>Alumni Association</strong></font></center>
+							
+             			
+        <div class="container-fluid">
+            <div class="row">
+				
+                <div class="col-sm-1"></div>
+                <div class="col-sm-10">
+                    <div id="myCarousel" class="carousel slide" data-ride="carousel">
+                        <!-- Indicators -->
+                        <ol class="carousel-indicators">
+                            <li data-target="#myCarousel" data-slide-to="800" class="active" ></li>
+                            
+                        </ol>
+
+                        <!-- Wrapper for slides -->
+                        <div class="carousel-inner">
+     
+							    <div class="item active">
+                                <img src="assets/Industrialvisit/G&B 1.jpeg" alt="2" style="width:100%; height: auto"><br>
+                                <center><p><strong>Industrial Visit on 16/10/2023 to Godrej & Boyce, Ambattur (2023-2025)</strong></p></center>
+                               <!-- <div class="carousel-caption">
+<h3>Second IMG</h3>
+<p>2nd Desc</p>
+</div> -->
+								</div>	
+							<div class="item">
+                                <img src="AU_Rank_1.jpg" alt="2" style="width:100%; height: auto">
+                                <img src="assets/Industrialvisit/G&B 5.jpeg" alt="2" style="width:100%; height: auto"><br>
+                                <center><p><strong>Industrial Visit on 16/10/2023 to Godrej & Boyce, Ambattur (2023-2025)</strong></p></center>
+                               <!-- <div class="carousel-caption">
+<h3>Second IMG</h3>
+<p>2nd Desc</p>
+</div> -->
+								</div>	
+							
+								<div class="item">
+                                <img src="AU_Rank_1.jpg" alt="2" style="width:100%; height: auto">
+                                <img src="assets/Industrialvisit/G&B 3.jpeg" alt="2" style="width:100%; height: auto"><br>
+                                <center><p><strong>Industrial Visit on 16/10/2023 to Godrej & Boyce, Ambattur (2023-2025)</strong></p></center>
+                               <!-- <div class="carousel-caption">
+<h3>Second IMG</h3>
+<p>2nd Desc</p>
+</div> -->
+								</div>
+								<div class="item">
+                                <img src="AU_Rank_1.jpg" alt="2" style="width:100%; height: auto">
+                                <img src="assets/Industrialvisit/Brakes India.jpeg" alt="2" style="width:100%; height: auto"><br>
+                                <center><p><strong>Industrial Visit on 16/10/2023 to Brakes India Pvt Ltd, Padi (2023-2025)</strong></p></center>
+                               <!-- <div class="carousel-caption">
+<h3>Second IMG</h3>
+<p>2nd Desc</p>
+</div> -->
+								</div>
+								<div class="item">
+                                <img src="AU_Rank_1.jpg" alt="2" style="width:100%; height: auto">
+                                <img src="assets/Industrialvisit/2nd yrs industvist.JPG" alt="2" style="width:100%; height: auto"><br>
+                                <center><p><strong>The India Cements Limited Sankari Plant, Salem (2022-2024)</strong></p></center>
+                               <!-- <div class="carousel-caption">
+<h3>Second IMG</h3>
+<p>2nd Desc</p>
+</div> -->
+								</div>
+
+
+
+                        
+                        
+
+                        <!-- Left and right controls -->
+                        <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+                            <span class="glyphicon glyphicon-chevron-left"></span>
+                            <span class="sr-only">Previous</span>
+                        </a>
+                        <a class="right carousel-control" href="#myCarousel" data-slide="next">
+                            <span class="glyphicon glyphicon-chevron-right"></span>
+                            <span class="sr-only">Next</span>
+                        </a>
+                    </div>
+
+                </div>
+			
+
+                <div class="col-sm-2"></div>
+
+            </div>
+            <br/>
+        </div>
+
+
+                </div>
+
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    
+                    <div id="vasd" class="tab-pane fade">
+                        <ul style="padding-top:10px">
+                            	<center> <font color=purple face=Garamond size=5><strong>Happy Class</strong></font></center>
+                            <li> JLPT-Japanese Proficiency Test for level N5 is undergone by the students during the first semester. The training for the same is given by ABK-AOTS Dosokai. The training is provided to develop basic communication skills in the language. </li>
+							<br>
+                            <li> Extensice training is provided to students in programming languages such as C and C++. This enables them to develop in-depth knowledge so that they can code their projects efficiently. </li><br>
+                            <li> The English Department conducts various activities periodically to help students improve their English communication skills. Oratorical competitions are conducted for first year students. The students of second year are encouraged to present a project in their third semester. The project focuses on interviewing eminent personalities in the industry. These projects and competitions prepare the students to attend campus interviews with confidence. </li><br>
+                            <li> Seminars are conducted regularly on current trending topics to keep the students updated with the technology. These seminars are conducted by eminent personalities from various industries to bridge the gap between industry and students. All departments host a one-day technical seminar every month. </li>
+                        </ul>
+                    </div>
+
+
+                    <div id="place_2016" class="tab-pane fade">
+											
+					<!--	<a href="Placement2016Batch.xlsx"><br><br><font face="Arial" color=blue><strong>Click here for 2012-2016 batch Placement Details</strong></font></a><br><br>-->
+                     <center> <a href="#"><img class="img-resposive" alt="Placement 2016" src="PLACEMENT-RECORD-MSEC-final.jpg" height="60%" width="80%" style="padding-top:20px;padding-bottom:20px"></a></center>
+                    </div>
+                    <div id="place_2017" class="tab-pane fade">
+						<br>
+						<br>
+						<center><br> <a href="PLACEMENT2016-2017.pdf"><font face="Arial" color=blue><strong>Click here for 2016-2017 Batch Placement Details</strong></font></a><br><br> </center>
+					<!--	<a href="Placement2013-2017.xlsx"><font face="Arial" color=blue><strong>Click here for 2013-2017 batch Placement Details</strong></font></a><br><br>-->
+               <center>     <!-- <a href="#"><img class="img-resposive" alt="Placement 2017" src="placement2017.PNG" height="40%" width="70%" style="padding-top:20px;padding-bottom:20px"></a>--></center>
+                    </div>
+					<div id="place_2018" class="tab-pane fade">
+						<br>
+						<br>
+						<!--	<a href="Placement2014-2018.xlsx"><font face="Arial" color=blue><strong>Click here for 2014-2018 batch Placement Details</strong></font></a><br>-->
+						<br>
+                <center><br> <a href="PLACEMENT2017-2018.pdf"><font face="Arial" color=blue><strong>Click here for 2017-2018 Batch Placement Details</strong></font></a><br><br> <!--  <a href="#"><img class="img-resposive" alt="Placement 2018" src="placement1718.png" height=400 width=600 style="padding-top:20px;padding-bottom:20px"></a>--></center>
+                    </div>
+					<div id="place_2019" class="tab-pane fade">
+						<br>
+						<br>
+						<!--	<a href="Placement2015-2019.xlsx"><font face="Arial" color=blue><strong>Click here for 2015-2019 batch Placement Details</strong></font></a><br>-->
+						<br>
+						<center>
+							<br>  <center><a href="PLACEMENT2018-2019.pdf"><font face="Arial" color=blue><strong>Click here for 2018-2019 Batch Placement Details</strong></font></a><br><br>
+                     <!--   <a href="#"><img class="img-resposive" alt="Placement 2019" src="placement2019.png" height="40%" width="60%" style="padding-top:20px;padding-bottom:20px"></a>--></center>
+                    </div>
+					<div id="place_2020" class="tab-pane fade">
+						<center>
+							<br>  <center><a href="PLACEMENT2019-2020.pdf"><font face="Arial" color=blue><strong>Click here for 2019-2020 Batch Placement Details</strong></font></a><br><br>
+                      <!--  <a href="#"><img class="img-resposive" alt="Placement 2020" src="Placement2020.jpg" height="60%" width="80%" style="padding-top:20px;padding-bottom:20px"></a></center>-->
+                    </div>
+				  
+				  <div id="place_2021" class="tab-pane fade">
+					<br>  <center><a href="PLACEMENT2020-2021.pdf"><font face="Arial" color=blue><strong>Click here for 2020-2021 Batch Placement Details</strong></font></a><br><br>
+                        <!--<a href="#"><img class="img-resposive" alt="Placement 2021" src="placement2021.png" height="60%" width="80%" style="padding-top:20px;padding-bottom:20px"></a>--></center>
+                    </div>
+				  
+				  
+				   <div id="place_2022" class="tab-pane fade">
+						<center>
+                        <a href="#"><img class="img-resposive" alt="Placement 2022" src="Placement2022.png" height="60%" width="80%" style="padding-top:20px;padding-bottom:20px"></a></center>
+					   </div>
+							  <div id="place_2023" class="tab-pane fade">
+					  <center>
+						 						  
+                        <a href="#"><img class="img-resposive" alt="Placement 2023" src="placement22-23.jpeg" height="60%" width="80%" style="padding-top:20px;padding-bottom:20px"></a></center>
+								 
+                    </div>
+							<div id="place_2024" class="tab-pane fade">
+					  <center>
+													
+							 <a href="#"><img class="img-resposive" alt="Placement 2024" src="Placement_2023-24.jpg" height="60%" width="80%" style="padding-top:20px;padding-bottom:20px"></a></center></div>
+							
+                    <div id="contact" class="tab-pane fade">
+						<br>
+						<p>&emsp;&emsp; &emsp;  <strong>Prof. Dr. Joseph George Fernandaz, </strong></p>
+<p>&emsp;&emsp; &emsp;  <strong>Head - Training and Placement | Dean of Students,</strong></p>
+
+                     <!--   <p><strong>Mr. Ramachandran Chokkalingam,</strong></p>
+<p><strong>Head/Placements and Corporate Affairs,</strong></p>-->
+<p>&emsp;&emsp; &emsp;  <strong>Meenakshi Sundararajan Engineering College</strong></p>
+<p>&emsp;&emsp; &emsp;  <strong><a href="mailto:placementcell@msec.edu.in">placementcell@msec.edu.in</a>&nbsp;| +91 9003010913</strong></p><br>
+						<!--
+<p>&nbsp;</p>
+<p><strong>Mr.A Velu</strong></p>
+<p><strong>Placement Officer</strong></p>
+<p><strong><a href="mailto:placementcell@msec.edu.in">placementcell@msec.edu.in</a>&nbsp;|  +91-9003010913 </strong></p>-->
+<div>&nbsp;</div</pre>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

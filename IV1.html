@@ -1,0 +1,541 @@
+<!DOCTYPE html>
+<html>
+	 
+    <head>
+        <title>MSSM</title>
+        <meta charset="utf-12">
+	<!--	<meta name="viewport" content="width=1024">-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="assets/logo/logo(2).png" type="image/x-icon">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.1s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254a !important;
+                border-color: #E7E7E7;
+                margin-bottom: 0px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffee;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1024px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 1024px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+       
+		</style>
+		<style>
+.button {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color:  #00254E;} /* Blue */
+</style>
+
+	<style>
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(1, 1);
+            }
+            to {
+                -webkit-transform: scale(1.5, 1.5);
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(1, 1);
+            }
+            to {
+                transform: scale(1.5, 1.5);
+            }
+        }
+
+        .carousel-inner .item > img {
+            -webkit-animation:0.2s;
+            animation: 0.2s;
+        }
+			.center img.img-with-animation {
+    margin: -28px auto;
+    display: block;
+}
+</style>
+    <style>
+    /* Styles for the pop-up */
+    #popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        z-index: 9999;
+    }
+    #popup-content {
+        display: inline-block;
+        background: #fff;
+        padding: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<style>
+	.pos1 {
+  position: absolute;
+  top: 310px;
+  left: 320px;
+}
+	.pos2 {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+}
+	.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+	/* Styling for the pop-up container */
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Ensures the pop-up is above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the pop-up content */
+#popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#popup-content img {
+  max-width: 100%;
+  max-height: 88vh; /* Limit height to 80% of viewport height */
+}
+
+#close-btn {
+  margin-top: 10px;
+
+}
+</style>
+                <style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+
+    </head>
+<script>
+    window.onload = function() {
+  var popupContainer = document.getElementById('popup-container');
+  var closeButton = document.getElementById('close-btn');                                                                                                                                                                                                                                   
+
+  function showPopup() {
+    popupContainer.style.display = 'flex';
+  }
+
+  function closePopup() {
+    popupContainer.style.display = 'none';
+  }
+
+  closeButton.addEventListener('click', closePopup);
+
+showPopup();
+}
+
+</script>
+    <body>
+ 
+
+<!--<div id="popup-container">
+            <div id="popup-content">
+              <img src="assets/logo/popup.jpg" alt="Pop-up Image"><br>
+              <button id="close-btn" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>-->
+        <nav class="navbar navbar-default" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navSearch">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="https://www.mssm.edu.in/">MSSM</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navSearch">	
+
+				 <p class="navbar-text navbar-right" style="padding-right:10px; color:white "> <a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf"target="_blank">Mandatory Disclosure  </a></p>	 
+                </div>
+            </div>
+        </nav>
+
+		<a href="#" title="MSSM"> <!--msec2_logo1.png--></a>
+		<!-- <h1 style="text-align: left; float: none; clear: both; margin: 0 auto;" > --><img src="assets\img\mssm_logo.jpg" style="max-width: 100%;"></img>
+<style>	
+		.blink_me {
+  animation: blinker 1.5s linear infinite;
+}
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+		@keyframes blinkingText{
+    0%{     color: #E046D7;    }
+    49%{    color: #468EE0; }
+    60%{    color: #EFF449; }
+    99%{    color: #F28C12;  }
+    100%{   color: #24D371;    }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+		</style>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar"><font face="Arial" size=2>
+
+                    <ul class="nav navbar-nav">
+                     <!--   <li><a href="#">HOME</a></li>-->
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+	<ul class="dropdown-menu"> 
+		<li><a href="management_new.html">Management </a></li>
+		<li><a href="MBA_new.html">M.B.A </a></li>	
+		<li><a href="whymssm_new.html">Why MSSM </a></li>
+	</ul>
+    <li class ="dropdown">
+	
+
+	<li><a href="Infrastructure.html">Infrastructure </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Prof&Dir_new.html">Professor &amp; Director </a></li>
+		<li><a href="ofm.html">Faculty Members </a></li>
+	</ul>
+	</li>	
+
+	<!--<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>-->
+	<li><a href="IIC2_new.html">Industry-Institution Connect </a></li>
+	
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Edge <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Research Faculty.html">Research Faculty </a></li>
+		<li><a href="coming_soon.html">Research Publications </a></li>
+		<li><a href="coming_soon.html">Research Activity </a></li>
+			</ul>
+	</li>
+	
+	<li><a href="gallery.html">Gallery </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	    <li><a href="graduation19th.html">19th GRADUATION DAY </a></li>
+	    <li><a href="graduationday18.html">18th GRADUATION DAY </a></li>
+	    <li><a href="graduationday17.html">17th GRADUATION DAY </a></li>
+		<li><a href="graduationday16.html">16th GRADUATION DAY </a></li>
+		<li><a href="graduationday15.html">15th GRADUATION DAY </a></li>
+	
+		
+		
+	</ul>
+	</li>
+	<li><a href="placement_new.html">Placement Cell </a></li>
+	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+	<li><a href="contact.html">Contact Us </a></li>	
+					</ul>       
+					</font>
+                </div>
+            </div>
+        </nav>
+<br>
+
+	<!--<div class="container">
+            <div class="row">            
+                <div class="col-sm-16" style="text-align: center">
+
+            
+             <a target="_blank" href="assets/Industrialvisit/AK1.jpeg">
+    <img src="assets/Industrialvisit/AK1.jpeg" alt="" width="90%" height="100%" style="padding:2px;border:thin solid black;"> 
+    </a>-->
+    
+
+<div>
+<br>
+<center><p size=20> Industrial Visit To "<b>GODREJ & BOYCE(G&B)</b>",  Ambattur Batch(2024-2026) <br>Dated On <b>27/09/2025</b></p></center>
+<br>
+	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16" style="text-align: center">
+
+            
+             <a target="_blank" href="assets/Industrialvisit/iv godrej3.jpg">
+    <img src="assets/Industrialvisit/iv godrej3.jpg" alt="" width="90%" height="100%" style="padding:2px;border:thin solid black;"> 
+    </a>
+</div></div>
+
+                </div>
+
+            </div>
+
+<br>
+	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16" style="text-align: center">
+
+            
+             <a target="_blank" href="assets/Industrialvisit/iv godrej 2.jpg">
+    <img src="assets/Industrialvisit/iv godrej 2.jpg" alt="" width="90%" height="100%" style="padding:2px;border:thin solid black;"> 
+    </a>
+</div></div>
+
+                </div>
+
+            </div>
+
+
+<br>
+
+
+</center>
+
+
+                </div>
+
+            </div>
+<br>
+            
+        </div>
+
+
+        <br/>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+<h2 align=center><font color=white face="Bodoni MT Black">Follow us on</font></h2> 
+<br>
+<a href="https://www.facebook.com/profile.php?id=61557611947227" target=blank><img src="assets/logo/facebook.png" height=40 width=40></img></a><a href="https://youtube.com"><img src="assets/logo/vecteezy.png" height=40 width=50></img></a><a href="https://www.instagram.com/mssm_mba_official/"><img src="assets/logo/picture-logo-42719.png" height=40 width=40></img></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/"><img src="assets/logo/linkedin-logo-png-1854.png" height=40 width=40></img></a>
+<center>
+<br>
+            <p> 363, Arcot Road, Kodambakkam, Chennai - 600 024 </p>
+        </footer>
+        <footer class="w3-center" style="padding: 2px; background-color: #000000;">
+            <div class="container">
+                <p class="copyright text-muted small" style="color: #ffffff" >All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>

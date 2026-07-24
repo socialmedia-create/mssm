@@ -1,0 +1,350 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MSSM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        
+            <div class="container-fluid">
+               
+                   
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                  
+            </div>
+        </nav>
+
+        <a href="#" title="MSSM">
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" ><img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/> </h1>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                
+                                <li><a href="management.html"> Management </a></li>
+                            </ul>
+                        </li>
+                                <li><a href="MBA.html"> M.B.A </a></li>
+                        <li><a href="whymssm.html"> Why MSSM </a></li>
+                        <li><a href="Infrastructure.html"> Infrastructure </a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Faculty <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Prof&Dir.html"> Professor & Director </a></li>
+                                <li><a href="ofm.html">Faculty Members </a></li></ul>
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Student Profile <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="batch19_21.html"> Batch of 2019-2021 </a></li>
+                            </ul> 
+                        <li><a href="gallery.html"> Gallery </a></li>
+                            <li><a href="placement.html"> Placement Cell </a></li> 
+                        <li><a href="contact.html"> Contact Us </a></li>                            
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+</div>
+                            </div>
+
+                        </div>
+
+      
+                    </div>
+
+                </div>
+
+                <div class="col-sm-1"></div>
+
+            </div>
+            <br/>
+        </div>
+
+
+</h3>			
+       	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16"style="text-align: center">
+                    <h3> CONGRATULATIONS ACHIEVERS
+                    <br>
+                    <br>
+<img src="assets/img2021/1. shanmuhapriya.jpg" style="width:50;height:20" alt="">
+<h2>Shanmuga Priya E</h2>
+<p class="title">University - 1st Rank with Gold Medal</p>
+
+            
+</font>
+<hr>
+</p>  
+			
+			</div>
+
+                        </div>
+                    </div>
+                    	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16"style="text-align: center">
+                    
+                    <br>
+<img src="assets/img2021/3. vidhya.jpg" style="width:50;height:20" alt="">
+<h2>Vidhya Lakshmi V</h2>
+<p class="title">University - 3rd Rank</p>
+
+            
+</font>
+<hr>
+</p>  
+			
+			</div>
+
+                        </div>
+                    </div>
+                    	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16"style="text-align: center">
+                    
+                    <br>
+<img src="assets/img2021/4. harish.jpg" style="width:50;height:20" alt="">
+<h2>Harish K.R</h2>
+<p class="title">University - 4th Rank</p>
+
+</font>
+<hr>
+</p>  
+			
+			</div>
+
+                        </div>
+                    </div>
+                    	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16"style="text-align: center">
+                    
+                    <br>
+<img src="assets/img2021/7. jayshma.jpg" style="width:50;height:20" alt="">
+<h2>Jayshma G.B</h2>
+<p class="title">University - 7th Rank</p>
+
+</font>
+<hr>
+</p>  
+			
+			</div>
+
+                        </div>
+                    </div>
+                    	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16"style="text-align: center">
+                    
+                    <br>
+<img src="assets/img2021/8. dhivyadharshini.jpg" style="width:50;height:20" alt="">
+<h2>Divya Dharshini P</h2>
+<p class="title">University - 8th Rank</p>
+
+</font>
+<hr>
+</p>  
+			
+			</div>
+
+                        </div>
+                    </div>
+                    	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16"style="text-align: center">
+                    
+                    <br>
+<img src="assets/img2021/9. dharshana.jpg" style="width:50;height:20" alt="">
+<h2>Darshana Rachel K</h2>
+<p class="title">University - 9th Rank</p>
+
+</font>
+<hr>
+</p>  
+			
+			</div>
+
+                        </div>
+                    </div>
+                    	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16"style="text-align: center">
+                    
+                    <br>
+<img src="assets/img2021/10. gomathi.jpg" style="width:50;height:20" alt="">
+<h2>Gomathi C</h2>
+<p class="title">University - 10th Rank</p>
+            
+</font>
+<hr>
+</p>  
+			
+			</div>
+
+                        </div>
+                    </div>
+                    	
+                </div>
+            </div>
+            
+        </div>
+        <br/>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+
+            <p><center> All Rights Reserved </center> </p>
+        </footer>
+        
+    </body>
+</html>

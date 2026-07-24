@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+	 
+    <head>
+        <title>MSSM</title>
+        <meta charset="utf-12">
+	<!--	<meta name="viewport" content="width=1024">-->
+     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="assets/logo/logo(2).png" type="image/x-icon">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.1s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254a !important;
+                border-color: #E7E7E7;
+                margin-bottom: 0px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffee;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 1024px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 1024px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+       
+		</style>
+		<style>
+.button {
+  border: none;
+  color: white;
+  padding: 10px 30px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 2px 2px;
+  cursor: pointer;
+}
+
+.button1 {background-color:  #00254E;} /* Blue */
+</style>
+
+	<style>
+        @-webkit-keyframes zoom {
+            from {
+                -webkit-transform: scale(1, 1);
+            }
+            to {
+                -webkit-transform: scale(1.5, 1.5);
+            }
+        }
+
+        @keyframes zoom {
+            from {
+                transform: scale(1, 1);
+            }
+            to {
+                transform: scale(1.5, 1.5);
+            }
+        }
+
+        .carousel-inner .item > img {
+            -webkit-animation:0.2s;
+            animation: 0.2s;
+        }
+			.center img.img-with-animation {
+    margin: -28px auto;
+    display: block;
+}
+</style>
+    <style>
+    /* Styles for the pop-up */
+    #popup {
+        display: none;
+        position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.7);
+        text-align: center;
+        z-index: 9999;
+    }
+    #popup-content {
+        display: inline-block;
+        background: #fff;
+        padding: 20px;
+        position: relative;
+        top: 50%;
+        transform: translateY(-50%);
+    }
+    #close-button {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        cursor: pointer;
+    }
+</style>
+
+<style>
+	.pos1 {
+  position: absolute;
+  top: 310px;
+  left: 320px;
+}
+	.pos2 {
+  position: absolute;
+  top: 110px;
+  left: 20px;
+}
+	.centered {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+	/* Styling for the pop-up container */
+#popup-container {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Semi-transparent background */
+  z-index: 9999; /* Ensures the pop-up is above other content */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Styling for the pop-up content */
+#popup-content {
+  background-color: #fff;
+  padding: 20px;
+  border-radius: 5px;
+  text-align: center;
+}
+
+#popup-content img {
+  max-width: 100%;
+  max-height: 88vh; /* Limit height to 80% of viewport height */
+}
+
+#close-btn {
+  margin-top: 10px;
+
+}
+</style>
+    </head>
+<script>
+    window.onload = function() {
+  var popupContainer = document.getElementById('popup-container');
+  var closeButton = document.getElementById('close-btn');                                                                                                                                                                                                                                   
+
+  function showPopup() {
+    popupContainer.style.display = 'flex';
+  }
+
+  function closePopup() {
+    popupContainer.style.display = 'none';
+  }
+
+  closeButton.addEventListener('click', closePopup);
+
+showPopup();
+}
+
+</script>
+    <body>
+ 
+
+<!--<div id="popup-container">
+            <div id="popup-content">
+              <img src="assets/logo/popup.jpg" alt="Pop-up Image"><br>
+              <button id="close-btn" type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+            </div>
+          </div>-->
+        <nav class="navbar navbar-default" >
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navSearch">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                    <a class="navbar-brand" href="https://www.mssm.edu.in/">MSSM</a>
+                </div>
+                <div class="collapse navbar-collapse" id="navSearch">	
+
+				 <p class="navbar-text navbar-right" style="padding-right:10px; color:white "> <a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf"target="_blank">Mandatory Disclosure  </a></p>	 
+                </div>
+            </div>
+        </nav>
+
+		<a href="#" title="MSSM"> <!--msec2_logo1.png--></a>
+		<!-- <h1 style="text-align: left; float: none; clear: both; margin: 0 auto;" > --><img src="assets\img\mssm_logo.jpg" style="max-width: 100%;"></img>
+<style>	
+		.blink_me {
+  animation: blinker 1.5s linear infinite;
+}
+.blinking{
+    animation:blinkingText 1.2s infinite;
+}
+		@keyframes blinkingText{
+    0%{     color: #E046D7;    }
+    49%{    color: #468EE0; }
+    60%{    color: #EFF449; }
+    99%{    color: #F28C12;  }
+    100%{   color: #24D371;    }
+}
+@keyframes blinker {
+  50% {
+    opacity: 0;
+  }
+}
+		</style>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar"><font face="Arial" size=2>
+
+                    <ul class="nav navbar-nav">
+                     <!--   <li><a href="#">HOME</a></li>-->
+<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+	<ul class="dropdown-menu"> 
+		<li><a href="management_new.html">Management </a></li>
+		<li><a href="MBA_new.html">M.B.A </a></li>	
+		<li><a href="whymssm_new.html">Why MSSM </a></li>
+	</ul>
+    <li class ="dropdown">
+	
+
+	<li><a href="Infrastructure.html">Infrastructure </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Prof&Dir_new.html">Professor &amp; Director </a></li>
+		<li><a href="ofm.html">Faculty Members </a></li>
+	</ul>
+	</li>	
+
+	<!--<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>-->
+	<li><a href="IIC2_new.html">Industry-Institution Connect </a></li>
+	
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Research Edge <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+		<li><a href="Research Faculty.html">Research Faculty </a></li>
+		<li><a href="coming_soon.html">Research Publications </a></li>
+		<li><a href="coming_soon.html">Research Activity </a></li>
+			</ul>
+	</li>
+	
+	<li><a href="gallery.html">Gallery </a></li>
+	<li class="dropdown"><a class="dropdown-toggle" data-toggle="dropdown" href="#">Graduation <span class="caret"></span></a>
+	<ul class="dropdown-menu">
+	    <li><a href="graduation19th.html">19th GRADUATION DAY </a></li>
+	    <li><a href="graduationday18.html">18th GRADUATION DAY </a></li>
+	    <li><a href="graduationday17.html">17th GRADUATION DAY </a></li>
+		<li><a href="graduationday16.html">16th GRADUATION DAY </a></li>
+		<li><a href="graduationday15.html">15th GRADUATION DAY </a></li>
+	
+		
+		
+	</ul>
+	</li>
+	<li><a href="placement_new.html">Placement Cell </a></li>
+	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+	<li><a href="contact.html">Contact Us </a></li>	
+					</ul>       
+					</font>
+                </div>
+            </div>
+        </nav>
+
+
+
+</center>
+	
+
+</center>
+     <br>
+       	<div class="container">
+            <div class="row">            
+                <div class="col-sm-16"style="text-align: center">
+<img src="assets/img/director.png" style="width:50%;height:200" alt="Director">        
+            <p class="text-justify"><font size="4"><hr>
+<h3><strong> Dr.Saiju M John - Director</strong>
+<br>M.B.A; MFT; M.Phil; UGC NET; TN SET; M.B.A Finance; PhD
+</h3>
+<br>
+Obtained his PhD in Management Science from Jawaharlal Nehru Technological University, Hyderabad.
+He started his career in the corporate sector after completing his MBA from the Department of Commerce and Management Studies, University of Calicut in 1988, before turning entrepreneur in 1995. After a decade as an entrepreneur he then turned to the academic life. He joined as a full time Professor in IIET, Meenakshi Sundararajan School of Management in 2006. He took charge as Director in 2017. He has to his credit 10 Research Papers published in reputed International and National Journals.<hr>
+"No dream is too great to achieve if one can plan, acquire the skills needed and work diligently towards that goal"
+<br>
+-Dr.Saiju.M.John
+
+</font>
+<hr>
+</p>  
+			
+			</div>
+
+                        </div>
+                    </div>
+
+
+
+
+
+</center>
+
+
+                </div>
+
+            </div>
+
+
+<br>
+
+</center>
+
+
+                </div>
+
+            </div>
+<br>
+            
+        </div>
+
+
+        <br/>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+<h2 align=center><font color=white face="Bodoni MT Black">Follow us on</font></h2> 
+<br>
+<a href="https://www.facebook.com/profile.php?id=61557611947227" target=blank><img src="assets/logo/facebook.png" height=40 width=40></img></a><a href="https://youtube.com"><img src="assets/logo/vecteezy.png" height=40 width=50></img></a><a href="https://www.instagram.com/mssm_mba_official/"><img src="assets/logo/picture-logo-42719.png" height=40 width=40></img></a>&nbsp;&nbsp;<a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/"><img src="assets/logo/linkedin-logo-png-1854.png" height=40 width=40></img></a>
+<center>
+<br>
+            <p> 363, Arcot Road, Kodambakkam, Chennai - 600 024 </p>
+        </footer>
+        <footer class="w3-center" style="padding: 2px; background-color: #000000;">
+            <div class="container">
+                <p class="copyright text-muted small" style="color: #ffffff" >All Rights Reserved</p>
+            </div>
+        </footer>
+    </body>
+</html>
+<!--<div id="pg-9357-5" class="panel-grid panel-has-style">
+                                                <div class="aos-init panel-row-style panel-row-style-for-9357-5" data-aos="fade-up" data-aos-duration="300" data-aos-easing="linear" data-aos-anchor-placement="top-bottom" data-aos-once="true">
+                                                    <div id="pgc-9357-5-0" class="panel-grid-cell">
+                                                        <div id="panel-9357-5-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="8">
+                                                            <div class="aos-init panel-widget-style panel-widget-style-for-9357-5-0-0" data-aos="fade-left" data-aos-duration="900" data-aos-easing="linear" data-aos-delay="600" data-aos-anchor-placement="top-bottom" data-aos-once="true">
+                                                                <div class="so-widget-sow-editor so-widget-sow-editor-base">
+                                                                    <div class="siteorigin-widget-tinymce textwidget">
+                                                                        <h1 class="main_heading text-center">
+                                                                            <span class="sheading">Our</span>
+                                                                            Authorities
+                                                                        </h1>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pg-9357-6" class="panel-grid panel-has-style">
+                                                <div class="panel-row-style panel-row-style-for-9357-6">
+                                                    <div id="pgc-9357-6-0" class="panel-grid-cell panel-grid-cell-empty"></div>
+                                                    <div id="pgc-9357-6-1" class="panel-grid-cell">
+                                                        <div id="panel-9357-6-1-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="9">
+                                                            <div class="so-widget-sow-editor so-widget-sow-editor-base">
+                                                                <div class="siteorigin-widget-tinymce textwidget">
+                                                                    <div class="tabcontent">
+                                                                        <h3 class="mb-0">
+                                                                            Shri. Ashok Kumar Mundhra, <span class="ger">Secretary</span>
+                                                                        </h3>
+                                                                        <h4>
+                                                                            <p style="text-align: justify; color: black;">“All our dreams can come true, if we have the courage to pursue them”— Walt Disney Dreams may seem to be far removed from reality. They may seem impossible and improbable. But little do we realize that all of us have in us the strength, patience and the passion to fulfill our dreams. The vision and dreams of a few kind hearted philanthropists and educationists, led to the founding of this institution...</p>
+                                                                        </h4>
+                                                                        <p class="readmore" color="blue">
+                                                                            <a href="https://www.dgvaishnavcollege.edu.in/authorities/secretary/">
+                                                                                <u>Read More</u>
+                                                                            </a>
+                                                                        </p>
+                                                                    </div>
+                                                                    <div class="tabimg">
+                                                                        <img decoding="async" class="aligncenter size-large wp-image-392 w3-border w3-padding" src="https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2020/01/secretary.jpg" alt=""/>
+                                                                    </div>
+                                                                </div>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div id="pg-9357-7" class="panel-grid panel-no-style">
+                                                <div id="pgc-9357-7-0" class="panel-grid-cell">
+                                                    <div id="panel-9357-7-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="10">
+                                                        <div class="so-widget-sow-editor so-widget-sow-editor-base">
+                                                            <div class="siteorigin-widget-tinymce textwidget">
+                                                                <p>
+                                                                    &nbsp;<br/>&nbsp;
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>-->
+                                            </script>
+        <!-- End Google Tag Manager snippet added by Site Kit -->
+        <style media="all" id="siteorigin-panels-layouts-head">
+            /* Layout 9357 */
+            #pgc-9357-0-0 , #pgc-9357-1-0 , #pgc-9357-2-0 , #pgc-9357-5-0 , #pgc-9357-7-0 , #pgc-9357-9-0 , #pgc-9357-10-0 , #pgc-9357-11-0 {
+                width: 100%;
+                width: calc(100% - ( 0 * 30px ) )
+            }
+
+            #pg-9357-0 , #pg-9357-2 , #pg-9357-3 , #pg-9357-5 , #pg-9357-6 , #pg-9357-7 , #pg-9357-8 , #pg-9357-9 , #pg-9357-10 , #pl-9357 .so-panel , #pl-9357 .so-panel:last-of-type {
+                margin-bottom: 0px
+            }
+
+            #pg-9357-1 {
+                margin-bottom: 3px
+            }
+
+            #pgc-9357-3-0 , #pgc-9357-4-0 , #pgc-9357-4-1 {
+                width: 50%;
+                width: calc(50% - ( 0.5 * 30px ) )
+            }
+
+            #pgc-9357-3-1 , #pgc-9357-8-0 {
+                width: 5%;
+                width: calc(5% - ( 0.95 * 30px ) )
+            }
+
+            #pgc-9357-3-2 {
+                width: 45%;
+                width: calc(45% - ( 0.55 * 30px ) )
+            }
+
+            #pg-9357-4 {
+                margin-bottom: 30px
+            }
+
+            #pl-9357 #panel-9357-5-0-0 {
+                margin: 0px 0px 30px 0px
+            }
+
+            #pgc-9357-6-0 {
+                width: 5.01%;
+                width: calc(5.01% - ( 0.9498997995992 * 30px ) )
+            }
+
+            #pgc-9357-6-1 {
+                width: 94.99%;
+                width: calc(94.99% - ( 0.050100200400802 * 30px ) )
+            }
+
+            #pgc-9357-8-1 {
+                width: 95%;
+                width: calc(95% - ( 0.05 * 30px ) )
+            }
+
+            #pg-9357-0> .panel-row-style {
+                background-color: #eaedec
+            }
+
+            #pg-9357-0.panel-has-style > .panel-row-style, #pg-9357-0.panel-no-style , #pg-9357-1.panel-has-style > .panel-row-style, #pg-9357-1.panel-no-style , #pg-9357-2.panel-has-style > .panel-row-style, #pg-9357-2.panel-no-style , #pg-9357-3.panel-has-style > .panel-row-style, #pg-9357-3.panel-no-style , #pg-9357-4.panel-has-style > .panel-row-style, #pg-9357-4.panel-no-style , #pg-9357-6.panel-has-style > .panel-row-style, #pg-9357-6.panel-no-style , #pg-9357-7.panel-has-style > .panel-row-style, #pg-9357-7.panel-no-style , #pg-9357-8.panel-has-style > .panel-row-style, #pg-9357-8.panel-no-style , #pg-9357-10.panel-has-style > .panel-row-style, #pg-9357-10.panel-no-style , #pg-9357-11.panel-has-style > .panel-row-style, #pg-9357-11.panel-no-style {
+                -webkit-align-items: flex-start;
+                align-items: flex-start
+            }
+
+            #panel-9357-0-0-0> .panel-widget-style {
+                background-color: #9bf2ec;
+                color: #000000
+            }
+
+            #pg-9357-1> .panel-row-style {
+                background-color: #bdeeef;
+                padding: 2px 0px 2px 0px
+            }
+
+            #panel-9357-1-0-0> .panel-widget-style {
+                background-color: #29d2e5
+            }
+
+            #pg-9357-2> .panel-row-style {
+                padding: 60px 0px 0px 0px
+            }
+
+            #pg-9357-3> .panel-row-style {
+                padding: 60px 0px 50px 0px
+            }
+
+            #pg-9357-4> .panel-row-style {
+                background-color: #f9f9f9;
+                border: 10px solid #8224e3;
+                padding: 60px 0px 0px 0px
+            }
+
+            #pg-9357-5> .panel-row-style {
+                padding: 50px 0px 50px 0px
+            }
+
+            #pg-9357-5.panel-has-style > .panel-row-style, #pg-9357-5.panel-no-style , #pg-9357-9.panel-has-style > .panel-row-style, #pg-9357-9.panel-no-style {
+                -webkit-align-items: center;
+                align-items: center
+            }
+
+            #pg-9357-6> .panel-row-style , #pg-9357-8> .panel-row-style {
+                background-color: #f3f2f2;
+                box-shadow: 0 5px 15px #25e8d1
+            }
+
+            #pgc-9357-6-0 , #pgc-9357-6-1 , #pgc-9357-8-0 , #pgc-9357-8-1 {
+                align-self: auto
+            }
+
+            #panel-9357-8-1-0> .panel-widget-style {
+                background-color: rgba(4,209,224,0.99)
+            }
+
+            #pg-9357-9> .panel-row-style {
+                padding: 50px 0px 40px 0px
+            }
+
+            #pg-9357-10> .panel-row-style {
+                background-color: #f3f2f2
+            }
+
+            #panel-9357-10-0-0> .panel-widget-style , #pg-9357-11> .panel-row-style {
+                padding: 30px 0px 0px 0px
+            }
+
+            @media (max-width: 780px) {
+                #pg-9357-0.panel-no-style, #pg-9357-0.panel-has-style > .panel-row-style, #pg-9357-0 , #pg-9357-1.panel-no-style, #pg-9357-1.panel-has-style > .panel-row-style, #pg-9357-1 , #pg-9357-2.panel-no-style, #pg-9357-2.panel-has-style > .panel-row-style, #pg-9357-2 , #pg-9357-3.panel-no-style, #pg-9357-3.panel-has-style > .panel-row-style, #pg-9357-3 , #pg-9357-4.panel-no-style, #pg-9357-4.panel-has-style > .panel-row-style, #pg-9357-4 , #pg-9357-5.panel-no-style, #pg-9357-5.panel-has-style > .panel-row-style, #pg-9357-5 , #pg-9357-6.panel-no-style, #pg-9357-6.panel-has-style > .panel-row-style, #pg-9357-6 , #pg-9357-7.panel-no-style, #pg-9357-7.panel-has-style > .panel-row-style, #pg-9357-7 , #pg-9357-8.panel-no-style, #pg-9357-8.panel-has-style > .panel-row-style, #pg-9357-8 , #pg-9357-9.panel-no-style, #pg-9357-9.panel-has-style > .panel-row-style, #pg-9357-9 , #pg-9357-10.panel-no-style, #pg-9357-10.panel-has-style > .panel-row-style, #pg-9357-10 , #pg-9357-11.panel-no-style, #pg-9357-11.panel-has-style > .panel-row-style, #pg-9357-11 {
+                    -webkit-flex-direction:column;
+                    -ms-flex-direction: column;
+                    flex-direction: column
+                }
+
+                #pg-9357-0 > .panel-grid-cell , #pg-9357-0 > .panel-row-style > .panel-grid-cell , #pg-9357-1 > .panel-grid-cell , #pg-9357-1 > .panel-row-style > .panel-grid-cell , #pg-9357-2 > .panel-grid-cell , #pg-9357-2 > .panel-row-style > .panel-grid-cell , #pg-9357-3 > .panel-grid-cell , #pg-9357-3 > .panel-row-style > .panel-grid-cell , #pg-9357-4 > .panel-grid-cell , #pg-9357-4 > .panel-row-style > .panel-grid-cell , #pg-9357-5 > .panel-grid-cell , #pg-9357-5 > .panel-row-style > .panel-grid-cell , #pg-9357-6 > .panel-grid-cell , #pg-9357-6 > .panel-row-style > .panel-grid-cell , #pg-9357-7 > .panel-grid-cell , #pg-9357-7 > .panel-row-style > .panel-grid-cell , #pg-9357-8 > .panel-grid-cell , #pg-9357-8 > .panel-row-style > .panel-grid-cell , #pg-9357-9 > .panel-grid-cell , #pg-9357-9 > .panel-row-style > .panel-grid-cell , #pg-9357-10 > .panel-grid-cell , #pg-9357-10 > .panel-row-style > .panel-grid-cell , #pg-9357-11 > .panel-grid-cell , #pg-9357-11 > .panel-row-style > .panel-grid-cell {
+                    width: 100%;
+                    margin-right: 0
+                }
+
+                #pgc-9357-3-0 , #pgc-9357-3-1 , #pgc-9357-4-0 , #pgc-9357-6-0 , #pgc-9357-8-0 , #pl-9357 .panel-grid .panel-grid-cell-mobile-last {
+                    margin-bottom: 0px
+                }
+
+                #pl-9357 .panel-grid-cell {
+                    padding: 0
+                }
+
+                #pl-9357 .panel-grid .panel-grid-cell-empty {
+                    display: none
+                }
+            }
+        </style>
+<!--<div id="pg-23-3"  class="panel-grid panel-has-style" ><div class="aos-init siteorigin-panels-stretch panel-row-style panel-row-style-for-23-3" data-aos="fade-down" data-aos-duration="300" data-aos-easing="linear" data-aos-anchor-placement="top-bottom" data-aos-once="true" data-stretch-type="full" ><div id="pgc-23-3-0"  class="panel-grid-cell" ><div id="panel-23-3-0-0" class="so-panel widget widget_lsow-tabs panel-first-child panel-last-child" data-index="4" ><div class="aos-init tab12 panel-widget-style panel-widget-style-for-23-3-0-0" data-aos="fade-left" data-aos-duration="900" data-aos-easing="ease" data-aos-delay="600" data-aos-anchor-placement="top-bottom" data-aos-once="true" ><div
+			
+			class="so-widget-lsow-tabs so-widget-lsow-tabs-default-66fe3d72d884-23"
+			
+		><div class="lsow-tabs  style1" data-mobile-width="767"><a href="#" class="lsow-tab-mobile-menu"><i class="lsow-icon-menu"></i>&nbsp;</a><div class="lsow-tab-nav"><div class="lsow-tab"><a class="lsow-tab-label" href="#"><span class="lsow-tab-title">Circular</span></a></div><div class="lsow-tab"><a class="lsow-tab-label" href="#"><span class="lsow-tab-title">Announcement</span></a></div><div class="lsow-tab"><a class="lsow-tab-label" href="#"><span class="lsow-tab-title">Events</span></a></div></div><div class="lsow-tab-panes"><div id="" class="lsow-tab-pane"><div id="mtphr-dnt-1112" class="mtphr-dnt mtphr-dnt-1112 mtphr-dnt-default mtphr-dnt-scroll mtphr-dnt-scroll-down"><div class="mtphr-dnt-wrapper mtphr-dnt-clearfix"><div class="mtphr-dnt-tick-container"><div class="mtphr-dnt-tick-contents"><div style="height:200px;" class="mtphr-dnt-tick mtphr-dnt-default-tick mtphr-dnt-clearfix "><a href="https://dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2025/01/4th-ICAB-MISF-2025.pdf" target="_blank"><h5 style="color:blue"><img loading="lazy" decoding="async" class="alignright" style="vertical-align:bottom" src="https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/05/new.gif" alt="" width="60" height="60" /> ICAB-MISF’ 2025 by Department of Bio-Technology  &#8211; Click Here  </h5></a></div><div style="height:200px;" class="mtphr-dnt-tick mtphr-dnt-default-tick mtphr-dnt-clearfix "><a href="https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/12/CGPA.pdf" target="_blank"><h5 style="color:blue">CGPA to Percentage Conversion</h5></a></div><div style="height:200px;" class="mtphr-dnt-tick mtphr-dnt-default-tick mtphr-dnt-clearfix "><a href="https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2022/04/Certificate-Medium-of-Instruction.pdf" target="_blank"><h5 style="color:blue"> Certificate &#8211; Medium of Instruction </h5></a></div></div></div></div></div>
+
+<a class="btn btn-flat btn-dark btn-theme-colored btn-sm pull-right" href="https://www.dgvaishnavcollege.edu.in/circular/">View All</a></div><div id="" class="lsow-tab-pane"><div id="mtphr-dnt-1111" class="mtphr-dnt mtphr-dnt-1111 mtphr-dnt-default mtphr-dnt-scroll mtphr-dnt-scroll-down"><div class="mtphr-dnt-wrapper mtphr-dnt-clearfix"><div class="mtphr-dnt-tick-container"><div class="mtphr-dnt-tick-contents"><div style="height:232px;" class="mtphr-dnt-tick mtphr-dnt-default-tick mtphr-dnt-clearfix "><a href="https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/12/CGPA.pdf" target="_blank"><h5 style="color:blue"><img loading="lazy" decoding="async" class="alignright" style="vertical-align:bottom" src="https://www.dgvaishnavcollege.edu.in/dgvaishnav-c/uploads/2021/05/new.gif" alt="" width="60" height="60" />CGPA to Percentage Conversion</h5></a></div></div></div></div></div>
+
+<a class="btn btn-flat btn-dark btn-theme-colored btn-sm pull-right" href="https://www.dgvaishnavcollege.edu.in/announcement/">View All</a></div><div id="" class="lsow-tab-pane">
+
+<a class="btn btn-flat btn-dark btn-theme-colored btn-sm pull-right" href="https://www.dgvaishnavcollege.edu.in/events/">View All</a></div></div><!-- .lsow-tab-panes --></div><!-- .lsow-tabs</div></div></div></div><div id="pgc-23-3-1"  class="panel-grid-cell panel-grid-cell-empty" ></div><div id="pgc-23-3-2"  class="panel-grid-cell" ><div id="panel-23-3-2-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="5" ><div class="aos-init panel-widget-style panel-widget-style-for-23-3-2-0" data-aos="fade-right" data-aos-duration="900" data-aos-easing="ease" data-aos-delay="600" data-aos-anchor-placement="top-bottom" data-aos-once="true" ><div
+			
+			class="so-widget-sow-editor so-widget-sow-editor-base"
+			
+		>
+<div class="siteorigin-widget-tinymce textwidget">
+	<p><iframe loading="lazy" src="https://www.youtube.com/embed/JgvQmR6HKlY?playlist=JgvQmR6HKlY&amp;autoplay=1&amp;loop=1" width="595" height="360" frameborder="0" allowfullscreen="allowfullscreen"></iframe></p>
+</div>
+</div></div></div></div></div></div><div id="pg-23-4"  class="panel-grid panel-has-style" ><div class="aos-init siteorigin-panels-stretch panel-row-style panel-row-style-for-23-4" data-aos="fade-down" data-aos-duration="300" data-aos-easing="linear" data-aos-anchor-placement="top-bottom" data-aos-once="true" data-stretch-type="full" ><div id="pgc-23-4-0"  class="panel-grid-cell" ><div id="panel-23-4-0-0" class="so-panel widget widget_sow-editor panel-first-child panel-last-child" data-index="6" ><div class="aos-init panel-widget-style panel-widget-style-for-23-4-0-0" data-aos="fade-up" data-aos-duration="900" data-aos-easing="linear" data-aos-delay="600" data-aos-anchor-placement="top-bottom" data-aos-once="true" ><div
+			
+			class="so-widget-sow-editor so-widget-sow-editor-base"
+			
+		>
+<div class="siteorigin-widget-tinymce textwidget">
+	<h1 class="main_heading"><span class="sheading">Welcome to</span> DDGD Vaishnav College</h1>
+<p class="text-justify">Dwaraka Doss Goverdhan Doss Vaishnav College, a linguistic minority institution established in the year 1964 by the Rajasthanis and Gujaratis settled in Chennai for the cause of higher education. DDGDVC is the best college with a sole purpose of imparting knowledge and value based education saw its grand day on 30th June 1964 with one course in B.Sc. Mathematics with Shri. Totadri Iyengar (teacher of Dr. APJ Abdul Kalam) as its first Principal. Dwaraka Doss Goverdhan Doss Vaishnav College has been a haven for generations of enthusiastic learners through five decades and more. College was founded on the principles of Vaishnavism, with the sole purpose of imparting value based quality...</p>
+<p class="readmore"><a href="https://www.dgvaishnavcollege.edu.in/about-college/">Read More</a></p>
+</div>
+</div></div></div></div>-->

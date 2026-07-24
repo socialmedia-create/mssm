@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <title>MSSM</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+
+  <!-- Bootstrap 3 -->
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+
+  <!-- Optional w3css icons you used -->
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+
+  <!-- Favicon -->
+  <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+  <style>
+    /* --- Navbar custom --- */
+    .navbar-default {
+      background-color: #00254e !important;
+      border-color: #E7E7E7;
+      margin-bottom: 10px;
+    }
+    .navbar-default .navbar-brand,
+    .navbar-default .navbar-nav > li > a {
+      color: #ffffff;
+    }
+    .navbar-default .navbar-brand:hover { color: #ECB200; }
+    .navbar-default .navbar-nav > li > a:hover { background-color:#ECB200; color:#fff; }
+    .navbar-default .navbar-toggle .icon-bar { background-color: #CCC; }
+
+    @media (min-width: 768px){
+      .navbar-nav { margin: 0 auto; display: table; table-layout: fixed; float:none; }
+      li.dropdown:hover > .dropdown-menu { display:block; }
+    }
+
+    /* --- Card / director styling (Bootstrap3 friendly) --- */
+    .director-card {
+      background: #fff;
+      border-radius: 12px;
+      overflow: hidden;
+      box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+      border: 1px solid rgba(0,0,0,0.06);
+      margin-bottom: 1.5rem;
+    }
+    .director-photo {
+      width: 100%;
+      height: auto;
+      object-fit: cover;
+      border-radius: 8px;
+      display:block;
+      margin: 0 auto;
+      max-width: 320px;
+    }
+    .role-badge {
+      display:inline-block;
+      padding:.25rem .6rem;
+      border-radius:.5rem;
+      font-weight:600;
+      background: rgba(0,0,0,0.06);
+    }
+    .director-quote { font-style: italic; font-size: 1.05rem; }
+
+    /* Make layout nicely padded inside */
+    .director-card .card-body { padding: 24px; }
+
+    /* Smaller screens */
+    @media (max-width: 767px) {
+      .director-photo { max-width: 220px; margin-bottom: 15px; }
+      .director-card .card-body { padding: 18px; }
+    }
+
+    /* small styling fixes for footer icons */
+    footer .social-icons img { margin-right: 10px; vertical-align: middle; }
+  </style>
+</head>
+
+<body>
+  <!-- Header / Logo -->
+  <div class="container text-center" style="padding:12px 0;">
+    <a href="#" title="MSSM">
+      <img src="assets/header/mssm.png" alt="MSSM Logo" style="max-width:100%; width:100%; height:auto;">
+    </a>
+  </div>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-default" role="navigation">
+    <div class="container-fluid">
+      <!-- Mobile toggle -->
+      <div class="navbar-header">
+        <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navBar">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+      </div>
+
+      <!-- Links -->
+      <div class="collapse navbar-collapse" id="navBar">
+        <ul class="nav navbar-nav">
+          <li><a href="index.html">Home</a></li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">About <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="management.html">Management</a></li>
+              <li><a href="MBA.html">M.B.A</a></li>
+              <li><a href="whymssm.html">Why MSSM</a></li>
+            </ul>
+          </li>
+
+          <li><a href="Infrastructure.html">Infrastructure</a></li>
+
+          <li class="dropdown">
+            <a class="dropdown-toggle" data-toggle="dropdown" href="#">Faculty <span class="caret"></span></a>
+            <ul class="dropdown-menu">
+              <li><a href="Prof&Dir.html">Professor & Director</a></li>
+              <li><a href="ofm.html">Faculty Members</a></li>
+            </ul>
+          </li>
+
+          <li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure</a></li>
+          <li><a href="IIC2.html">Industry-Institution Connect</a></li>
+          <li><a href="gallery.html">Gallery</a></li>
+          <li><a href="placement.html">Placement Cell</a></li>
+          <li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div><!-- /.navbar-collapse -->
+    </div><!-- /.container-fluid -->
+  </nav>
+
+  <!-- Main container -->
+  <main class="container">
+    <div class="row">
+      <div class="col-xs-12 col-md-10 col-md-offset-1">
+
+        <!-- Director / Additional Director Card -->
+        <article class="director-card">
+          <div class="row">
+            <!-- photo col -->
+            <div class="col-xs-12 col-sm-4 text-center align-self-center" style="padding:24px;">
+              <img src="assets/Faculty_Photo/Dr.Gomathi.JPG" alt="Dr. D. Gomathy — Additional Director" class="director-photo">
+            </div>
+
+            <!-- text col -->
+            <div class="col-xs-12 col-sm-8 card-body">
+              <header>
+                <h2 class="h4" style="margin-top:0;"><b>Dr. D. GOMATHY - PROFESSOR & ADDITIONAL DIRECTOR</b></</h2>
+                <div style="margin:8px 0;">
+                  <span class="role-badge">B.SC, M.B.A, PGDLA, M.PHIL, PhD, UGC-NET, TN SET</span>
+                </div>
+              </header>
+
+              <section>
+                <p style="line-height:1.6;">
+                  Dr. D. Gomathy is a senior Academician in the field of Management Studies with nearly 28 years of Academic Leadership and Excellence. She has contributed significantly in leading,
+                  nurturing and fostering an Academic Environment in the domain area of Management Education with Innovative Curriculum Design, intense Industry Institute Interaction, Project and Field 
+                  based Learning, Self-Study and Student Engagement Practices, Personal and Professional Development Courses with a view to holistic development of student fraternity.
+	She is expertised in the area of Human Resource Management, Organisational Behaviour. Her Research interest are in the area of Emotional Intelligence, Women Leadership and Workplace Behaviour. 
+	She is a Research Guide of University of Madras in the field of Management Studies and has guided many academicians and industry professionals towards their journey to a Doctoral Degree in Management Studies. 
+	She has produced 2 PhD.  She has participated and presented papers in many National, International Conferences. She has to her credit 34 Research articles published in National, International Journals and 6 
+	Book Chapters and 4 books as editor.
+	She is a recipient of many awards like Best Teacher, Best Educator, Women Icon, Inspiring Women and Best Academician. She is part of many Academic bodies and has been an Expert Member Nominee of University
+	of Madras for Board of Studies, Academic Audit, Approval, Affiliation Inspection and Faculty Recruitment.
+
+Process defines Perfection, Perfection drives Performance and Performance takes you to the Pinnacle. – Dr. D.Gomathy, Professor and Additional Director, Meenakshi Sundararajan School of Management, Kodambakkam, Chennai.
+
+                </p>
+              </section>
+
+              
+            </div>
+          </div>
+        </article>
+
+       
+      </div><!-- /.col -->
+    </div><!-- /.row -->
+  </main>
+
+  <!-- Footer -->
+  <footer class="w3-center" style="background-color:#00254e; padding:18px; color:#fff; margin-top:30px;">
+    <h3 style="margin-top:0;"><strong>Follow us on</strong></h3>
+    <div class="social-icons" style="margin:10px 0;">
+      <a href="https://www.facebook.com/profile.php?id=61557611947227" target="_blank"><img src="assets/logo/facebook.png" height="40" width="40" alt="facebook"></a>
+      <a href="https://youtube.com" target="_blank"><img src="assets/logo/vecteezy.png" height="40" width="50" alt="youtube"></a>
+      <a href="https://www.instagram.com/mssm_mba_official/" target="_blank"><img src="assets/logo/picture-logo-42719.png" height="40" width="40" alt="instagram"></a>
+      <a href="https://www.linkedin.com/in/meenakshi-sundararajan-school-of-management-7a23bb229/" target="_blank"><img src="assets/logo/linkedin-logo-png-1854.png" height="40" width="40" alt="linkedin"></a>
+    </div>
+
+    <p style="margin:6px 0;">363, Arcot Road, Kodambakkam, Chennai - 600 024</p>
+  </footer>
+
+  <footer style="background:#000; padding:8px; color:#fff;">
+    <div class="container text-center">
+      <p class="copyright small" style="margin:0;">All Rights Reserved</p>
+    </div>
+  </footer>
+
+  <!-- JS: jQuery then Bootstrap -->
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</body>
+</html>

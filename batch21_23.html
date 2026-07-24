@@ -1,0 +1,696 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MSSM</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+
+        <style>
+			#blinker
+			{text-decoration:blink;}
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+        </style>
+
+    </head>
+    <body>
+        
+            <div class="container-fluid">
+               
+                   
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                  
+            </div>
+        </nav>
+
+        <a href="#" title="MSSM">
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" ><img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/> </h1>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="management.html"> Management </a></li>
+                            </ul>
+                        </li>
+                                <li><a href="MBA.html"> M.B.A </a></li>
+                        <ul class="nav navbar-nav">
+                        <li><a href="whymssm.html"> Why MSSM </a></li>
+                        <li><a href="Infrastructure.html"> Infrastructure </a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Faculty <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Prof&Dir.html"> Professor & Director </a></li>
+                                <li><a href="ofm.html">Faculty Members </a></li></ul>
+                        </li>
+                          <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Student Profile <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <!--
+                                <li><a href="batch20_22.html"> Batch of 2020-2022 </a></li>
+                                -->
+                                <li><a href="batch21_23.html"> Batch of 2021-2023 </a></li>
+                            </ul>
+                            <li><a href="gallery.html"> Gallery </a></li> 
+                               <li><a href="placement.html"> Placement Cell </a></li>
+                        <li><a href="contact.html"> Contact Us </a></li>                            
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+</div>
+                            </div>
+
+                        </div>
+
+      
+                    </div>
+
+                </div>
+
+                <div class="col-sm-1"></div>
+
+            </div>
+            <br/>
+        </div>
+ <div class="main-container container">
+  <div class="row">
+    <section class="col-sm-12">
+                  <a id="main-content"></a>
+                    <h1 class="page-header">Profile of First year MBA Students</h1>
+                                                         <div class="region region-content">
+    <div id="node-12" class="node node-page node-full clearfix" about="/placement/students-speak" typeof="foaf:Document">
+
+      <span property="dc:title" content="Students Speak" class="rdf-meta element-hidden"></span><span property="sioc:num_replies" content="0" datatype="xsd:integer" class="rdf-meta element-hidden"></span>
+ <div class="content clearfix">
+    <div class="field field-name-body field-type-text-with-summary field-label-hidden"><div class="field-items"><div class="field-item even" property="content:encoded"><!-- Left-aligned media object -->
+
+
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch21_23/01.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Aravind Raj R </h4></b>
+		 <p></p>UG : B.Com <br/>
+		 <!--
+		 MBA Specialization : HR & Marketing<br/>
+		 -->
+		</p>
+
+
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch21_23/02.jpg /></div>
+	<div class="media-body">
+		<h4 class="media-heading">
+			Avinash A </h4>
+		<p>UG : B.Com <br/>
+		<!--
+		MBA Specialization : Finance & Marketing<br/>
+		-->
+		</p>
+</div>
+</div>
+
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch21_23/03.jpg   /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+		Baskaran R</h4></b>
+		<p>UG : B.Com <br/>
+		<!--
+		MBA Specialization : Finance & Marketing<br/>
+		-->
+		</p>
+</div>
+</div>
+<!--
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/harish.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Harish K R</h4></b>
+		<p>UG : B.E (EEE) <br/>
+		MBA Specialization : HR & Marketing<br/>
+		</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/karthikeyan.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Karthikeyan M S</h4></b>
+		<p>UG : B.Tech (IT) <br/> MBA Specialization : HR & Marketing<br/></p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/mohan.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Mohan Kumar S</h4></b>
+		<p>UG : B.E (Mech)<br/>	MBA Specialization : Finance & Marketing<br/> </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/muthumanikandan.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Muthumanikandan M</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & Marketing<br/> </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/naveen.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Naveen Raj S</h4></b>
+		<p>UG : B.E (Mech) <br/>	MBA Specialization : Finance & HR<br/>
+	</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/prasanna.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Prasanna S</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/rahul.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Rahul C M</h4></b>
+		<p>UG : B.Com<br/>	MBA Specialization : Finance & Marketing<br/></p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/rajkumar.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Raj Kumar E</h4></b>
+		<p>UG : BCA <br/>  MBA Specialization : HR & Marketing<br/></p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/selvamuthukrishnan.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Selva Muthu Krishnan S</h4></b>
+		<p>UG : B.E (EEE) <br/>	MBA Specialization : Finance & Marketing<br/></p>
+			</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/vidhyagar.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Vidhyagar M</h4></b>
+		<p>UG : B.E (Mech) <br/>
+			Work Experience : YSI Automative Pvt.ltd(Engineering Trainee) - 1 year</br>	MBA Specialization : Finance & Marketing<br/></p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/akila.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Akila S</h4></b>
+		<p>UG : B.Sc(CS) <br/> MBA Specialization : HR & Marketing<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/ashwini-k.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Aswini K</h4></b>
+		<p>UG : BBA <br/> MBA Specialization : HR & Marketing<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/ashwini-j.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Ashwini J</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/dharshana.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Darshana Rachel K</h4></b>
+		<p>UG : B.Sc (Physics) <br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/dhivyadharshini.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Divya Dharshini P</h4></b>
+		<p>UG : B.Sc(Chemistry) <br/> MBA Specialization : HR & Marketing<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/gomathi.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Gomathi C</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/harshini.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Harshini J</h4></b>
+		<p>UG : B.A (English) <br/> MBA Specialization : HR & Marketing<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/hanisha.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Hanisha K</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/ishwarya.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Ishwarya P</h4></b>
+		<p>UG : BCA <br/> MBA Specialization : HR & Marketing<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/jayshma.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Jayshma G B</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/keerthana.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Keerthana K</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/mariaroseline.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Maria Roseline G</h4></b>
+		<p>UG : BBA <br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/meena.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Meena M</h4></b>
+		<p>UG : B.A(Economics) <br/>	MBA Specialization : Finance & Marketing<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/nithya.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Nithiya A S</h4></b>
+		<p>UG : B.Com <br/> </p>	MBA Specialization : Finance & HR<br/>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/nivenitha.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Nivenitha B</h4></b>
+		<p>UG : B.A(Economics)<br/>	MBA Specialization : Finance & HR<br/>
+			</p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/raksha.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Raksha S N</h4></b>
+		<p>UG : B.Sc (Mathematics) <br/>
+			Work Experience : Infosys ltd(Operations Executive) - 1.5 Years 
+			</br> 	MBA Specialization : Finance & HR<br/></p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/sandhiya.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Sandhya G</h4></b>
+		<p>UG : B.E (CSE) <br/> 	MBA Specialization : Finance & HR<br/></p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/saarumathi.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Saarumathi R</h4></b>
+		<p>UG : B.Sc (Physics) <br/>	MBA Specialization : Finance & HR<br/> </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/shanmuhapriya.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Shanmuga Priya E</h4></b>
+		<p>UG : B.Tech (IT) <br/>	MBA Specialization : Finance & HR<br/> </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/simran.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Simran Arjan Mirpuri</h4></b>
+		<p>UG : B.Com<br/>	MBA Specialization : Finance & HR<br/> </p>
+</div>
+</div>
+
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/sowjanya.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Sowjanya S</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/> </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/surya.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Surya R</h4></b>
+		<p>UG : B.A (Sociology) <br/>	MBA Specialization : Finance & HR<br/> </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/sumithra.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Sumithra R</h4></b>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/> </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/thivya.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Thivya E</h4></b>
+		<p>UG : B.Com (CS) <br/> MBA Specialization : Finance & HR<br/></p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/varsha.jpg /></div>
+	<div class="media-body">
+		<b><h4 class="media-heading">
+			Varsha S</h4></b>
+		<p>UG : BCA <br/> MBA Specialization : HR & Marketing<br/></p></p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/vidhya.jpg /></div>
+	<div class="media-body">
+		<h4 class="media-heading">
+			Vidhya Lakshmi V</h4>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/> </p>
+</div>
+</div>
+<hr>
+<div class="media">
+	<div class="media-left">
+		<img class="media-object img-thumbnail" src=assets/batch19_21/yuvashree.jpg /></div>
+	<div class="media-body">
+		<h4 class="media-heading">
+			Yuvasree S</h4>
+		<p>UG : B.Com <br/>	MBA Specialization : Finance & HR<br/> </p>
+</div>
+</div>
+<hr>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>        
+</div>
+</div>           
+</div>
+</div>
+</div>
+</div>
+
+            
+        </div>
+        -->
+        <br/>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+
+            <p><center> All Rights Reserved </center> </p>
+        </footer>
+        
+    </body>
+</html>

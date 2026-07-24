@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> M.B.A </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <style>
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+            td,tr{
+                background-color: rgb(0,37,78);
+                color: #ffffff;
+            }
+            table 
+            {
+                border-collapse: separate;
+                border-spacing: 2px;
+            }
+            tr 
+            {
+
+                height: 60px;
+            }
+
+        </style>
+
+    </head>
+    <body>                   
+            </div>
+        </nav>
+             <img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="management.html"> Management </a></li>
+                                <li><a href="MBA.html"> M.B.A </a></li>   
+                                <li><a href="whymssm.html"> Why MSSM </a></li>
+                            </ul>
+                                
+                     
+                        <li><a href="Infrastructure.html"> Infrastructure </a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Faculty <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Prof&Dir.html"> Professor & Director</a></li>
+                                <li><a href="ofm.html">Faculty Members </a></li>
+                            </ul>  <li class="dropdown">
+                           	
+	<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>
+	<li><a href="IIC2.html">Industry-Institution Connect </a></li>
+
+                        <li> <a href="gallery.html"> Gallery </a></li>
+                              <li><a href="placement.html"> Placement Cell </a></li> 
+                        	<li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+                        <li><a href="contact.html"> Contact Us </a></li>                            
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="jumbotron page-header" style="text-align: center; background-color: #ECB200;padding: 5px">
+                <h3> Master of Business Administration </h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2> MBA Programme  </h2>
+                    <p>
+The College offers an MBA programme affiliated to the University Of Madras,Approved by AICTE New Delhi with 6 Specializations namely :
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+<br>                   
+ <p>
+- Human Resources Management</p>
+<p>
+- Finance Management
+</p>
+<p>
+- Marketing Management
+</p>
+<p>
+- Systems Management
+</p>
+<p>
+- Logistics Management
+</p>
+<p>
+- Hospital Management
+</p>
+<div class="container">
+            <div class="jumbotron page-header" style="text-align: center; background-color: #ECB200;padding: 5px">
+                <h3> Admission Procedure </h3>
+            </div>
+<p>
+Government allots candidates for 50% of the seats through TANCET Counselling.<B><u> Our TANCET MBA Counselling Code : 365</B> </u>. The remaining 50% are alloted by the management using the below mentioned procedure :
+</p>
+<p>
+<br>- Weightage for 10th standard  marks - 10%
+<br>- Weightage for 12th standard  marks - 15%
+<br>- Weightage for U.G  marks 	         - 25%
+<br>- Weightage for Group Discussion     - 25%
+<br>- Weightage for Personal Interview   - 25%
+</p>
+<p>
+<h5>NOTE : Eligibility Certificate issued by the University of Madras has to be submitted by Candidates who have completed their U.G from a university other than the University of Madras.</h5>
+  
+                    </ol> 
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2>  </h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    
+                </div>
+            </div>
+        </div>
+	<br/>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+            <p><center> All Rights Reserved</center> </p>
+        </footer>
+        
+    </body>
+</html>

@@ -1,0 +1,524 @@
+﻿
+<!DOCTYPE html>
+<html>
+    <head>
+        <title> M.B.A </title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+
+        <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.11.0/umd/popper.min.js"></script>
+
+        <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+        <link rel="icon" href="favicon.ico" type="image/x-icon">
+        
+        <style>
+            #myInput		
+            {
+                width:0%;
+                -webkit-transition:width 0.3s ease-in-out;
+            }
+            #myInput:hover,#myInput:focus	
+            {
+                width:100%;
+                -webkit-transition:width 0.5s ease-in-out;
+            }
+
+        </style>
+
+        <style>
+            /* navbar */
+            .navbar-default {
+                background-color: #00254e !important;
+                border-color: #E7E7E7;
+                margin-bottom: 10px;
+            }
+            /* Title */
+            .navbar-default .navbar-brand {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-brand:hover,
+            .navbar-default .navbar-brand:focus {
+                color: #ECB200;
+            }
+            /* Link */
+            .navbar-default .navbar-nav > li > a {
+                color: #ffffff;
+            }
+            .navbar-default .navbar-nav > li > a:hover,
+            .navbar-default .navbar-nav > li > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .active > a,
+            .navbar-default .navbar-nav > .active > a:hover,
+            .navbar-default .navbar-nav > .active > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .open > a,
+            .navbar-default .navbar-nav > .open > a:hover,
+            .navbar-default .navbar-nav > .open > a:focus {
+                color: #ffffff;
+                background-color: #ECB200;
+            }
+            /* Caret */
+            .navbar-default .navbar-nav > .dropdown > a .caret {
+                border-top-color: #ECB200;
+                border-bottom-color: #ECB200;
+            }
+            .navbar-default .navbar-nav > .dropdown > a:hover .caret,
+            .navbar-default .navbar-nav > .dropdown > a:focus .caret {
+                border-top-color: #ffffff;
+                border-bottom-color: #ffffff;
+            }
+            .navbar-default .navbar-nav > .open > a .caret,
+            .navbar-default .navbar-nav > .open > a:hover .caret,
+            .navbar-default .navbar-nav > .open > a:focus .caret {
+                border-top-color: #000000;
+                border-bottom-color: #000000;
+            }
+
+            .navbar-default .navbar-nav > .open .dropdown-menu > li >a:hover {
+                background-color: #ECB200;
+            }
+            .dropdown-menu > li > a:hover, 
+            .dropdown-menu > li > a:focus {
+                background-color: #ECB200;
+            }
+
+            /* Mobile version */
+            .navbar-default .navbar-toggle {
+                border-color: #DDD;
+            }
+            .navbar-default .navbar-toggle:hover,
+            .navbar-default .navbar-toggle:focus {
+                background-color: #DDD;
+            }
+            .navbar-default .navbar-toggle .icon-bar {
+                background-color: #CCC;
+            }
+            @media (max-width: 767px) {
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a {
+                    color: #ffffff;
+                }
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:hover,
+                .navbar-default .navbar-nav .open .dropdown-menu > li > a:focus {
+                    color: #000000;
+                }
+            }
+
+            @media (min-width: 768px){
+                .navbar-nav{
+                    margin: 0 auto;
+                    display: table;
+                    table-layout: fixed;
+                    float:none;
+                }
+            }
+
+        </style>
+        <style>
+            a.link_color:hover 
+            {
+                color:#ffffff;
+            }
+            @media (min-width: 768px){
+                li.dropdown:hover > .dropdown-menu {
+                    display: block;
+                }
+            }
+            td,tr{
+                background-color: rgb(0,37,78);
+                color: #ffffff;
+            }
+            table 
+            {
+                border-collapse: separate;
+                border-spacing: 2px;
+            }
+            tr 
+            {
+
+                height: 60px;
+            }
+
+        </style>
+
+    </head>
+    <body>                   
+            </div>
+        </nav>
+            <h1 style="text-align: center; float: none; clear: both; margin: 0 auto;" > <img src="assets/img/mssm_logo.jpg" style="max-width: 100%;"/> </h1>
+        </a>
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navBar">
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>                        
+                    </button>
+                </div>
+                <div class="collapse navbar-collapse" id="navBar">
+
+                    <ul class="nav navbar-nav">
+                        <li><a href="index.html">Home</a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> About <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="management.html"> Management </a></li>
+                                <li><a href="MBA.html"> M.B.A </a></li>
+                                <li><a href="whymssm.html"> Why MSSM </a></li>
+                        </ul>
+                        <li><a href="Infrastructure.html"> Infrastructure </a></li>
+                        <li class="dropdown">
+                            <a class="dropdown-toggle" data-toggle="dropdown" href="#"> Faculty <span class="caret"></span></a>
+                            <ul class="dropdown-menu">
+                                <li><a href="Prof&Dir.html"> Professor & Director</a></li>
+                                <li><a href="ofm.html">Faculty Members </a></li>
+                            </ul>
+                              <li class="dropdown">
+                           
+                           	
+	<li><a href="assets/studentprofile/MEENAKSHI SUNDARARAJAN SCHOOL OF MANAGEMENT.pdf">Mandatory Disclosure </a></li>
+		<li><a href="IIC2.html">Industry-Institution Connect </a></li>
+
+
+                            <li><a href="gallery.html"> Gallery </a></li>
+                               <li><a href="placement.html"> Placement Cell </a></li> 
+                               <li><a href="https://docs.google.com/forms/d/1qIucpVLxJSPi2-NOVRAWSWQ74xipHxZ4c61ShpGStlY/edit">Grievances </a></li>
+                        <li><a href="contact.html"> Contact Us </a></li>                            
+                    </ul>
+
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="jumbotron page-header" style="text-align: center; background-color: #ECB200;padding: 5px">
+                <h3> </h3>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+                    <h2> Why M.B.A @ MSSM  </h2>
+                    <p>
+The College offers an MBA programme affiliated to the University Of Madras, Approved by AICTE.
+                    </p>
+                </div>
+            </div>
+            <div class="row">
+                <div class="col-sm-12">
+<br>                   
+ <p>
+• Learning Environment creates employable students.
+</p>
+<p>
+• Judicious blend of Management Theory and the application of theory to practice.
+</p>
+<p>
+• Student-Faculty Ratio is 12:1. 
+</p>
+<p>
+• Industry oriented Case-Study based teaching-learning Pedagogy.
+</p>
+<p>
+• NPTEL and MOOCs are also made available to them to ensure learning.
+</p>
+<p>
+•A detailed analysis of financial market activities with a comprehensive study of business,finance and accounting topics.
+</p>
+<p>
+• Industrial visits are a part of the curriculum.
+</p>
+<p>
+• Entrepreneurship Development Cell imparts Skill sets required for Innovation,Model Building and Entrepreneurship.
+</p>
+<p>
+• In order to provide a competiive edge to our students, soft skills such as customer-centricity, critical thinking, problem-solving, attention to detail and flawless written and Verbal Communication are imparted to students.
+</p>
+<p>
+• The reason we exist is our Students.
+</p>
+<p>
+ • Tutorial Hour - "Feel Free to Clarify your Doubts with Faculty any time "
+</p>
+<p>
+ • Saturdays are meant for Individual Student Development - called "HAPPY CLASSES" by enacting Plays, Conducting quiz programmes, Debates on current affairs, Group discussions, Training in public speaking.   
+
+</p>
+<p>
+ • Organisational Leadership, Inspiration, Dilemmas and action are learnt, by using inputs from Literature.
+   Classics are great for trying out various issues of Leadership and connecting with Organisational Behaviour.
+   Students can analyse the dilemmas the characters engage in, introspect and  write a reflection paper.
+   
+
+</p>
+<h5><b>THE PLAY "MURDER IN THE CATHEDRAL" BY T.S ELLIOT IS BEING ENACTED BY STUDENTS OF 1ST YEAR 
+<b></h5>
+
+<div class="container">
+            <div class="column">            
+                <style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: left;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+<style>
+div.gallery {
+  border: 1px solid #ccc;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+.responsive {
+  padding: 0 6px;
+  float: left;
+  width: 24.99999%;
+}
+
+@media only screen and (max-width: 700px) {
+  .responsive {
+    width: 49.99999%;
+    margin: 6px 0;
+  }
+}
+
+@media only screen and (max-width: 500px) {
+  .responsive {
+    width: 100%;
+  }
+}
+
+.clearfix:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+</style>
+<style>
+div.gallery {
+  margin: 5px;
+  border: 1px solid #ccc;
+  float: center;
+  width: 180px;
+}
+
+div.gallery:hover {
+  border: 1px solid #777;
+  float: center;
+}
+
+div.gallery img {
+  width: 100%;
+  height: auto;
+  float: center;
+}
+
+div.desc {
+  padding: 15px;
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="assets/img/ymssm1.jpg">
+      <img align="center" src="assets/img/ymssm1.jpg" style="transform:rotate(deg);">
+    </a>
+  </div>
+</div>
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="assets/img/ymssm2.jpg">
+      <img  align="center" src="assets/img/ymssm2.jpg" alt="Bishops" width="600" height="400">
+    </a>
+  </div>
+</div>
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="assets/img/ymssm3.jpg">
+	<img align="center" src="assets/img/ymssm3.jpg" style="transform:rotate(360deg);">
+    </a>
+</div>
+ </div>
+ </div>
+ </div>
+
+<h6><b>On (14.03.2020) Final episode of The Play "MURDER IN THE CATHEDRAL" <b></h6>  
+</p>
+
+
+
+    
+
+
+<div class="responsive">
+  <div class="gallery">
+    <a target="_blank" href="assets/img/whymssm4.jpg">
+      <img src="assets/img/whymssm4.jpg" style="transform:rotate(deg);">
+    </a>
+ 
+
+<br>
+
+ <h7><b>The Entire Crew of The Play "MURDER IN THE CATHEDRAL" <b></h7>  
+</p>
+</div>
+</div>
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+
+  
+<div class="container">
+            <div class="jumbotron page-header" style="text-align: center; background-color: #ECB200;padding: 5px">
+                <h3> Our Academic Achievements </h3>
+</div>
+<p>
+Students of Meenakshi Sundararajan School of Management have continuously excelled at the university level examinations </p><br><p>Details of some achievements, are listed below:</p><br>
+<!--
+<img align="center" alt="achiever" src="assets\img\ashwinik.jpg" style="width:15%;height:200" /> <img alt="achiever" hspace="50" src="assets\img\archana.jpg" style="width:15%;height:200" /> <img alt="achiever" src="assets\img\varsha.jpg" style="width:15%;height:200" />
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/ashwinik.jpg" style="width:30%;height:30" alt="nithya"></div><h5> <center> Ms. K Ashwini stood 1st in the examinations conducted during May 2020 by the University of Madras</center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/archana.jpg" style="width:30%;height:20" alt="nithya"></div><h5> <center> Ms. P Archana stood 2nd in the examinations conducted during May 2020 by the University of Madras</center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/varsha.jpg" style="width:30%;height:20" alt="nithya"></div><h5> <center> Ms. M Varsha stood 3rd in the examinations conducted during May 2020 by the University of Madras</center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/1.png" style="width:30%;height:20" alt="nithya"></div><h5> <center> Ms. T G Deepika stood 2nd in the examinations conducted during April 2019 by the University of Madras</center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/2.jpg" style="width:30%;height:20" alt="nithya"></div><h5> <center> Ms. V Veena stood 5th in the examinations conducted during April 2019 by the University of Madras</center> </h5><br>
+-->
+<div class="col-sm-16" style="text-align: center">
+    <img src="assets/nisha_mam/First Rank Holder.JPG" style="width:35%;height:20" alt="Director"></div><h5> <center>Ms. Nishanthini.R  receiving the Gold Medal from the Honble President of India, during the University of Madras convocation held on 6th Aug, 2023.</center> </h5><br>
+    <div class="col-sm-16" style="text-align: center">
+<img src="assets/img/Screenshot (5).png" style="width:35%;height:20" alt="Director"></div><h5> <center>Ms. Shanmugapriya.E receiving the Gold Medal from the Tamilnadu Governor, during the University of Madras convocation held on 16th May, 2022.</center> </h5><br>
+
+<div class="col-sm-16" style="text-align: center">
+<img src="assets/img/rank2020.jpg" style="width:70%;height:30" alt="nithya"></div><h5> <center> Ms. K Ashwini stood 1st, Ms. P Archana stood 2nd, Ms. M Varsha stood 3rd in the April 2020 examinations of the University of Madras</center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/2019.jpg" style="width:60%;height:30" alt="nithya"></div><h5> <center> Ms. T G Deepika stood 2nd, Ms. V Veena stood 5th, Ms. M Varsha stood 6th, Mr. V Dinesh Krishnan stood 8th in the April 2019 examinations of the University of Madras</center> </h5><br>
+
+
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/beryl.jpg" style="width:30%;height:20" alt="nithya"></div><h5> <center> Ms. R Beryl Georgina stood 1st in the examinations conducted during April 2018 by the University of Madras</center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/ishwarya.jpg" style="width:30%;height:20" alt="nithya"></div><h5> <center>Ms. Ishwariya vaani C K stood 3rd in the examinations conducted during April 2017 by the University of Madras </center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/aathi.png" style="width:30%;height:20" alt="nithya"></div><h5> <center>Ms. Aarthi stood 1st in the examinations conducted during April 2013 by the University of Madras </center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/maha.png" style="width:30%;height:20" alt="nithya"></div><h5> <center> Ms.C.Mahalakshmi stood 2nd in the examinations conducted during April 2008 by the University of Madras</center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/nithya.png" style="width:30%;height:20" alt="nithya"></div><h5> <center> Ms.S.Nithya stood 2nd in the examinations conducted during April 2006 by the University of Madras</center> </h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/jayanti.png" style="width:15%;height:20" alt="jayanti"></div><h5> <center>Ms. Jayanthi stood 1st in the examinations conducted during April 2005 by the University of Madras</center></h5><br>
+
+<div class="col-sm-16"style="text-align: center">
+<img src="assets/img/Gowri.png" style="width:15%;height:20" alt="gowri"></div><h5> <center>Ms. Gowri stood 2nd, in the examinations conducted during April 2004 by the University of Madras</center> </h5><br>
+            </div>
+                    </ol> 
+                </div>
+            </div>
+            <a href="assets/Aicte/Aicte (1)_merged.pdf"><font color ="blue">AICTE Approval</font></a>
+<div class="row">
+                <div class="col-sm-12">
+                    <h2> Grievances and Redressal </h2>
+                    <p>
+
+Meenakshi Sundararajan School of Management is committed to a policy of treating all members of the college community fairly in regard to their personal and professional concerns. The student grievance procedure ensures that concerns are promptly dealt with and resolutions reached in a fair and just manner. The College’s procedures enable students to bring complaints and problems to the attention of the College administration.<br/>
+
+<p>Registry for Grievances and Redressal is available in the office of main building Meenakshi Sundararajan School of Management, 363, Arcot Road, Kodambakkam, Chennai-600024.</p><br>
+
+                    </p>
+                    <p>
+For any grievance <font color=blue><a href="https://docs.google.com/forms/d/e/1FAIpQLScqInOtONaJ9VSi8nejCfdtE1kSUIl07xTQlFiehrKeHGvj1w/viewform?usp=pp_url">click here for online grievance submission.</a></h3><hr> 
+                   </p>
+                </div>
+            </div>
+            
+      
+  <div class="row">
+                <div class="col-sm-12">
+                    <font color = "black">
+                    <h2> The Counselors </h2>
+                    <ol>
+                        <li> Prof. S. Devananth-Head of the Department
+                        </li><br>
+                                             <li> Dr.S Chandrasekaran-Assistant Professor
+ </li><br>
+                        <li> Dr. S.A. Jarina -Assistant Professor </li> <br>
+                    </ol></font>
+                </div>
+			<font size =3><a href="https://www.aicte-india.org/feedback/index.php"><font color=blue>	AICTE FEEDBACK	</font></a></font>
+		
+            </div>
+        </div>
+        <footer class="w3-center" style="background-color: #00254e; padding: 2px; color: #ffffff">
+
+            <p> All Rights Reserved </p>
+        </footer>
+    </body>
+</html>
